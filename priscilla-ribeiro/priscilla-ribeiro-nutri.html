@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="icon" href="img/logo-priscilla.webp" type="image/png">
+<link rel="icon" href="img/logo-priscilla.png" type="image/png">
 <style>
 :root{
   --bg:#F5EFE6; --bg2:#EBE3D3; --bg3:#E2D7C0;
@@ -54,10 +54,13 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 .brand-text .b1{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--ink);font-style:italic;letter-spacing:-.01em}
 .brand-text .b2{font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);margin-top:2px}
 .nav{display:flex;gap:28px;align-items:center}
-.nav a{font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--ink2);transition:color .2s}
-.nav a:hover{color:var(--gold-dark)}
-.nav-cta{background:var(--ink);color:var(--bg);padding:11px 22px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);transition:all .2s;border-radius:999px}
-.nav-cta:hover{background:var(--gold-dark)}
+.nav a:not(.nav-cta){font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--ink2);transition:color .2s}
+.nav a:not(.nav-cta):hover{color:var(--gold-dark)}
+.nav-cta{background:var(--ink);color:#fff;padding:11px 22px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);transition:all .2s;border-radius:999px}
+.nav-cta:hover{background:var(--gold-dark);color:#fff}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;width:40px;height:40px;position:relative;flex-shrink:0}
+.nav-toggle span{position:absolute;left:7px;right:7px;height:2px;background:var(--ink);transition:.25s}
+.nav-toggle span:nth-child(1){top:13px}.nav-toggle span:nth-child(2){top:19px}.nav-toggle span:nth-child(3){top:25px}
 
 /* ===== HERO (bipartidário) ===== */
 .hero{position:relative;overflow:hidden;background:var(--bg);padding:0}
@@ -312,7 +315,15 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 /* ===== RESPONSIVO ===== */
 @media(max-width:980px){
   .container{padding:0 24px}
-  .nav{display:none}
+  .nav{position:fixed;inset:0;z-index:45;flex-direction:column;justify-content:center;align-items:center;gap:30px;background:var(--bg);opacity:0;pointer-events:none;transition:opacity .25s ease;overflow:auto}
+  .nav.open{opacity:1;pointer-events:auto}
+  .nav a{font-size:18px;letter-spacing:.04em}
+  .nav .nav-cta{margin-top:16px;font-size:13px}
+  .nav-toggle{display:block}
+  body.nav-open{overflow:hidden}
+  .nav-toggle.open span:nth-child(1){top:19px;transform:rotate(45deg)}
+  .nav-toggle.open span:nth-child(2){opacity:0}
+  .nav-toggle.open span:nth-child(3){top:19px;transform:rotate(-45deg)}
   .hero-split{grid-template-columns:1fr;min-height:auto}
   .hero-half{padding:60px 24px}
   .hero-divider{display:none}
@@ -340,22 +351,18 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
   .footer .container{grid-template-columns:1fr;gap:32px}
 }
 @media(max-width:560px){
-  .topbar{font-size:9px}
-  .topbar .tb-left{gap:14px}
+  .topbar{font-size:9px;letter-spacing:.1em;padding:6px 0}
+  .topbar .container{flex-wrap:nowrap;gap:10px}
+  .topbar .tb-left{gap:10px}
+  .topbar .tb-left span:nth-child(2){display:none}
   .hero-half h1{font-size:38px}
   .method245-col .phases{grid-template-columns:1fr}
 }
+
+.nav .nav-cta{background:var(--terra);color:#fff;border:1px solid var(--terra)}
+.nav .nav-cta:hover{background:var(--terra-dark);color:#fff;border-color:var(--terra-dark)}
 </style>
-<style>
-.editor-bar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#1F1A14;color:#F5EFE6;padding:10px 18px;font-family:'Inter',system-ui,sans-serif;font-size:12px;display:flex;justify-content:space-between;align-items:center;gap:12px;letter-spacing:.04em;box-shadow:0 4px 16px rgba(0,0,0,.18)}
-.editor-bar .eb-left{display:flex;align-items:center;gap:14px}
-.editor-bar .eb-badge{background:#B8956A;color:#1F1A14;padding:3px 8px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
-.editor-bar .eb-name{font-family:'Newsreader',serif;font-style:italic;font-size:15px;color:#F5EFE6}
-.editor-bar .eb-stats{color:#B8956A;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
-.editor-bar .eb-cta{padding:6px 12px;background:#B8956A;color:#1F1A14;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:all .2s;border-radius:999px}
-.editor-bar .eb-cta:hover{background:#D4B98A}
-body{padding-top:42px}
-</style></head>
+</head>
 <body>
 
 <!-- TOPBAR -->
@@ -387,8 +394,9 @@ body{padding-top:42px}
       <a href="#cases">Casos</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
+      <a href="https://wa.me/message/VU3NMZVWWKAZD1" class="nav-cta" target="_blank" rel="noopener">WhatsApp</a>
     </nav>
-    <a href="https://wa.me/message/VU3NMZVWWKAZD1" class="nav-cta" target="_blank" rel="noopener">WhatsApp</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -397,7 +405,7 @@ body{padding-top:42px}
   <div class="hero-split">
     <div class="hero-half hero-left">
       <div class="hero-photo-side">
-        <img src="img/hero-priscilla.webp" alt="Priscilla Ribeiro, personal trainer e nutricionista" loading="eager">
+        <img src="img/hero-priscilla.jpg" alt="Priscilla Ribeiro, personal trainer e nutricionista" loading="eager">
         <div class="hero-photo-badge"><span class="b1">5 anos</span><span class="b2">de consultorio</span></div>
       </div>
       <div class="hero-tag"><span class="pill">Treino</span><span>Lado esquerdo</span></div>
@@ -485,7 +493,7 @@ body{padding-top:42px}
     <div class="dupla-split">
       <div class="dupla-col treino">
         <span class="col-label">TREINO</span>
-        <img src="img/method-treino.webp" alt="Personal training guiando aluna no kettlebell" loading="lazy">
+        <img src="img/method-treino.jpg" alt="Personal training guiando aluna no kettlebell" loading="lazy">
         <div class="col-text">
           <h4>Forca <em>direcionada</em></h4>
           <p>Periodizacao por objetivo. Forca, hipertrofia, resistencia, recomposicao, gestante ou pos-lesao. O plano muda, o metodo nao.</p>
@@ -497,7 +505,7 @@ body{padding-top:42px}
       </div>
       <div class="dupla-col nutri">
         <span class="col-label">NUTRI</span>
-        <img src="img/method-prato.webp" alt="Bowl fitness com frango, quinoa, abacate e batata-doce" loading="lazy">
+        <img src="img/method-prato.jpg" alt="Bowl fitness com frango, quinoa, abacate e batata-doce" loading="lazy">
         <div class="col-text">
           <h4>Estrutura <em>sem dieta</em></h4>
           <p>Plano alimentar individual, montado em cima do que voce ja come. Sem refeicao separada, sem suplemento caro, sem terrorismo nutricional.</p>
@@ -659,7 +667,7 @@ body{padding-top:42px}
       <h2>Personal <em>&amp;</em> Nutri. Uma so profissional.</h2>
     </div>
     <div class="sobre-photo-wrap">
-      <img src="img/sobre-priscilla.webp" alt="Priscilla Ribeiro, personal trainer e nutricionista esportiva" loading="lazy">
+      <img src="img/sobre-priscilla.jpg" alt="Priscilla Ribeiro, personal trainer e nutricionista esportiva" loading="lazy">
       <div class="ph-name">Priscilla <em>Ribeiro</em></div>
       <span class="ph-tag">Personal Trainer . Nutricionista Esportiva . CRN RJ 21101937</span>
     </div>
@@ -840,22 +848,30 @@ body{padding-top:42px}
   <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3 8.4 3 14.7c0 2.1.6 4 1.6 5.7L3 29l9-2.4c1.3.4 2.6.6 4 .6 7 0 13-5.4 13-11.7S23 3 16 3zm6.4 16.2c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.3.1-2.1-.1-.5-.2-1.2-.4-2-.7-3.5-1.5-5.8-5-6-5.3-.2-.3-1.4-1.9-1.4-3.6 0-1.7.9-2.5 1.2-2.8.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5.3.7.9 2.4 1 2.5.1.2.1.4 0 .6-.1.2-.2.3-.4.5l-.5.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.4.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.3.1 1.8.9 2.2 1 .3.2.6.2.7.4 0 .2 0 1-.3 1.8z"/></svg>
 </a>
 
-
+<script>
+/* MENU MOBILE - hamburger */
 (function(){
-  var bar = document.createElement('div');
-  bar.className = 'editor-bar';
-  bar.innerHTML = '<div class="eb-left"><span class="eb-badge">v2</span><span class="eb-name">Priscilla Ribeiro . Dupla Treino+Nutri</span><span class="eb-stats">. 53KB . 55/55 pre-flight . sem chat</span></div><a class="eb-cta" href="priscilla-ribeiro-nutri.html">. ver site</a>';
-  document.body.prepend(bar);
-  document.querySelectorAll('img[src^="img/"]').forEach(function(img){
-    img.addEventListener('click', function(e){
-      if(e.ctrlKey || e.metaKey){
-        e.preventDefault();
-        var url = prompt('Nova URL:', img.src);
-        if(url) img.src = url;
-      }
-    });
-    img.title = 'Ctrl+Click para trocar imagem';
+  var toggle=document.getElementById('nav-toggle');
+  if(!toggle) return;
+  var nav=document.querySelector('.header .nav');
+  var open=false;
+  function setOpen(v){
+    open=v;
+    toggle.classList.toggle('open',v);
+    toggle.setAttribute('aria-expanded',v?'true':'false');
+    toggle.setAttribute('aria-label',v?'Fechar menu':'Abrir menu');
+    nav.classList.toggle('open',v);
+    document.body.classList.toggle('nav-open',v);
+  }
+  toggle.addEventListener('click',function(){ setOpen(!open); });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){ setOpen(false); });
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&open) setOpen(false);
   });
 })();
+</script>
+
 </body>
 </html>

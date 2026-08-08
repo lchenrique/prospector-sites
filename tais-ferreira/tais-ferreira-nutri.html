@@ -73,9 +73,15 @@ h3{font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
 .topbar .sep{color:var(--ink3);margin:0 4px}
 .topbar a{transition:color .2s ease}
 .topbar a:hover{color:var(--bg)}
+@media(max-width:560px){
+  .topbar{font-size:9px;letter-spacing:.12em;padding:6px 0}
+  .topbar .row{flex-wrap:nowrap;gap:12px}
+  .topbar .row .left{display:none}
+  .topbar .row .right{gap:10px}
+}
 
 /* HEADER FIXO */
-.site-header{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.2)}
+.site-header{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:2px solid var(--ink2);backdrop-filter:saturate(1.2)}
 .site-header-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
 .brand{display:flex;align-items:center;gap:12px;font-family:var(--serif)}
 .monograma{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:11px;letter-spacing:.14em;font-weight:500;border-radius:2px}
@@ -83,10 +89,27 @@ h3{font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
 .brand-text b{font-weight:500;font-size:18px;letter-spacing:-.01em}
 .brand-text small{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);margin-top:3px}
 .site-nav{display:flex;align-items:center;gap:22px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
-.site-nav a{color:var(--ink2);transition:color .2s ease;padding:6px 0;border-bottom:1px solid transparent}
-.site-nav a:hover{color:var(--accent);border-bottom-color:var(--accent)}
-.site-nav .btn{padding:11px 22px;font-size:13px}
-@media(max-width:920px){.site-nav a:not(.btn){display:none}}
+.site-nav a:not(.btn){color:var(--ink2);transition:color .2s ease;padding:6px 0;border-bottom:1px solid transparent}
+.site-nav a:not(.btn):hover{color:var(--accent);border-bottom-color:var(--accent)}
+.site-nav .btn{padding:14px 26px;font-size:14px}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;width:40px;height:40px;position:relative;flex-shrink:0}
+.nav-toggle span{position:absolute;left:7px;right:7px;height:2px;background:var(--ink);transition:.25s}
+.nav-toggle span:nth-child(1){top:13px}.nav-toggle span:nth-child(2){top:19px}.nav-toggle span:nth-child(3){top:25px}
+@media(max-width:920px){
+  .site-nav a:not(.btn){display:none}
+  .nav-toggle{display:block}
+}
+/* MENU MOBILE - overlay fullscreen */
+@media(max-width:920px){
+  .site-nav{position:fixed;inset:0;z-index:40;flex-direction:column;justify-content:center;align-items:center;gap:26px;background:var(--bg);opacity:0;pointer-events:none;transition:opacity .22s ease;overflow:auto}
+  .site-nav.open{opacity:1;pointer-events:auto}
+  .site-nav a:not(.btn){display:block;font-size:15px;letter-spacing:.2em;padding:6px 0}
+  .site-nav .btn{margin-top:14px}
+  body.nav-open{overflow:hidden}
+  .nav-toggle.open span:nth-child(1){top:19px;transform:rotate(45deg)}
+  .nav-toggle.open span:nth-child(2){opacity:0}
+  .nav-toggle.open span:nth-child(3){top:19px;transform:rotate(-45deg)}
+}
 
 /* HERO */
 .hero{position:relative;padding:72px 0 96px;border-bottom:1px solid var(--line);overflow:hidden}
@@ -259,6 +282,9 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
 /* REVEAL ANIMATION */
 .rv{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
 .rv.on{opacity:1;transform:translateY(0)}
+
+.site-header .btn-ghost{background:var(--accent);color:#fff;border-color:var(--accent)}
+.site-header .btn-ghost:hover{background:var(--accent);color:#fff;filter:brightness(1.08);transform:translateY(-1px);box-shadow:0 8px 20px rgba(139,42,27,.30)}
 </style>
 </head>
 <body>
@@ -291,6 +317,7 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
       <a href="#contato">Contato</a>
       <a class="btn btn-ghost" href="#" data-chat="open" aria-label="Abrir conversa com a Tais">Conversar</a>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -313,7 +340,7 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
       </div>
       <div class="hero-img rv">
         <div class="frame">
-          <img src="img/hero-food-mamao-manga.webp?v=3" alt="Mamao e manga fatiados em tábua de madeira, com frasco de chia e lupa ao lado, em mesa de marmore cream">
+          <img src="img/hero-food-mamao-manga.jpg?v=3" alt="Mamao e manga fatiados em tábua de madeira, com frasco de chia e lupa ao lado, em mesa de marmore cream">
           <div class="caption"><b>Fig. 01</b>Frutas frescas, sementes e avaliacao. Nutricao que comeca no detalhe.</div>
         </div>
         <div class="tag">Nutricao clinica</div>
@@ -332,7 +359,7 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
       </div>
     </div>
     <div class="video-frame rv">
-      <video src="video/consultorio-tais.mp4" controls preload="metadata" playsinline poster="img/video-poster-tais.webp"></video>
+      <video src="video/consultorio-tais.mp4" controls preload="metadata" playsinline poster="img/video-poster-tais.jpg"></video>
     </div>
     <p class="video-caption">Gravado no consultorio da Tais, na Ilha do Governador, RJ.</p>
     <div class="video-cta rv">
@@ -530,7 +557,7 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
     <div class="sobre-grid">
       <div class="sobre-photo rv">
         <div class="photo-frame">
-          <img src="img/photo-tais-portrait.webp?v=3" alt="Tais Ferreira, nutricionista, no consultorio da Ilha do Governador">
+          <img src="img/photo-tais-portrait.jpg?v=3" alt="Tais Ferreira, nutricionista, no consultorio da Ilha do Governador">
         </div>
         <div class="formation-card">
           <span class="lbl">Formacao</span>
@@ -564,11 +591,11 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
     </div>
     <div class="contato-galeria rv">
       <figure class="galeria-item">
-        <img src="img/abordagem-bioimpedancia.webp?v=2" alt="Bioimpedancia, fita metrica, maca verde e caderno com plano alimentar aberto em mesa cream">
+        <img src="img/abordagem-bioimpedancia.jpg?v=2" alt="Bioimpedancia, fita metrica, maca verde e caderno com plano alimentar aberto em mesa cream">
         <figcaption><b>Fig. A</b>Avaliacao completa. Composicao corporal, IMC, bioimpedancia.</figcaption>
       </figure>
       <figure class="galeria-item">
-        <img src="img/consultorio-arrumado.webp?v=2" alt="Consultorio da Tais com poltrona verde, diploma na parede e planta na janela">
+        <img src="img/consultorio-arrumado.jpg?v=2" alt="Consultorio da Tais com poltrona verde, diploma na parede e planta na janela">
         <figcaption><b>Fig. B</b>O consultorio. Ilha do Governador, sala 207.</figcaption>
       </figure>
     </div>
@@ -652,7 +679,7 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
   </button>
   <div class="chat-panel" id="chat-panel" role="dialog" aria-label="Chat com a Tais Ferreira" hidden>
     <div class="chat-header">
-      <div class="chat-avatar"><img src="img/photo-tais-portrait.webp?v=3" alt="Tais Ferreira"></div>
+      <div class="chat-avatar"><img src="img/photo-tais-portrait.jpg?v=3" alt="Tais Ferreira"></div>
       <div class="chat-info">
         <b>Tais Ferreira</b>
         <span class="chat-status">Atendimento em horario comercial</span>
@@ -673,7 +700,7 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
   var close = document.getElementById('chat-close');
   var body = document.getElementById('chat-body');
   var quick = document.getElementById('chat-quick');
-  var WA = 'https://wa.me/5521987990463.replace('"','').replace('"','') + '?text=' + encodeURIComponent('Ola, vim pelo site da Tais e quero conversar.');
+  var WA = 'https://wa.me/5521987990463?text=' + encodeURIComponent('Ola, vim pelo site da Tais e quero conversar.');
   var opened = false;
   var busy = false;
 
@@ -780,6 +807,31 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
 })();
 </script>
 
+<script>
+/* MENU MOBILE - hamburger */
+(function(){
+  var toggle=document.getElementById('nav-toggle');
+  if(!toggle) return;
+  var nav=document.querySelector('.site-nav');
+  var open=false;
+  function setOpen(v){
+    open=v;
+    toggle.classList.toggle('open',v);
+    toggle.setAttribute('aria-expanded',v?'true':'false');
+    toggle.setAttribute('aria-label',v?'Fechar menu':'Abrir menu');
+    nav.classList.toggle('open',v);
+    document.body.classList.toggle('nav-open',v);
+  }
+  toggle.addEventListener('click',function(){ setOpen(!open); });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){ setOpen(false); });
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&open) setOpen(false);
+  });
+})();
+</script>
+
 
 <script>
 (function(){
@@ -801,60 +853,5 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
 })();
 </script>
 
-<!-- PROSPECTOR-EDITOR-START -->
-<style id="pe-style">
-#pe-bar{position:fixed;top:0;left:0;right:0;z-index:99999;background:#111;color:#fff;font:14px/1 -apple-system,Segoe UI,Roboto,sans-serif;display:flex;align-items:center;gap:16px;padding:10px 16px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
-#pe-bar button{background:#22c55e;color:#fff;border:0;border-radius:8px;padding:8px 16px;font-weight:600;cursor:pointer}
-#pe-bar button:hover{background:#16a34a}
-body{margin-top:44px !important}
-.pe-hover{outline:2px dashed #22c55e !important;outline-offset:2px;cursor:pointer}
-[contenteditable="true"]:focus{outline:2px solid #3b82f6 !important;outline-offset:2px}
-</style>
-<div id="pe-bar">
-  <strong>Modo edição</strong>
-  <span>Clique em textos para editar · clique em imagens para trocar</span>
-  <button id="pe-export" type="button">Exportar página</button>
-</div>
-<input type="file" id="pe-file" accept="image/*" style="display:none">
-<script id="pe-script">
-(function(){
-  var TEXT='h1,h2,h3,h4,h5,h6,p,li,a,span,button,td,th,figcaption,blockquote,strong,em';
-  document.querySelectorAll(TEXT).forEach(function(el){
-    if(el.closest('#pe-bar'))return;
-    if(el.children.length===0||el.childElementCount<=1){
-      el.addEventListener('click',function(e){
-        if(el.tagName==='A'||el.tagName==='BUTTON')e.preventDefault();
-        el.setAttribute('contenteditable','true');el.focus();
-      });
-      el.addEventListener('mouseenter',function(){el.classList.add('pe-hover')});
-      el.addEventListener('mouseleave',function(){el.classList.remove('pe-hover')});
-      el.addEventListener('blur',function(){el.removeAttribute('contenteditable')});
-    }
-  });
-  var fileInput=document.getElementById('pe-file'),currentImg=null;
-  document.querySelectorAll('img').forEach(function(img){
-    img.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();currentImg=img;fileInput.click()});
-    img.addEventListener('mouseenter',function(){img.classList.add('pe-hover')});
-    img.addEventListener('mouseleave',function(){img.classList.remove('pe-hover')});
-  });
-  fileInput.addEventListener('change',function(){
-    var f=fileInput.files[0];if(!f||!currentImg)return;
-    var r=new FileReader();
-    r.onload=function(){currentImg.src=r.result;if(currentImg.srcset)currentImg.removeAttribute('srcset')};
-    r.readAsDataURL(f);fileInput.value='';
-  });
-  document.getElementById('pe-export').addEventListener('click',function(){
-    var doc=document.documentElement.cloneNode(true);
-    ['#pe-bar','#pe-style','#pe-script','#pe-file'].forEach(function(s){var n=doc.querySelector(s);if(n)n.remove()});
-    doc.querySelectorAll('[contenteditable]').forEach(function(n){n.removeAttribute('contenteditable')});
-    doc.querySelectorAll('.pe-hover').forEach(function(n){n.classList.remove('pe-hover')});
-    var html='<!DOCTYPE html>
-'+doc.outerHTML;
-    var blob=new Blob([html],{type:'text/html'});
-    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='index.html';a.click();
-  });
-})();
-</script>
-<!-- PROSPECTOR-EDITOR-END -->
 </body>
 </html>

@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="icon" href="img/consultorio-clean.webp" type="image/jpeg">
+<link rel="icon" href="img/consultorio-clean.jpg" type="image/jpeg">
 <style>
 :root{
   --bg:#F5F2EB;
@@ -58,10 +58,10 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 .brand-text b{font-family:var(--serif);font-weight:600;font-size:20px;letter-spacing:-.01em;color:var(--ink);display:block}
 .brand-text small{font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);margin-top:4px;display:block;font-weight:500}
 .nav{display:flex;align-items:center;gap:28px}
-.nav a{font-size:13px;font-weight:500;color:var(--ink2);transition:color .2s}
-.nav a:hover{color:var(--sage)}
-.nav-cta{background:var(--ink);color:var(--ink-soft);padding:12px 22px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--mono);font-weight:500;border-radius:999px;transition:all .2s}
-.nav-cta:hover{background:var(--sage);transform:translateY(-1px)}
+.nav a:not(.nav-cta){font-size:13px;font-weight:500;color:var(--ink2);transition:color .2s}
+.nav a:not(.nav-cta):hover{color:var(--sage)}
+.nav-cta{background:var(--ink);color:#fff;padding:12px 22px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--mono);font-weight:500;border-radius:999px;transition:all .2s}
+.nav-cta:hover{background:var(--sage);color:#fff;transform:translateY(-1px)}
 @media(max-width:920px){.nav a:not(.nav-cta){display:none}}
 
 /* ===== HERO editorial central ===== */
@@ -114,7 +114,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 .sobre-art .quote-mark{position:absolute;top:24px;left:34px;font-family:var(--serif);font-size:120px;line-height:1;color:var(--sage);font-style:italic;opacity:.55}
 .sobre-art blockquote{font-family:var(--serif);font-size:clamp(20px,2vw,26px);line-height:1.4;font-weight:400;font-style:italic;color:var(--ink-soft);position:relative;z-index:1}
 .sobre-art .attr{margin-top:24px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-soft);position:relative;z-index:1}
-.sobre-art .leaf{position:absolute;width:130px;height:130px;background:url('img/cha-xicara.webp') center/cover;border-radius:50%;bottom:-30px;right:-20px;border:6px solid var(--bg);box-shadow:0 20px 40px -15px rgba(31,38,32,.25)}
+.sobre-art .leaf{position:absolute;width:130px;height:130px;background:url('img/cha-xicara.jpg') center/cover;border-radius:50%;bottom:-30px;right:-20px;border:6px solid var(--bg);box-shadow:0 20px 40px -15px rgba(31,38,32,.25)}
 @media(max-width:900px){.sobre-inner{grid-template-columns:1fr;gap:50px}.sobre-art{min-height:auto}.sobre-art .quote-card{padding:42px 32px}.sobre-art .leaf{width:90px;height:90px;bottom:-15px;right:0}}
 
 /* ===== ATENDIMENTOS ===== */
@@ -212,6 +212,9 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.fab-pulse{animation:none}}
+
+.header .nav-cta{background:var(--terra);color:#fff;border:1px solid var(--terra)}
+.header .nav-cta:hover{background:var(--terra-soft);color:#fff;border-color:var(--terra-soft)}
 </style>
 </head>
 <body>
@@ -330,7 +333,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 
       <article class="atend-card reveal">
         <div class="atend-img">
-          <img src="img/prato-comida-brasileira.webp" alt="Prato de comida caseira brasileira, exemplo de refeicao balanceada">
+          <img src="img/prato-comida-brasileira.jpg" alt="Prato de comida caseira brasileira, exemplo de refeicao balanceada">
           <span class="badge">01 . Clinica</span>
         </div>
         <div class="atend-body">
@@ -342,7 +345,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 
       <article class="atend-card reveal">
         <div class="atend-img">
-          <img src="img/ingredientes-coloridos.webp" alt="Ingredientes coloridos em tigela, simbolo de alimentacao variada">
+          <img src="img/ingredientes-coloridos.jpg" alt="Ingredientes coloridos em tigela, simbolo de alimentacao variada">
           <span class="badge">02 . Emagrecimento</span>
         </div>
         <div class="atend-body">
@@ -354,7 +357,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 
       <article class="atend-card reveal">
         <div class="atend-img">
-          <img src="img/maca-aveia.webp" alt="Maca verde fatiada com aveia, simbolo de habitos saudaveis">
+          <img src="img/maca-aveia.jpg" alt="Maca verde fatiada com aveia, simbolo de habitos saudaveis">
           <span class="badge">03 . Qualidade de vida</span>
         </div>
         <div class="atend-body">
@@ -366,7 +369,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 
       <article class="atend-card reveal">
         <div class="atend-img">
-          <img src="img/consultorio-clean.webp" alt="Consultorio clean e moderno, simbolo de atendimento online ou presencial">
+          <img src="img/consultorio-clean.jpg" alt="Consultorio clean e moderno, simbolo de atendimento online ou presencial">
           <span class="badge">04 . Online</span>
         </div>
         <div class="atend-body">
@@ -413,16 +416,16 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
   <div class="container">
     <div class="galeria-grid">
       <div class="galeria-img reveal">
-        <img src="img/consultorio-clean.webp" alt="Consultorio de nutricao, ambiente clean e acolhedor">
+        <img src="img/consultorio-clean.jpg" alt="Consultorio de nutricao, ambiente clean e acolhedor">
         <span class="caption">Consultorio . Ilha do Governador</span>
       </div>
       <div class="galeria-stack">
         <div class="galeria-img reveal">
-          <img src="img/cha-xicara.webp" alt="Cha em xicara ceramica, momento de pausa no atendimento">
+          <img src="img/cha-xicara.jpg" alt="Cha em xicara ceramica, momento de pausa no atendimento">
           <span class="caption">A pausa importa</span>
         </div>
         <div class="galeria-img reveal">
-          <img src="img/maca-aveia.webp" alt="Maca e aveia, exemplo de lanche saudavel recomendado">
+          <img src="img/maca-aveia.jpg" alt="Maca e aveia, exemplo de lanche saudavel recomendado">
           <span class="caption">Simples e possivel</span>
         </div>
       </div>
@@ -524,147 +527,5 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
   });
 });
 </script>
-
-<!-- PROSPECTOR-EDITOR-START -->
-<style id="pe-style">
-#pe-bar{position:fixed;top:0;left:0;right:0;z-index:99999;background:#111;color:#fff;font:13px/1.4 -apple-system,Segoe UI,Roboto,sans-serif;display:flex;align-items:center;gap:18px;padding:11px 18px;box-shadow:0 2px 10px rgba(0,0,0,.3);flex-wrap:wrap}
-#pe-bar strong{color:#fff;font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:11px}
-#pe-bar span{color:#a3a3a3;font-size:12px}
-#pe-bar button{background:#22c55e;color:#fff;border:0;border-radius:8px;padding:8px 16px;font-weight:600;cursor:pointer;font-size:12px;letter-spacing:.04em;transition:background .2s}
-#pe-bar button:hover{background:#16a34a}
-#pe-bar .pe-tip{background:#1f2937;padding:6px 12px;border-radius:6px;font-size:11px;color:#d1d5db}
-body{padding-top:48px !important}
-.pe-hover{outline:2px dashed #22c55e !important;outline-offset:3px;cursor:pointer}
-[contenteditable="true"]:focus{outline:2px solid #3b82f6 !important;outline-offset:3px;background:rgba(59,130,246,.04)}
-</style>
-<div id="pe-bar">
-  <strong>Modo edição</strong>
-  <span>Clique nos textos para editar . clique nas imagens para trocar</span>
-  <span class="pe-tip">Use Ctrl+S para salvar manualmente</span>
-  <button id="pe-save" type="button">Salvar no navegador</button>
-  <button id="pe-export" type="button">Exportar HTML</button>
-</div>
-<input type="file" id="pe-file" accept="image/*" style="display:none">
-<script id="pe-script">
-(function(){
-  var STORAGE='mariana-editor-v1';
-  var TEXT='h1,h2,h3,h4,h5,h6,p,li,a,span,button,td,th,figcaption,blockquote,strong,em,small';
-
-  function attachText(el){
-    if(el.closest('#pe-bar'))return;
-    if(el.children.length>1 && el.querySelector('img'))return;
-    el.addEventListener('click',function(e){
-      if(el.tagName==='A'||el.tagName==='BUTTON')e.preventDefault();
-      el.setAttribute('contenteditable','true');
-      el.focus();
-    });
-    el.addEventListener('mouseenter',function(){el.classList.add('pe-hover')});
-    el.addEventListener('mouseleave',function(){el.classList.remove('pe-hover')});
-    el.addEventListener('blur',function(){el.removeAttribute('contenteditable');saveToStorage()});
-  }
-
-  function attachImg(img){
-    img.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();currentImg=img;fileInput.click()});
-    img.addEventListener('mouseenter',function(){img.classList.add('pe-hover')});
-    img.addEventListener('mouseleave',function(){img.classList.remove('pe-hover')});
-  }
-
-  document.querySelectorAll(TEXT).forEach(attachText);
-  var fileInput=document.getElementById('pe-file'),currentImg=null;
-  document.querySelectorAll('img').forEach(attachImg);
-  fileInput.addEventListener('change',function(){
-    var f=fileInput.files[0];if(!f||!currentImg)return;
-    var r=new FileReader();
-    r.onload=function(){
-      currentImg.src=r.result;
-      if(currentImg.srcset)currentImg.removeAttribute('srcset');
-      saveToStorage();
-    };
-    r.readAsDataURL(f);
-    fileInput.value='';
-  });
-
-  function saveToStorage(){
-    try{
-      var edits=[];
-      document.querySelectorAll('[data-pe-original]').forEach(function(el){
-        edits.push({sel:el.dataset.peOriginal,html:el.innerHTML});
-      });
-      var imgs=[];
-      document.querySelectorAll('img').forEach(function(img,i){
-        if(img.src.indexOf('data:')===0){
-          imgs.push({i:i,src:img.src,alt:img.alt||''});
-        }
-      });
-      localStorage.setItem(STORAGE,JSON.stringify({text:edits,imgs:imgs,t:Date.now()}));
-    }catch(e){console.warn('save err',e)}
-  }
-
-  function loadFromStorage(){
-    try{
-      var raw=localStorage.getItem(STORAGE);if(!raw)return;
-      var data=JSON.parse(raw);
-      (data.text||[]).forEach(function(e){
-        var n=document.querySelector(e.sel);
-        if(n)n.innerHTML=e.html;
-      });
-      (data.imgs||[]).forEach(function(im){
-        var imgs=document.querySelectorAll('img');
-        if(imgs[im.i]){imgs[im.i].src=im.src;if(im.alt)imgs[im.i].alt=im.alt;}
-      });
-    }catch(e){console.warn('load err',e)}
-  }
-
-  function markOriginals(){
-    document.querySelectorAll(TEXT).forEach(function(el,i){
-      if(el.closest('#pe-bar'))return;
-      el.setAttribute('data-pe-original','[data-pe-original="'+cssPath(el)+'"]');
-    });
-  }
-  function cssPath(el){
-    var p=[];while(el&&el.nodeType===1&&el!==document.body){
-      var s=el.nodeName.toLowerCase();
-      if(el.id){s+='#'+el.id;p.unshift(s);break}
-      var sib=el.parentNode?Array.from(el.parentNode.children).filter(function(c){return c.nodeName===el.nodeName}):[];
-      if(sib.length>1){s+=':nth-of-type('+(sib.indexOf(el)+1)+')'}
-      p.unshift(s);el=el.parentNode;
-    }
-    return p.join('>');
-  }
-
-  document.getElementById('pe-save').addEventListener('click',function(){
-    saveToStorage();
-    var btn=this;var orig=btn.textContent;
-    btn.textContent='Salvo . '+new Date().toLocaleTimeString();
-    btn.style.background='#0ea5e9';
-    setTimeout(function(){btn.textContent=orig;btn.style.background=''},1800);
-  });
-
-  document.getElementById('pe-export').addEventListener('click',function(){
-    var doc=document.documentElement.cloneNode(true);
-    ['#pe-bar','#pe-style','#pe-script','#pe-file'].forEach(function(s){var n=doc.querySelector(s);if(n)n.remove()});
-    doc.querySelectorAll('[contenteditable]').forEach(function(n){n.removeAttribute('contenteditable')});
-    doc.querySelectorAll('.pe-hover').forEach(function(n){n.classList.remove('pe-hover')});
-    doc.querySelectorAll('[data-pe-original]').forEach(function(n){n.removeAttribute('data-pe-original')});
-    doc.body.style.paddingTop='';
-    var html='<!DOCTYPE html>\n'+doc.outerHTML;
-    var blob=new Blob([html],{type:'text/html'});
-    var a=document.createElement('a');
-    a.href=URL.createObjectURL(blob);
-    a.download='mariana-silveira-nutri.html';
-    a.click();
-  });
-
-  document.addEventListener('keydown',function(e){
-    if((e.ctrlKey||e.metaKey)&&e.key==='s'){
-      e.preventDefault();saveToStorage();
-    }
-  });
-
-  markOriginals();
-  loadFromStorage();
-})();
-</script>
-<!-- PROSPECTOR-EDITOR-END -->
 </body>
 </html>

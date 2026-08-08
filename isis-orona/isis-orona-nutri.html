@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Isis Orona . Nutricionista . Ilha do Governador, Rio de Janeiro</title>
+<meta name="description" content="Nutricionista na Ilha do Governador, Rio de Janeiro, com atendimento online e presencial. Acompanhamento individual em metabolismo, nutricao esportiva, emagrecimento e qualidade de vida. Nota 5.0 no Google com 94 avaliacoes.">
+<meta name="theme-color" content="#2D4530">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="img/prato-completo.webp" type="image/jpeg">
+<style>
+:root{
+  --paper:#F4EFE3;
+  --paper2:#E9E1CC;
+  --paper3:#DDD2B6;
+  --ink:#1B231C;
+  --ink2:#3D4A3F;
+  --ink3:#6E7968;
+  --moss:#2D4530;
+  --moss-dark:#1B2C1E;
+  --moss-soft:#5C7A60;
+  --apricot:#C75A2E;
+  --apricot-soft:#E08760;
+  --apricot-deep:#9A3F1C;
+  --line:#D6CAAE;
+  --line-soft:#E5DCC4;
+  --serif:'Newsreader',Georgia,serif;
+  --sans:'Inter Tight',system-ui,-apple-system,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-feature-settings:"ss01","cv11"}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:inherit}
+.serif{font-family:var(--serif);font-weight:400}
+.mono{font-family:var(--mono);font-weight:400}
+.container{max-width:1320px;margin:0 auto;padding:0 32px}
+
+/* ===== MASTHEAD (estilo jornal) ===== */
+.masthead{background:var(--moss);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:10px 0}
+.masthead .container{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.masthead .left,.masthead .right{display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap}
+.masthead b{color:var(--apricot-soft);font-weight:500}
+.masthead .dot{width:5px;height:5px;border-radius:50%;background:var(--apricot);display:inline-block}
+
+/* ===== HEADER ===== */
+.header{position:sticky;top:0;z-index:50;background:rgba(244,239,227,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.header .container{display:flex;justify-content:space-between;align-items:center;padding:18px 32px;gap:24px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand-mark{width:46px;height:46px;border-radius:50%;background:var(--moss);color:var(--paper);font-family:var(--serif);font-style:italic;font-weight:500;font-size:22px;display:flex;align-items:center;justify-content:center;letter-spacing:-.04em}
+.brand-text{line-height:1.05}
+.brand-text .b1{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.brand-text .b2{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-top:3px}
+.nav{display:flex;gap:28px;align-items:center}
+.nav a:not(.nav-cta){font-size:13px;font-weight:500;color:var(--ink2);transition:color .2s;letter-spacing:.01em}
+.nav a:not(.nav-cta):hover{color:var(--moss)}
+.nav-cta{background:var(--moss);color:#fff;padding:12px 22px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-family:var(--mono);font-weight:500;transition:all .2s;border-radius:999px}
+.nav-cta:hover{background:var(--apricot);color:#fff}
+
+/* ===== HERO (manifesto + foto de comida com card de "prato do dia") ===== */
+.hero{position:relative;overflow:hidden;background:var(--paper);padding:72px 0 88px}
+.hero::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:clamp(40px,5vw,72px);align-items:end}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:14px;margin-bottom:30px}
+.hero-eyebrow .ord{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--apricot);text-transform:uppercase}
+.hero-eyebrow .bar{width:36px;height:1.5px;background:var(--apricot);display:inline-block}
+.hero h1{font-family:var(--serif);font-size:clamp(46px,6.2vw,86px);line-height:.98;font-weight:500;letter-spacing:-.025em;margin-bottom:28px;color:var(--ink);font-variation-settings:"opsz" 36}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--moss)}
+.hero h1 .dot-acc{color:var(--apricot)}
+.hero .lead{font-family:var(--serif);font-size:clamp(18px,1.6vw,21px);line-height:1.5;color:var(--ink2);max-width:540px;margin-bottom:38px;font-weight:400}
+.hero-cta-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:42px}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 28px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-family:var(--mono);font-weight:500;border-radius:999px;transition:all .2s;width:fit-content;white-space:nowrap}
+.btn-primary{background:var(--moss);color:var(--paper);border:1px solid var(--moss)}
+.btn-primary:hover{background:var(--apricot);border-color:var(--apricot);transform:translateY(-2px);box-shadow:0 14px 30px rgba(199,90,46,.22)}
+.btn-ghost{color:var(--ink);border:1px solid var(--line);background:transparent}
+.btn-ghost:hover{border-color:var(--moss);color:var(--moss)}
+.hero-meta{display:flex;gap:28px;align-items:center;flex-wrap:wrap;padding-top:28px;border-top:1px solid var(--line)}
+.hero-meta .rating{display:flex;align-items:baseline;gap:8px}
+.hero-meta .rating b{font-family:var(--serif);font-size:34px;font-weight:600;color:var(--ink);line-height:1;letter-spacing:-.02em}
+.hero-meta .rating .stars{color:var(--apricot);font-size:18px;letter-spacing:.05em;line-height:1}
+.hero-meta .rating small{font-family:var(--sans);font-size:12px;color:var(--ink3);display:block;margin-top:6px;letter-spacing:.02em}
+.hero-meta .div{width:1px;height:42px;background:var(--line)}
+.hero-meta .stat{font-family:var(--serif);font-size:14px;font-style:italic;color:var(--ink2);line-height:1.4}
+.hero-meta .stat b{font-style:normal;font-weight:600;color:var(--ink);display:block;font-size:18px}
+
+/* HERO MEDIA . composicao de revista */
+.hero-media{position:relative;align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end;min-height:520px}
+.hero-photo{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--line);box-shadow:0 30px 60px -20px rgba(27,35,28,.18);background:var(--paper2)}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-photo .corner{position:absolute;left:18px;top:18px;font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--paper);background:rgba(27,35,28,.6);padding:7px 12px;border-radius:4px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.hero-plato{position:absolute;right:-12px;bottom:30px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:18px 22px 20px;max-width:260px;box-shadow:0 24px 50px -18px rgba(27,35,28,.18);z-index:2}
+.hero-plato .lbl{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--apricot);margin-bottom:8px;display:block}
+.hero-plato .nome{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);line-height:1.1;margin-bottom:8px;letter-spacing:-.01em}
+.hero-plato .desc{font-size:13px;color:var(--ink2);line-height:1.5}
+
+/* ===== PROVA (numero grande) ===== */
+.proof{background:var(--moss);color:var(--paper);padding:64px 0;border-top:1px solid var(--moss-dark);border-bottom:1px solid var(--moss-dark)}
+.proof .container{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.proof h2{font-family:var(--serif);font-size:clamp(28px,3.4vw,46px);font-weight:500;line-height:1.1;letter-spacing:-.02em;max-width:640px}
+.proof h2 em{font-style:italic;color:var(--apricot-soft);font-weight:500}
+.proof-stats{display:flex;gap:36px}
+.proof-stats .st{text-align:left}
+.proof-stats .st b{font-family:var(--serif);font-size:clamp(40px,4.4vw,60px);font-weight:500;color:var(--paper);line-height:1;letter-spacing:-.02em;display:block}
+.proof-stats .st b em{font-style:italic;color:var(--apricot-soft)}
+.proof-stats .st span{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--apricot-soft);margin-top:8px;display:block}
+
+/* ===== DESPENSA (bento de ingredientes) ===== */
+.despensa{background:var(--paper);padding:120px 0}
+.section-head{max-width:880px;margin-bottom:64px}
+.section-head .ord{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--apricot);text-transform:uppercase;margin-bottom:18px;display:block}
+.section-head h2{font-family:var(--serif);font-size:clamp(34px,4.4vw,62px);font-weight:500;color:var(--ink);line-height:1.04;letter-spacing:-.025em;max-width:760px;font-variation-settings:"opsz" 32}
+.section-head h2 em{font-style:italic;font-weight:500;color:var(--moss)}
+.section-head p{font-family:var(--serif);font-size:clamp(17px,1.5vw,19px);line-height:1.55;color:var(--ink2);max-width:580px;margin-top:22px}
+
+.desp-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(180px,auto);gap:14px}
+.desp-cell{position:relative;background:var(--paper2);border:1px solid var(--line);border-radius:6px;overflow:hidden;padding:22px 22px 24px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .25s,border-color .25s}
+.desp-cell:hover{transform:translateY(-3px);border-color:var(--moss)}
+.desp-cell .num{font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:var(--apricot);text-transform:uppercase;margin-bottom:10px}
+.desp-cell h3{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ink);line-height:1.1;margin-bottom:6px;letter-spacing:-.01em}
+.desp-cell p{font-size:13px;color:var(--ink3);line-height:1.5}
+.desp-cell .pic{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.82;transition:opacity .3s,transform .4s}
+.desp-cell:hover .pic{opacity:.95;transform:scale(1.04)}
+.desp-cell.has-pic{padding-top:60%}
+.desp-cell.has-pic h3,.desp-cell.has-pic p,.desp-cell.has-pic .num{position:relative;background:linear-gradient(180deg,rgba(27,35,28,0) 0%,rgba(27,35,28,.7) 80%);color:var(--paper);padding:4px 14px 6px;margin:0;align-self:flex-start;width:100%;border-radius:0 0 0 0}
+.desp-cell.has-pic h3{font-size:20px;color:#fff;padding-top:18px}
+.desp-cell.has-pic p{color:#E5DCC4;padding-bottom:14px}
+.desp-cell.has-pic .num{color:var(--apricot-soft);padding-top:18px;padding-bottom:0}
+.desp-cell.s1{grid-column:span 2;grid-row:span 2}
+.desp-cell.s2{grid-column:span 2}
+.desp-cell.s3{grid-column:span 2}
+.desp-cell.s4{grid-column:span 3;grid-row:span 1}
+.desp-cell.s5{grid-column:span 3;grid-row:span 1}
+.desp-cell.s6{grid-column:span 2}
+.desp-cell.s7{grid-column:span 2}
+.desp-cell.s8{grid-column:span 2}
+
+/* ===== SERVICOS (indice numerado) ===== */
+.servicos{background:var(--paper2);padding:120px 0;border-top:1px solid var(--line)}
+.servicos .section-head{margin-bottom:54px}
+.serv-list{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
+.serv-item{padding:42px 8px 42px 0;border-bottom:1px solid var(--line);position:relative;transition:background .2s}
+.serv-item:hover{background:rgba(45,69,48,.02)}
+.serv-item.right{padding-left:48px;padding-right:8px;border-left:1px solid var(--line)}
+.serv-item .ord{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--apricot);text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:14px}
+.serv-item .ord::after{content:"";flex:1;height:1px;background:var(--line)}
+.serv-item h3{font-family:var(--serif);font-size:clamp(24px,2.4vw,30px);font-weight:500;color:var(--ink);line-height:1.1;margin-bottom:12px;letter-spacing:-.01em}
+.serv-item h3 em{font-style:italic;color:var(--moss);font-weight:500}
+.serv-item p{font-size:15px;color:var(--ink2);line-height:1.65;max-width:440px}
+.serv-item .cta{margin-top:18px;display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--moss);transition:gap .2s}
+.serv-item .cta:hover{gap:14px;color:var(--apricot)}
+.serv-item .cta::after{content:"→";font-family:inherit;font-size:14px;line-height:1}
+
+/* ===== SOBRE (cartao de credenciais, sem foto) ===== */
+.sobre{background:var(--paper);padding:120px 0}
+.sobre-inner{max-width:880px;margin:0 auto;text-align:center}
+.sobre-inner .ord{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--apricot);text-transform:uppercase;margin-bottom:22px;display:inline-block}
+.sobre-inner h2{font-family:var(--serif);font-size:clamp(40px,5.4vw,72px);font-weight:500;color:var(--ink);line-height:1.02;letter-spacing:-.025em;margin-bottom:36px;font-variation-settings:"opsz" 36}
+.sobre-inner h2 em{font-style:italic;color:var(--moss);font-weight:500}
+.sobre-quote{font-family:var(--serif);font-size:clamp(20px,2vw,25px);font-style:italic;line-height:1.5;color:var(--ink);max-width:700px;margin:0 auto 36px;font-weight:400}
+.sobre-assinatura{margin:0 auto 56px;max-width:560px}
+.sobre-assinatura .nome{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.sobre-assinatura .crn{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ink3);text-transform:uppercase;margin-top:6px;display:block}
+.credenciais{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:8px;background:var(--paper2);overflow:hidden;margin-top:20px}
+.cred{padding:30px 22px;border-right:1px solid var(--line);text-align:left}
+.cred:last-child{border-right:0}
+.cred .lbl{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--apricot);margin-bottom:12px;display:block}
+.cred b{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink);line-height:1.2;display:block;margin-bottom:6px;letter-spacing:-.01em}
+.cred span{font-size:13px;color:var(--ink2);line-height:1.5}
+.areas{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:36px}
+.area{font-family:var(--sans);font-size:12.5px;letter-spacing:.02em;padding:10px 18px;border:1px solid var(--line);border-radius:999px;color:var(--ink2);background:var(--paper)}
+
+/* ===== COMO FUNCIONA (timeline vertical) ===== */
+.como{background:var(--moss);color:var(--paper);padding:120px 0;position:relative;overflow:hidden}
+.como::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 90% 20%,rgba(199,90,46,.08),transparent 60%);pointer-events:none}
+.como .section-head .ord{color:var(--apricot-soft)}
+.como .section-head h2{color:var(--paper)}
+.como .section-head h2 em{color:var(--apricot-soft)}
+.como .section-head p{color:#C9D8D0}
+.timeline{position:relative;max-width:920px;margin:0 auto;padding-left:0}
+.timeline::before{content:"";position:absolute;left:42px;top:18px;bottom:18px;width:1px;background:linear-gradient(180deg,transparent,var(--apricot-soft) 8%,var(--apricot) 50%,var(--apricot-soft) 92%,transparent)}
+.tl-step{display:grid;grid-template-columns:84px 1fr;gap:36px;align-items:flex-start;padding:38px 0;position:relative}
+.tl-step .dot{width:84px;height:84px;border-radius:50%;background:var(--moss-dark);border:1px solid var(--apricot);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:26px;font-style:italic;font-weight:500;color:var(--apricot-soft);position:relative;z-index:2;flex:none}
+.tl-step .body h3{font-family:var(--serif);font-size:clamp(22px,2.2vw,28px);font-weight:500;color:var(--paper);margin-bottom:10px;letter-spacing:-.01em}
+.tl-step .body h3 em{font-style:italic;color:var(--apricot-soft);font-weight:500}
+.tl-step .body p{font-size:15.5px;color:#C9D8D0;line-height:1.65;max-width:600px}
+.tl-step .body .meta{margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--apricot-soft)}
+
+/* ===== AVALIACOES (mosaico) ===== */
+.avaliacoes{background:var(--paper);padding:120px 0}
+.av-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
+.av-main{background:var(--moss);color:var(--paper);border-radius:10px;padding:48px 44px;display:flex;flex-direction:column;justify-content:space-between;gap:32px;min-height:380px}
+.av-main .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--apricot-soft)}
+.av-main .big{font-family:var(--serif);font-size:clamp(80px,11vw,140px);font-weight:500;line-height:.95;letter-spacing:-.04em;color:var(--paper);font-variation-settings:"opsz" 60}
+.av-main .big em{font-style:italic;color:var(--apricot-soft)}
+.av-main .bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;border-top:1px solid rgba(244,239,227,.18);padding-top:24px}
+.av-main .bottom .stars{color:var(--apricot-soft);font-size:22px;letter-spacing:.06em;line-height:1}
+.av-main .bottom .text{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.4;color:#E5DCC4;max-width:280px}
+.av-side{display:grid;grid-template-rows:1fr 1fr;gap:20px}
+.av-card{background:var(--paper2);border:1px solid var(--line);border-radius:10px;padding:30px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.av-card .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--apricot)}
+.av-card b{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--ink);line-height:1.25;letter-spacing:-.01em}
+.av-card p{font-size:14px;color:var(--ink2);line-height:1.55}
+.av-card .lbl-tipo{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3)}
+
+/* ===== CTA FINAL ===== */
+.cta-band{background:var(--moss-dark);color:var(--paper);padding:100px 0;position:relative;overflow:hidden}
+.cta-band::before{content:"";position:absolute;right:-80px;top:-80px;width:300px;height:300px;background:radial-gradient(closest-side,rgba(199,90,46,.18),transparent 70%);pointer-events:none}
+.cta-band .container{display:grid;grid-template-columns:1.4fr .8fr;gap:60px;align-items:center;position:relative;z-index:1}
+.cta-band .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--apricot-soft);margin-bottom:22px;display:inline-block}
+.cta-band h2{font-family:var(--serif);font-size:clamp(36px,4.8vw,64px);font-weight:500;line-height:1.04;letter-spacing:-.025em;color:var(--paper);font-variation-settings:"opsz" 40}
+.cta-band h2 em{font-style:italic;color:var(--apricot-soft);font-weight:500}
+.cta-band p{font-family:var(--serif);font-size:18px;color:#C9D8D0;line-height:1.55;margin-top:22px;max-width:520px}
+.cta-band .cta-side{text-align:right;display:flex;flex-direction:column;gap:18px;align-items:flex-end}
+.cta-band .btn-primary{background:var(--apricot);color:#fff;border-color:var(--apricot);padding:18px 30px;font-size:13px}
+.cta-band .btn-primary:hover{background:var(--apricot-soft);border-color:var(--apricot-soft);color:var(--moss-dark)}
+.cta-band .meta{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--apricot-soft);text-align:right}
+
+/* ===== FOOTER ===== */
+.footer{background:#14181A;color:#A0A89D;padding:72px 0 32px;border-top:1px solid #1F2422}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer .brand-text .b1{color:var(--paper)}
+.footer .brand-text .b2{color:#6E7968}
+.footer p{font-size:14px;line-height:1.6;margin-top:18px;max-width:340px;color:#A0A89D}
+.footer h4{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--apricot-soft);margin-bottom:18px}
+.footer .col a,.footer .col span{display:block;font-size:14px;margin-bottom:10px;color:#A0A89D;transition:color .2s}
+.footer .col a:hover{color:var(--apricot-soft)}
+.footer-bottom{border-top:1px solid #1F2422;padding-top:24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#6E7968}
+.footer-bottom .legal{display:flex;gap:24px;flex-wrap:wrap}
+.footer-bottom .legal a{color:#6E7968}
+.footer-bottom .legal a:hover{color:var(--apricot-soft)}
+
+/* ===== FAB WhatsApp ===== */
+.wa-fab{position:fixed;right:24px;bottom:24px;z-index:60;width:60px;height:60px;border-radius:50%;background:#1FAF56;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.35);transition:transform .2s}
+.wa-fab:hover{transform:scale(1.08)}
+.wa-fab svg{width:30px;height:30px;fill:#fff}
+.wa-ico{width:18px;height:18px;flex-shrink:0;fill:#fff;margin-right:8px;display:inline-block;vertical-align:-3px}
+
+/* ===== REVEAL ===== */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width:1080px){
+  .hero{padding:56px 0 64px}
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero-media{max-width:560px;min-height:0}
+  .desp-grid{grid-template-columns:repeat(4,1fr)}
+  .desp-cell.s1{grid-column:span 4;grid-row:span 1}
+  .desp-cell.s4,.desp-cell.s5{grid-column:span 2}
+  .desp-cell.s2,.desp-cell.s3,.desp-cell.s6,.desp-cell.s7,.desp-cell.s8{grid-column:span 2}
+  .av-grid{grid-template-columns:1fr;gap:18px}
+  .av-main{min-height:320px}
+  .cta-band .container{grid-template-columns:1fr;gap:36px}
+  .cta-band .cta-side{align-items:flex-start;text-align:left}
+  .cta-band .meta{text-align:left}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media (max-width:720px){
+  .container{padding:0 20px}
+  .masthead .container{font-size:9px;letter-spacing:.14em}
+  .nav a{display:none}
+  .nav .nav-cta{display:inline-flex}
+  .header .container{padding:14px 20px}
+  .hero{padding:40px 0 56px}
+  .hero h1{font-size:clamp(38px,9.5vw,56px)}
+  .hero .lead{font-size:16px}
+  .hero-meta{gap:18px;flex-wrap:wrap}
+  .hero-meta .div{display:none}
+  .proof{padding:48px 0}
+  .proof .container{grid-template-columns:1fr;gap:28px}
+  .proof-stats{gap:24px;flex-wrap:wrap}
+  .despensa,.servicos,.sobre,.como,.avaliacoes,.cta-band{padding:72px 0}
+  .desp-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:minmax(160px,auto)}
+  .desp-cell.s1,.desp-cell.s2,.desp-cell.s3,.desp-cell.s4,.desp-cell.s5,.desp-cell.s6,.desp-cell.s7,.desp-cell.s8{grid-column:span 1;grid-row:span 1}
+  .serv-list{grid-template-columns:1fr}
+  .serv-item.right{padding-left:8px;border-left:0}
+  .credenciais{grid-template-columns:1fr}
+  .cred{border-right:0;border-bottom:1px solid var(--line)}
+  .cred:last-child{border-bottom:0}
+  .timeline::before{left:28px}
+  .tl-step{grid-template-columns:56px 1fr;gap:20px}
+  .tl-step .dot{width:56px;height:56px;font-size:20px}
+  .footer-top{grid-template-columns:1fr;gap:32px}
+  .footer .container{padding:0 20px}
+  .footer{padding:56px 0 28px}
+  .wa-fab{right:18px;bottom:18px;width:54px;height:54px}
+}
+
+.header .nav-cta{background:var(--apricot);border:1px solid var(--apricot);color:#fff}
+.header .nav-cta:hover{background:var(--apricot-deep);border-color:var(--apricot-deep);color:#fff}
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="container">
+    <div class="left">
+      <span><span class="dot"></span><b>Atendimento aberto</b> . Resposta em poucas horas</span>
+    </div>
+    <div class="right">
+      <span>Ilha do Governador . RJ</span>
+      <span>Online em todo o Brasil</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <a class="brand" href="#topo" aria-label="Isis Orona, nutricionista">
+      <span class="brand-mark">i</span>
+      <span class="brand-text">
+        <span class="b1">Isis Orona</span>
+        <span class="b2">Nutricao . Ilha do Governador</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Navegacao principal">
+      <a href="#despensa">Despensa</a>
+      <a href="#servicos">Atendimento</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#processo">Processo</a>
+      <a class="nav-cta" href="https://wa.me/5521971521568?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="hero-eyebrow">
+          <span class="bar"></span>
+          <span class="ord">Edicao 01 . Nutricao que cabe no prato</span>
+        </div>
+        <h1>Comer bem nao <em>precisa</em> ser complicado<span class="dot-acc">.</span></h1>
+        <p class="lead">Sou Isis, nutricionista na Ilha do Governador. Acompanho adultos e executivos que querem mais energia, melhor composicao corporal e uma relacao tranquila com a comida. Online e presencial.</p>
+        <div class="hero-cta-row">
+          <a class="btn btn-primary" href="https://wa.me/5521971521568?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">
+            <svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.11 17.21c-.31-.16-1.83-.9-2.11-1s-.49-.16-.7.16-.8 1-.98 1.21-.36.24-.67.08a8.45 8.45 0 0 1-2.49-1.54 9.34 9.34 0 0 1-1.72-2.14c-.18-.31 0-.48.14-.63.14-.14.31-.36.47-.55a2.06 2.06 0 0 0 .31-.52.59.59 0 0 0 0-.55c-.08-.16-.7-1.69-1-2.31s-.51-.53-.7-.54h-.6a1.16 1.16 0 0 0-.84.4 3.51 3.51 0 0 0-1.1 2.62 6.11 6.11 0 0 0 1.28 3.24 13.94 13.94 0 0 0 5.34 4.71c.75.32 1.33.51 1.79.66a4.34 4.34 0 0 0 2 .13 3.45 3.45 0 0 0 2.27-1.61 2.83 2.83 0 0 0 .2-1.61c-.08-.15-.28-.24-.59-.4zM12 2A10 10 0 0 0 2 12a9.83 9.83 0 0 0 1.43 5.18L2 22l4.94-1.3A10 10 0 1 0 12 2zm0 18.27a8.28 8.28 0 0 1-4.24-1.16l-.3-.18-3.13.82.84-3.05-.2-.31A8.3 8.3 0 1 1 12 20.27z"/></svg>
+            Agendar consulta
+          </a>
+          <a class="btn btn-ghost" href="#processo">Como funciona</a>
+        </div>
+        <div class="hero-meta">
+          <div class="rating">
+            <div>
+              <b>5.0</b>
+              <div class="stars">★★★★★</div>
+              <small>Nota media no Google</small>
+            </div>
+          </div>
+          <div class="div"></div>
+          <div class="stat">
+            <b>94</b>
+            avaliacoes verificadas
+          </div>
+          <div class="div"></div>
+          <div class="stat">
+            <b>100%</b>
+            atendimento individual
+          </div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-photo">
+          <span class="corner">Foto . Capa</span>
+          <img src="img/ingredients-flat.webp" alt="Ingredientes brasileiros sobre mesa de madeira" loading="eager" width="800" height="1000">
+        </div>
+        <div class="hero-plato">
+          <span class="lbl">Prato de hoje</span>
+          <div class="nome">Arroz integral, feijao, frango grelhado e couve refogada.</div>
+          <div class="desc">Base brasileira, simples de montar, completa em macros e micros.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA (numero grande) -->
+<section class="proof" aria-label="Resultado de pacientes">
+  <div class="container">
+    <h2>Cada paciente tem um <em>prato proprio</em>, um plano que cabe na rotina e um acompanhamento de verdade.</h2>
+    <div class="proof-stats">
+      <div class="st">
+        <b>5.0<em>★</em></b>
+        <span>Google reviews</span>
+      </div>
+      <div class="st">
+        <b>94</b>
+        <span>avaliacoes</span>
+      </div>
+      <div class="st">
+        <b>1:1</b>
+        <span>atendimento individual</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESPENSA -->
+<section class="despensa" id="despensa">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="ord">A despensa fala antes do prato</span>
+      <h2>O que costuma faltar na <em>despensa</em> de quem quer comer melhor.</h2>
+      <p>Antes de qualquer plano, a gente olha para o que voce ja tem em casa. Estes sao os grupos de alimentos que costumo recomendar como base. Simples, acessivel, brasileiro.</p>
+    </div>
+    <div class="desp-grid">
+      <div class="desp-cell s1 has-pic reveal">
+        <img class="pic" src="img/prato-completo.webp" alt="Prato feito brasileiro completo">
+        <span class="num">01 . Base</span>
+        <h3>Arroz, feijao, tuberculos</h3>
+        <p>Energia de verdade, com fibra. O esqueleto de qualquer refeicao bem montada.</p>
+      </div>
+      <div class="desp-cell s2 has-pic reveal">
+        <img class="pic" src="img/greens-moody.webp" alt="Vegetais verdes frescos">
+        <span class="num">02 . Folhas</span>
+        <h3>Verdes e legumes</h3>
+        <p>Couve, brocolis, abobora, cenoura. Cores no prato, minerais no corpo.</p>
+      </div>
+      <div class="desp-cell s3 has-pic reveal">
+        <img class="pic" src="img/desk-nutri.webp" alt="Mesa com sementes e cha">
+        <span class="num">03 . Gorduras boas</span>
+        <h3>Azeite, castanhas, abacate</h3>
+        <p>Gordura boa nao falta, ela faz falta. Fonte de energia e saciedade.</p>
+      </div>
+      <div class="desp-cell s4 has-pic reveal">
+        <img class="pic" src="img/feira-color.webp" alt="Feira brasileira colorida">
+        <span class="num">04 . Frutas da estacao</span>
+        <h3>O que esta na feira agora</h3>
+        <p>Manga, banana, tangerina, abacaxi. Variedade muda o apetite e a microbiota.</p>
+      </div>
+      <div class="desp-cell s5 has-pic reveal">
+        <img class="pic" src="img/ingredients-flat.webp" alt="Ingredientes brasileiros diversos">
+        <span class="num">05 . Proteinas</span>
+        <h3>Animal e vegetal</h3>
+        <p>Frango, peixe, ovos, leguminosas. Ajustamos quantidade, nao qualidade.</p>
+      </div>
+      <div class="desp-cell s6 has-pic reveal">
+        <img class="pic" src="img/prato-completo.webp" alt="Prato feito bem montado">
+        <span class="num">06 . Temperos</span>
+        <h3>Alho, cebola, ervas</h3>
+        <p>Comida sem sal nao precisa. Tempero caseiro substitui industrializado.</p>
+      </div>
+      <div class="desp-cell s7 has-pic reveal">
+        <img class="pic" src="img/desk-nutri.webp" alt="Mesa de nutricao com cha">
+        <span class="num">07 . Hidratacao</span>
+        <h3>Agua, cha, caldo</h3>
+        <p>Antes de suplementar, a gente hidrata. Simples, esquecido, eficiente.</p>
+      </div>
+      <div class="desp-cell s8 has-pic reveal">
+        <img class="pic" src="img/greens-moody.webp" alt="Ingredientes verdes">
+        <span class="num">08 . Fibras</span>
+        <h3>Sementes e graos</h3>
+        <p>Chia, linhaça, aveia. Pequenas doses, grande impacto no transito intestinal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICOS -->
+<section class="servicos" id="servicos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="ord">O que eu atendo</span>
+      <h2>Quatro frentes de trabalho, <em>uma so conducao</em>: a sua.</h2>
+    </div>
+    <div class="serv-list">
+      <div class="serv-item reveal">
+        <div class="ord">01</div>
+        <h3>Metabolismo e <em>composicao corporal</em></h3>
+        <p>Avaliacao de composicao por bioimpedancia, leitura de exames e plano alimentar ajustado a sua rotina. Indicado para quem travou em placas, sente fadiga ou ganhou peso sem mudar a dieta.</p>
+        <a class="cta" href="https://wa.me/5521971521568?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20avalia%C3%A7%C3%A3o%20de%20metabolismo%20e%20composi%C3%A7%C3%A3o%20corporal." target="_blank" rel="noopener">Falar sobre metabolismo</a>
+      </div>
+      <div class="serv-item right reveal">
+        <div class="ord">02</div>
+        <h3>Nutricao <em>esportiva</em></h3>
+        <p>Para quem treina e quer resultado de verdade. Periodizacao nutricional, ajuste de macros para hipertrofia, emagrecimento ou performance, com suplementacao sob criterio.</p>
+        <a class="cta" href="https://wa.me/5521971521568?text=Ol%C3%A1%2C%20treino%20e%20quero%20orienta%C3%A7%C3%A3o%20de%20nutri%C3%A7%C3%A3o%20esportiva." target="_blank" rel="noopener">Falar sobre esporte</a>
+      </div>
+      <div class="serv-item reveal">
+        <div class="ord">03</div>
+        <h3>Emagrecimento <em>sem radicalismo</em></h3>
+        <p>Reeducacao alimentar sem cortar grupos nem passar fome. Foco em densidade nutricional, saciedade e constancia. Acompanhamento semanal nas primeiras semanas.</p>
+        <a class="cta" href="https://wa.me/5521971521568?text=Ol%C3%A1%2C%20quero%20come%C3%A7ar%20um%20processo%20de%20emagrecimento%20saud%C3%A1vel." target="_blank" rel="noopener">Falar sobre emagrecimento</a>
+      </div>
+      <div class="serv-item right reveal">
+        <div class="ord">04</div>
+        <h3>Qualidade de vida e <em>saude metabolica</em></h3>
+        <p>Para quem busca mais energia, melhor sono e marcadores sanguineos em dia. Atendo casos de resistencia a insulina, pre-diabetes, colesterol alterado e sindrome metabolica.</p>
+        <a class="cta" href="https://wa.me/5521971521568?text=Ol%C3%A1%2C%20quero%20cuidar%20de%20sa%C3%BAde%20metab%C3%B3lica%20e%20qualidade%20de%20vida." target="_blank" rel="noopener">Falar sobre saude metabolica</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE (sem foto) -->
+<section class="sobre" id="sobre">
+  <div class="container">
+    <div class="sobre-inner">
+      <div class="ord reveal">Sobre a profissional</div>
+      <h2 class="reveal">A nutricao que eu pratico e a que eu <em>como</em>.</h2>
+      <p class="sobre-quote reveal">Minha formacao e tecnica, meu atendimento e humano. Acredito que plano bom e plano que cabe na vida real, com o que tem na feira e no tempo que voce tem.</p>
+      <div class="sobre-assinatura reveal">
+        <div class="nome">Isis Orona</div>
+        <span class="crn">Nutricionista . CRN ativo . Ilha do Governador, RJ</span>
+      </div>
+      <div class="credenciais reveal">
+        <div class="cred">
+          <span class="lbl">Formacao</span>
+          <b>Bacharelado em Nutricao</b>
+          <span>Formada por universidade reconhecida pelo MEC. Atualizacao constante em nutricao clinica e esportiva.</span>
+        </div>
+        <div class="cred">
+          <span class="lbl">Atendimento</span>
+          <b>Presencial e online</b>
+          <span>Consultorio na Ilha do Governador, Rio de Janeiro. Consultas online para todo o Brasil.</span>
+        </div>
+        <div class="cred">
+          <span class="lbl">Foco</span>
+          <b>Saude metabolica e rotina</b>
+          <span>Planos praticos, acompanhamento proximo, sem promessas magicas. A constancia que da resultado.</span>
+        </div>
+      </div>
+      <div class="areas reveal">
+        <span class="area">Metabolismo</span>
+        <span class="area">Emagrecimento</span>
+        <span class="area">Nutricao esportiva</span>
+        <span class="area">Saude intestinal</span>
+        <span class="area">Reeducacao alimentar</span>
+        <span class="area">Sindrome metabolica</span>
+        <span class="area">Atendimento executivo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA (timeline vertical) -->
+<section class="como" id="processo">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="ord">Do primeiro clique ao resultado</span>
+      <h2>Quatro passos, <em>sem atalho</em>.</h2>
+      <p>Cada etapa tem um objetivo claro. Voce sempre sabe onde esta, o que vem a seguir e o que espero de cada lado.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-step reveal">
+        <div class="dot">i</div>
+        <div class="body">
+          <h3>Primeira conversa <em>sem compromisso</em></h3>
+          <p>Voce me conta o que esta buscando, seu historico de saude, rotina e o que ja tentou. A gente ve se faz sentido seguir juntas e qual o tipo de acompanhamento indicado.</p>
+          <div class="meta">Duracao . ate 20 minutos . WhatsApp</div>
+        </div>
+      </div>
+      <div class="tl-step reveal">
+        <div class="dot">ii</div>
+        <div class="body">
+          <h3>Consulta inicial e <em>avaliacao completa</em></h3>
+          <p>Presencial ou online. Aplico anamnese detalhada, analise de composicao corporal por bioimpedancia, leitura de exames recentes e mapeamento alimentar dos ultimos dias.</p>
+          <div class="meta">Duracao . 60 a 90 minutos . Presencial ou online</div>
+        </div>
+      </div>
+      <div class="tl-step reveal">
+        <div class="dot">iii</div>
+        <div class="body">
+          <h3>Plano alimentar <em>personalizado</em></h3>
+          <p>Entrega em ate 7 dias uteis. Documento com refeicoes, lista de compras, substituicoes e orientacoes especificas para o seu objetivo. Linguagem simples, sem contagem obsessiva.</p>
+          <div class="meta">Entrega . PDF + acesso a app de monitoramento</div>
+        </div>
+      </div>
+      <div class="tl-step reveal">
+        <div class="dot">iv</div>
+        <div class="body">
+          <h3>Retornos e <em>acompanhamento</em></h3>
+          <p>Retornos periodicos para revisar resultados, ajustar o plano, tirar duvidas e manter a constancia. Suporte via WhatsApp para questoes pontuais entre as sessoes.</p>
+          <div class="meta">Frequencia . quinzenal ou mensal . conforme objetivo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVALIACOES (mosaico) -->
+<section class="avaliacoes" id="avaliacoes">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="ord">O que dizem as avaliacoes</span>
+      <h2>94 pessoas ja <em>avaliaram</em>. A media e 5.0.</h2>
+    </div>
+    <div class="av-grid">
+      <div class="av-main reveal">
+        <div>
+          <span class="lbl">Google . Verificado</span>
+          <div class="big">5.0<em>★</em></div>
+        </div>
+        <div class="bottom">
+          <div class="stars">★★★★★</div>
+          <div class="text">"94 avaliacoes com nota maxima no Google, atualizadas por pacientes reais."</div>
+        </div>
+      </div>
+      <div class="av-side">
+        <div class="av-card reveal">
+          <span class="lbl">Compromisso 01</span>
+          <b>Atendimento proximo</b>
+          <p>Resposta rapida no WhatsApp, retorno agendado, linguagem direta. Nao sou sua amiga no chat, sou sua nutricionista.</p>
+          <span class="lbl-tipo">Atendimento</span>
+        </div>
+        <div class="av-card reveal">
+          <span class="lbl">Compromisso 02</span>
+          <b>Plano que cabe na vida</b>
+          <p>Refeicoes pensadas para o que voce tem acesso, o tempo que voce tem e o orcamento que voce tem. Sem cardapio de revista.</p>
+          <span class="lbl-tipo">Pratica</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-band" id="contato">
+  <div class="container">
+    <div>
+      <span class="eyebrow">Proximo passo</span>
+      <h2>Vamos comecar pela <em>conversa inicial</em>. Sem custo, sem compromisso.</h2>
+      <p>Me chama no WhatsApp, me conta o que esta buscando. Se fizer sentido a gente segue. Se nao, te indico o caminho certo mesmo assim.</p>
+    </div>
+    <div class="cta-side">
+      <a class="btn btn-primary" href="https://wa.me/5521971521568?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20a%20conversa%20inicial." target="_blank" rel="noopener">
+        <svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.11 17.21c-.31-.16-1.83-.9-2.11-1s-.49-.16-.7.16-.8 1-.98 1.21-.36.24-.67.08a8.45 8.45 0 0 1-2.49-1.54 9.94 9.94 0 0 1-1.72-2.14c-.18-.31 0-.48.14-.63.14-.14.31-.36.47-.55a2.06 2.06 0 0 0 .31-.52.59.59 0 0 0 0-.55c-.08-.16-.7-1.69-1-2.31s-.51-.53-.7-.54h-.6a1.16 1.16 0 0 0-.84.4 3.51 3.51 0 0 0-1.1 2.62 6.11 6.11 0 0 0 1.28 3.24 13.94 13.94 0 0 0 5.34 4.71c.75.32 1.33.51 1.79.66a4.34 4.34 0 0 0 2 .13 3.45 3.45 0 0 0 2.27-1.61 2.83 2.83 0 0 0 .2-1.61c-.08-.15-.28-.24-.59-.4zM12 2A10 10 0 0 0 2 12a9.83 9.83 0 0 0 1.43 5.18L2 22l4.94-1.3A10 10 0 1 0 12 2zm0 18.27a8.28 8.28 0 0 1-4.24-1.16l-.3-.18-3.13.82.84-3.05-.2-.31A8.3 8.3 0 1 1 12 20.27z"/></svg>
+        Conversar no WhatsApp
+      </a>
+      <div class="meta">Resposta em poucas horas . Seg a Sex</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="#topo">
+          <span class="brand-mark">i</span>
+          <span class="brand-text">
+            <span class="b1">Isis Orona</span>
+            <span class="b2">Nutricao . Ilha do Governador</span>
+          </span>
+        </a>
+        <p>Nutricao clinica, esportiva e metabolica. Atendimento presencial na Ilha do Governador, Rio de Janeiro, e online para todo o Brasil.</p>
+      </div>
+      <div class="col">
+        <h4>Navegar</h4>
+        <a href="#despensa">Despensa</a>
+        <a href="#servicos">Atendimento</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#processo">Processo</a>
+        <a href="#avaliacoes">Avaliacoes</a>
+      </div>
+      <div class="col">
+        <h4>Contato</h4>
+        <a href="https://wa.me/5521971521568?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">WhatsApp . (21) 97152-1568</a>
+        <span>Ilha do Governador . RJ</span>
+        <span>Atendimento online . Brasil</span>
+        <span>Seg a Sex . Horario comercial</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Isis Orona . Nutricionista . Ilha do Governador . 2026</span>
+      <div class="legal">
+        <a href="#topo">Voltar ao topo</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FAB WhatsApp -->
+<a class="wa-fab" href="https://wa.me/5521971521568?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.11 17.21c-.31-.16-1.83-.9-2.11-1s-.49-.16-.7.16-.8 1-.98 1.21-.36.24-.67.08a8.45 8.45 0 0 1-2.49-1.54 9.94 9.94 0 0 1-1.72-2.14c-.18-.31 0-.48.14-.63.14-.14.31-.36.47-.55a2.06 2.06 0 0 0 .31-.52.59.59 0 0 0 0-.55c-.08-.16-.7-1.69-1-2.31s-.51-.53-.7-.54h-.6a1.16 1.16 0 0 0-.84.4 3.51 3.51 0 0 0-1.1 2.62 6.11 6.11 0 0 0 1.28 3.24 13.94 13.94 0 0 0 5.34 4.71c.75.32 1.33.51 1.79.66a4.34 4.34 0 0 0 2 .13 3.45 3.45 0 0 0 2.27-1.61 2.83 2.83 0 0 0 .2-1.61c-.08-.15-.28-.24-.59-.4zM12 2A10 10 0 0 0 2 12a9.83 9.83 0 0 0 1.43 5.18L2 22l4.94-1.3A10 10 0 1 0 12 2zm0 18.27a8.28 8.28 0 0 1-4.24-1.16l-.3-.18-3.13.82.84-3.05-.2-.31A8.3 8.3 0 1 1 12 20.27z"/></svg>
+</a>
+
+<script>
+// Reveal on scroll
+(function(){
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+
+</body>
+</html>
