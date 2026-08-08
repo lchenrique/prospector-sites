@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog . Amanda Nobrega, nutricionista em Tijuca, Rio de Janeiro</title>
+<meta name="description" content="Artigos sobre nutricao, reeducacao alimentar, emagrecimento, nutricao clinica, esportiva e ansiedade. Por Amanda Nobrega, nutricionista em Tijuca, RJ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF5F0; --bg2:#F3E6E0; --ink:#2A1820; --ink2:#7A5560;
+  --accent:#C24170; --accent-dark:#9F2E57; --cream:#F4E7DD;
+  --line:#E5D2D8; --card:#FFFCFD;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:1280px;margin:0 auto;padding:0 32px}
+section{padding:120px 0}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;letter-spacing:-.02em}
+h1{font-size:clamp(40px,6vw,84px);font-weight:300}
+h2{font-size:clamp(32px,4vw,56px);font-weight:400}
+h3{font-size:clamp(22px,2vw,28px);font-weight:500}
+p{font-size:16.5px;line-height:1.65;color:var(--ink2)}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(251,245,240,.92);backdrop-filter:saturate(120%);border-bottom:1px solid var(--line);padding:18px 0;transition:padding .3s ease}
+.header.scrolled{padding:12px 0}
+.header .container{display:flex;align-items:center;justify-content:space-between;gap:32px}
+.brand{font-family:var(--serif);font-size:18px;font-weight:500;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.brand .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.brand-sub{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;color:var(--ink2);text-transform:uppercase;margin-top:2px}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{font-size:14px;color:var(--ink2);font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.nav .btn-agendar{padding:10px 22px;background:var(--accent);color:#fff;border-radius:0;font-size:13px;letter-spacing:.04em}
+.nav .btn-agendar:hover{background:var(--accent-dark)}
+.menu-toggle{display:none;background:transparent;border:0;color:var(--ink);font-size:24px;cursor:pointer;padding:8px}
+@media(max-width:780px){
+  .nav{position:fixed;top:0;right:0;bottom:0;width:280px;background:var(--bg);flex-direction:column;align-items:flex-start;padding:96px 32px 32px;gap:24px;transform:translateX(100%);transition:transform .35s ease;border-left:1px solid var(--line)}
+  .nav.open{transform:translateX(0)}
+  .nav a{font-size:18px}
+  .menu-toggle{display:block}
+  body.menu-open{overflow:hidden}
+}
+.blog-hero{background:var(--bg2);padding:160px 0 100px;text-align:left}
+.blog-hero h1{margin:18px 0 24px;max-width:980px}
+.blog-hero .lead{font-size:20px;max-width:680px;margin-bottom:0;color:var(--ink2);line-height:1.5}
+.blog-hero .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:48px;margin-top:80px;padding-top:48px;border-top:1px solid var(--line)}
+.blog-hero .stat .n{font-family:var(--serif);font-size:48px;font-weight:500;line-height:1;color:var(--ink);letter-spacing:-.02em}
+.blog-hero .stat .l{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-top:8px}
+.blog-hero .stat .d{font-size:13.5px;color:var(--ink2);margin-top:6px;line-height:1.4}
+@media(max-width:780px){.blog-hero{padding:120px 0 64px}.blog-hero .stats{grid-template-columns:1fr 1fr;gap:32px;margin-top:48px}}
+.bio{background:var(--bg)}
+.bio-grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start}
+.bio h2{font-size:clamp(28px,3vw,40px);margin-top:14px}
+.bio p{font-size:18px;line-height:1.65;margin-bottom:24px}
+.bio p:last-child{margin-bottom:0}
+@media(max-width:900px){.bio-grid{grid-template-columns:1fr;gap:32px}}
+.esp{background:var(--bg2)}
+.esp-head{margin-bottom:64px;max-width:720px}
+.esp-head h2{margin-top:14px}
+.esp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+.esp-card{padding:48px 40px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.esp-card .num{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--accent);margin-bottom:16px}
+.esp-card h3{font-size:28px;margin-bottom:14px}
+.esp-card p{font-size:15.5px;line-height:1.55}
+@media(max-width:780px){.esp-grid{grid-template-columns:1fr}.esp-card{padding:32px 24px}}
+.posts{background:var(--bg)}
+.posts-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:64px;gap:32px}
+.posts-head h2{margin-top:14px}
+.posts-head .meta{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+@media(max-width:780px){.posts-head{flex-direction:column;align-items:start}}
+.posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+.post-card{border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--bg);transition:background .25s;display:flex;flex-direction:column;position:relative}
+.post-card:hover{background:var(--card)}
+.post-card .img{aspect-ratio:4/3;overflow:hidden;background:var(--bg2)}
+.post-card .img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.post-card:hover .img img{transform:scale(1.04)}
+.post-card .body{padding:32px 28px 36px;flex:1;display:flex;flex-direction:column}
+.post-card .cat{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.post-card h3{font-size:24px;line-height:1.15;margin-bottom:14px;letter-spacing:-.01em}
+.post-card .excerpt{font-size:14.5px;line-height:1.55;color:var(--ink2);margin-bottom:24px;flex:1}
+.post-card .meta-row{display:flex;justify-content:space-between;align-items:center;padding-top:18px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+.post-card .meta-row .reading{color:var(--ink)}
+@media(max-width:1024px){.posts-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.posts-grid{grid-template-columns:1fr}}
+footer{background:#1A0E14;color:#D6C0C8;padding:72px 0 32px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
+footer .brand{color:#fff;margin-bottom:18px}
+footer .brand-sub{color:#9F7A86}
+footer p{color:#9F7A86;font-size:13.5px;line-height:1.6;margin-bottom:18px}
+footer h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin-bottom:18px;font-weight:500}
+footer a{color:#D6C0C8;display:block;font-size:14px;padding:6px 0;transition:color .2s}
+footer a:hover{color:#fff}
+footer .foot-bottom{margin-top:48px;padding-top:24px;border-top:1px solid #3A1F2A;font-size:11.5px;color:#7A5560;text-align:center;letter-spacing:.04em}
+@media(max-width:780px){footer .cols{grid-template-columns:1fr;gap:32px}}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container">
+    <a href="amanda-nobrega-nutri.html" class="brand">
+      <span class="dot"></span>
+      <div>
+        <div>Amanda Nobrega</div>
+        <span class="brand-sub">Nutricionista . Tijuca, RJ</span>
+      </div>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="amanda-nobrega-nutri.html#servicos">Especialidades</a>
+      <a href="amanda-nobrega-nutri.html#sobre">Sobre</a>
+      <a href="amanda-nobrega-nutri.html#como">Como funciona</a>
+      <a href="blog.html" style="color:var(--ink)">Blog</a>
+      <a href="amanda-nobrega-nutri.html#contato">Contato</a>
+      <a href="https://wa.me/5521999955095?text=Ola%2C%20vim%20pelo%20site%20da%20Amanda%20e%20quero%20agendar." target="_blank" rel="noopener" class="btn-agendar">Agendar</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">&#9776;</button>
+  </div>
+</header>
+
+<section class="blog-hero">
+  <div class="container">
+    <div class="mono">BLOG</div>
+    <h1>Leitura leve sobre alimentacao real.</h1>
+    <p class="lead">6 artigos sobre reeducacao, emagrecimento, nutricao clinica, esportiva e ansiedade. Sem radicalismos, com metodo, com base.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">06</div><div class="l">artigos</div><div class="d">publicados desde 2016</div></div>
+<div class="stat"><div class="n">04</div><div class="l">temas</div><div class="d">reeducacao, clinica, esportiva, estetica</div></div>
+<div class="stat"><div class="n">220</div><div class="l">opinioes</div><div class="d">5,0 no Doctoralia</div></div>
+<div class="stat"><div class="n">100%</div><div class="l">humanos</div><div class="d">sem radicalismo, com metodo</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bio">
+  <div class="container bio-grid">
+    <div>
+      <div class="mono">SOBRE A AMANDA</div>
+      <h2>Nutricionista em Tijuca, formada pela UNIRIO.</h2>
+    </div>
+    <div>
+      <p>Meu nome e Amanda Nobrega e sou nutricionista formada pela Universidade Federal do Estado do Rio de Janeiro (UNIRIO). Atendo quem chega cansado de dietas restritivas, buscando uma relacao mais leve com a comida.</p>
+      <p>Ao longo dos ultimos anos me dediquei a ajudar pessoas que buscam desde uma alimentacao mais saudavel atraves do processo de reeducacao alimentar ate aquelas que possuem alguma patologia ou disfuncao alimentar que exige um maior cuidado.</p>
+      <p>Atualmente venho me especializando na nutricao esportiva, com o objetivo de auxiliar atletas que procuram um maior rendimento na pratica de atividades fisicas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="esp">
+  <div class="container">
+    <div class="esp-head">
+      <div class="mono">ESPECIALIDADES</div>
+      <h2>Quatro frentes de nutricao, em um so lugar.</h2>
+    </div>
+    <div class="esp-grid">
+      <div class="esp-card"><div class="num">01</div><h3>Reeducacao</h3><p>Promove habitos alimentares mais saudaveis, sem radicalismos. E o primeiro passo para que o paciente atinja os objetivos do planejamento nutricional.</p></div>
+<div class="esp-card"><div class="num">02</div><h3>Estetica</h3><p>Auxilia no emagrecimento e no tratamento de desordens esteticas, como queda de cabelo, unhas quebradicas, pele ressecada, celulite. A condicao pode ser corrigida com alimentacao equilibrada.</p></div>
+<div class="esp-card"><div class="num">03</div><h3>Esportiva</h3><p>Adequa as necessidades do atleta para obter um melhor rendimento na pratica de atividade fisica. O principal objetivo e fazer da alimentacao combustivel, nao obstaculo.</p></div>
+<div class="esp-card"><div class="num">04</div><h3>Clinica</h3><p>Focada na patologia especifica de cada paciente, orientando de acordo com o problema e estilo de vida. Voltada para pacientes com diabetes, dislipidemias, doenca coronariana, disturbios alimentares, entre outras.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="posts">
+  <div class="container">
+    <div class="posts-head">
+      <div>
+        <div class="mono">ARTIGOS</div>
+        <h2>Posts recentes.</h2>
+      </div>
+      <div class="meta">6 artigos . 2016 a 2020</div>
+    </div>
+    <div class="posts-grid">
+      <a class="post-card" href="blog/01-erros-emagrecer.html"><div class="img"><img src="blog/img/01-erros-emagrecer.jpg" alt="10 erros na hora de tentar emagrecer" loading="lazy"></div><div class="body"><div class="cat">Emagrecimento</div><h3>10 erros na hora de tentar emagrecer</h3><div class="excerpt">Quem ai ja tentou emagrecer por conta propria? A grande maioria responde eu. O numero de pessoas que recorre ao emagrecimento rapido cresce, e isso gera deficit nutricional e problemas serios de saude.</div><div class="meta-row"><span>16 de abril de 2020</span><span class="reading">8 min</span></div></div></a>
+<a class="post-card" href="blog/02-bisfenol.html"><div class="img"><img src="blog/img/02-bisfenol.jpg" alt="Por que voce deve se preocupar com o Bisfenol A" loading="lazy"></div><div class="body"><div class="cat">Reeducacao</div><h3>Por que voce deve se preocupar com o Bisfenol A</h3><div class="excerpt">O BPA e um composto presente em plasticos, mamadeiras, embalagens e latas. Os efeitos para a saude vao de alteracoes hormonais a infertilidade, diabetes e cancer.</div><div class="meta-row"><span>21 de julho de 2017</span><span class="reading">5 min</span></div></div></a>
+<a class="post-card" href="blog/03-organicos.html"><div class="img"><img src="blog/img/03-organicos.jpg" alt="A importancia dos alimentos organicos" loading="lazy"></div><div class="body"><div class="cat">Reeducacao</div><h3>A importancia dos alimentos organicos</h3><div class="excerpt">A preocupacao com a saude e com a alimentacao vem crescendo. Os organicos sao cultivados sem agrotoxicos e trazem beneficios para a saude e o meio ambiente, mesmo com um custo mais alto.</div><div class="meta-row"><span>21 de julho de 2017</span><span class="reading">6 min</span></div></div></a>
+<a class="post-card" href="blog/04-celulite.html"><div class="img"><img src="blog/img/04-celulite.jpg" alt="Alimentos que auxiliam a minimizar a celulite" loading="lazy"></div><div class="body"><div class="cat">Emagrecimento</div><h3>Alimentos que auxiliam a minimizar a celulite</h3><div class="excerpt">As celulites sao um incomodo. Alguns alimentos funcionam como antiinflamatorios e antioxidantes, ajudam na reducao e melhoram o aspecto da pele quando aliados a pratica de atividade fisica.</div><div class="meta-row"><span>20 de novembro de 2016</span><span class="reading">5 min</span></div></div></a>
+<a class="post-card" href="blog/05-panela.html"><div class="img"><img src="blog/img/05-panela.jpg" alt="Qual panela voce deve utilizar na hora da preparacao" loading="lazy"></div><div class="body"><div class="cat">Reeducacao</div><h3>Qual panela voce deve utilizar na hora da preparacao</h3><div class="excerpt">Os minerais presentes nos materiais das panelas podem interagir com o alimento. Aluminio, ferro, ceramica, inox, antiaderente, vidro, esmaltada: o que muda e como escolher para cada preparo.</div><div class="meta-row"><span>20 de novembro de 2016</span><span class="reading">6 min</span></div></div></a>
+<a class="post-card" href="blog/06-ansiedade.html"><div class="img"><img src="blog/img/06-ansiedade.jpg" alt="Como a alimentacao pode ajudar no controle da ansiedade" loading="lazy"></div><div class="body"><div class="cat">Clinica</div><h3>Como a alimentacao pode ajudar no controle da ansiedade</h3><div class="excerpt">A ansiedade e uma sensacao normal, mas pode virar transtorno. Cafeina, carboidratos simples e alcool podem piorar. Vitamina C, magnesio, zinco e vitaminas do complexo B sao aliados.</div><div class="meta-row"><span>20 de novembro de 2016</span><span class="reading">7 min</span></div></div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="cols">
+      <div>
+        <div class="brand">Amanda Nobrega</div>
+        <p>Nutricionista em Tijuca, RJ. Reeducacao alimentar, nutricao clinica, esportiva e estetica. Atendimento presencial e online.</p>
+        <p style="font-size:12px">Rua Engenheiro Enaldo Cravo Peixoto, 105 . Sala 920<br>Tijuca . Rio de Janeiro, RJ<br>(21) 99955-5095</p>
+      </div>
+      <div>
+        <h4>NAVEGACAO</h4>
+        <a href="amanda-nobrega-nutri.html#servicos">Especialidades</a>
+        <a href="amanda-nobrega-nutri.html#sobre">Sobre</a>
+        <a href="amanda-nobrega-nutri.html#como">Como funciona</a>
+        <a href="blog.html">Blog</a>
+        <a href="amanda-nobrega-nutri.html#contato">Contato</a>
+      </div>
+      <div>
+        <h4>CONTATO</h4>
+        <a href="https://wa.me/5521999955095?text=Ola%2C%20vim%20pelo%20site%20da%20Amanda" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:contato@nutrindosaude.com.br">contato@nutrindosaude.com.br</a>
+        <a href="https://www.doctoralia.com.br/amanda-nobrega-fernandes-da-costa/nutricionista/rio-de-janeiro" target="_blank" rel="noopener">Doctoralia</a>
+        <a href="https://www.instagram.com/nutrindosaudens" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/nutrindosaudens" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div class="foot-bottom">Amanda Nobrega, nutricionista no Rio de Janeiro. Blog . 2026.</div>
+  </div>
+</footer>
+
+<script>
+  const toggle=document.getElementById("menuToggle"),nav=document.getElementById("nav");
+  if(toggle){toggle.addEventListener("click",function(){nav.classList.toggle("open");document.body.classList.toggle("menu-open")});}
+  nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("open");document.body.classList.remove("menu-open")});});
+  var h=document.getElementById("header");
+  window.addEventListener("scroll",function(){h.classList.toggle("scrolled",window.scrollY>40)});
+</script>
+</body>
+</html>

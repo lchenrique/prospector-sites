@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tais Ferreira . Nutricionista clinica e comportamental . Ilha do Governador</title>
+<meta name="description" content="Nutricionista clinica e comportamental na Ilha do Governador, RJ. Emagrecimento, gestacao, condicoes de saude, performance e publico vegano. Atendimento presencial e online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2EBD9;
+  --bg2:#E8DDC0;
+  --bg3:#EFE5CC;
+  --ink:#2C1F14;
+  --ink2:#5C4632;
+  --ink3:#8A7558;
+  --accent:#8B2A1B;
+  --accent-dark:#5C1810;
+  --sage:#6B7A5C;
+  --sage-dark:#4A5640;
+  --line:#C8B98E;
+  --line-soft:#D8CDA6;
+  --serif:'EB Garamond','Times New Roman',Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  font-size:16px;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:1180px;margin:0 auto;padding:0 40px}
+.container-narrow{width:100%;max-width:780px;margin:0 auto;padding:0 40px}
+section{padding:120px 0}
+
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;letter-spacing:-.01em;color:var(--ink)}
+h1{font-size:clamp(46px,7vw,98px);font-weight:400;line-height:.95;letter-spacing:-.02em}
+h2{font-size:clamp(36px,4.6vw,68px);font-weight:400;line-height:1.05;letter-spacing:-.015em}
+h3{font-size:clamp(22px,2.4vw,32px);font-weight:500;letter-spacing:-.01em}
+
+.roman{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.4em;color:var(--accent);line-height:1}
+.label-mono{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);font-weight:500}
+
+.btn{display:inline-flex;align-items:center;gap:14px;font-weight:500;font-size:14.5px;padding:16px 28px;border-radius:0;transition:background .2s,transform .2s,color .2s;border:1px solid var(--ink);cursor:pointer;font-family:inherit;letter-spacing:.04em;text-transform:uppercase}
+.btn svg{width:16px;height:16px}
+.btn-primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn-primary:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--bg)}
+.btn-accent{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.btn-accent:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+
+.link-underline{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:500;padding-bottom:3px;border-bottom:1px solid var(--accent);transition:gap .25s}
+.link-underline:hover{gap:18px}
+
+/* TOP BAR */
+.topbar{padding:12px 0;background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.topbar .left,.topbar .right{display:flex;align-items:center;gap:18px}
+.topbar .sep{opacity:.4}
+.topbar a{transition:color .2s}
+.topbar a:hover{color:var(--accent)}
+
+/* HEADER fixo */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(242,235,217,.92);backdrop-filter:saturate(120%);border-bottom:1px solid var(--line);padding:18px 0}
+.site-header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:14px;font-family:var(--serif);font-weight:500;font-size:20px}
+.brand .monograma{width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--ink);color:var(--bg);font-family:var(--serif);font-weight:500;font-size:17px;letter-spacing:.02em;font-style:italic}
+.brand-text small{display:block;font-family:var(--sans);font-weight:400;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin-top:1px}
+.site-nav{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:500}
+.site-nav a{position:relative;padding-bottom:2px}
+.site-nav a:not(.btn)::after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.site-nav a:not(.btn):hover::after{transform:scaleX(1)}
+.site-nav .btn{padding:11px 22px;font-size:13px}
+
+/* HERO - entrada direta, sem metafora */
+.hero{position:relative;padding:80px 0 100px;border-bottom:1px solid var(--line);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:80px;align-items:center}
+.hero-text .kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;display:flex;align-items:center;gap:14px}
+.hero-text .kicker::before{content:'';width:32px;height:1px;background:var(--accent)}
+.hero-text h1{font-size:clamp(40px,5.4vw,72px);font-weight:400;line-height:1.02;letter-spacing:-.02em;margin-bottom:28px;max-width:680px}
+.hero-text h1 em{font-style:italic;color:var(--accent);font-weight:400}
+.hero-text .lead{font-family:var(--serif);font-size:20px;line-height:1.5;color:var(--ink2);margin-bottom:32px;max-width:560px}
+.hero-text .ctas{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+.hero-text .reputation{margin-top:36px;padding-top:28px;border-top:1px solid var(--line);display:flex;align-items:center;gap:32px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3)}
+.hero-text .reputation .item{display:flex;align-items:center;gap:8px}
+.hero-text .reputation b{color:var(--ink);font-weight:500;font-family:var(--serif);font-size:20px;letter-spacing:0}
+.hero-text .reputation .stars{color:var(--accent);font-size:14px;letter-spacing:.1em}
+.hero-img{position:relative}
+.hero-img .frame{padding:24px 24px 64px;background:var(--bg3);border:1px solid var(--line);position:relative;box-shadow:8px 12px 0 var(--line-soft)}
+.hero-img .frame img{width:100%;height:auto;display:block;filter:sepia(.15) saturate(1.05)}
+.hero-img .caption{position:absolute;left:24px;right:24px;bottom:20px;font-family:var(--serif);font-style:italic;font-size:13px;color:var(--ink3);text-align:center;line-height:1.3}
+.hero-img .caption b{font-style:normal;font-weight:500;color:var(--ink2);font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:4px}
+.hero-img .tag{position:absolute;top:-18px;right:-18px;background:var(--accent);color:var(--bg);padding:10px 16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;transform:rotate(4deg);box-shadow:2px 3px 0 var(--ink)}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero{padding:60px 0 80px}}
+
+/* SUMARIO (navegacao) */
+.sumario{padding:36px 0;border-bottom:1px solid var(--line);background:var(--bg)}
+.sumario-grid{display:grid;grid-template-columns:auto 1fr auto;gap:14px 40px;align-items:baseline;max-width:980px;margin:0 auto}
+.sumario-grid .roman-num{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--accent);font-weight:400}
+.sumario-grid .titulo{font-family:var(--serif);font-size:21px;color:var(--ink);line-height:1.2}
+.sumario-grid .desc{font-family:var(--serif);font-size:14.5px;color:var(--ink2);font-style:italic}
+.sumario-grid .pg{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3)}
+.sumario-grid a.all{display:contents;color:inherit;transition:color .2s}
+.sumario-grid a.all:hover .titulo{color:var(--accent)}
+@media(max-width:760px){.sumario-grid{grid-template-columns:auto 1fr;gap:12px 16px}.sumario-grid .pg{display:none}}
+
+/* SECTION PADRAO */
+.section-head{display:grid;grid-template-columns:80px 1fr;gap:32px;margin-bottom:64px;align-items:start}
+.section-head .num{font-family:var(--serif);font-style:italic;font-size:64px;color:var(--accent);line-height:.8;padding-top:8px}
+.section-head .head h2{margin-bottom:14px}
+.section-head .head .kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.section-head .head .kicker::before{content:'';width:24px;height:1px;background:var(--ink3)}
+@media(max-width:760px){.section-head{grid-template-columns:1fr;gap:8px;margin-bottom:48px}.section-head .num{font-size:42px;padding-top:0}}
+
+/* SECAO I - ABERTURA (texto editorial sem metafora de guia) */
+.abertura{padding:120px 0 100px;border-bottom:1px solid var(--line)}
+.abertura-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:80px;align-items:start}
+.abertura-text .kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;display:flex;align-items:center;gap:14px}
+.abertura-text .kicker::before{content:'';width:32px;height:1px;background:var(--accent)}
+.abertura-text h2{margin-bottom:32px}
+.abertura-text h2 em{font-style:italic;color:var(--accent)}
+.abertura-text p{font-size:16px;line-height:1.7;color:var(--ink2);margin-bottom:18px;max-width:540px}
+.abertura-text p strong{color:var(--ink);font-weight:600}
+.abertura-text .signature{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink2)}
+.abertura-text .signature b{font-style:normal;font-weight:500;color:var(--ink)}
+.abertura-side{position:sticky;top:32px;padding:32px;background:var(--bg3);border:1px solid var(--line)}
+.abertura-side .stamp{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.abertura-side .stamp::before{content:'';width:18px;height:1px;background:var(--accent)}
+.abertura-side p{font-family:var(--serif);font-size:15.5px;line-height:1.6;color:var(--ink2);font-style:italic;margin:0}
+@media(max-width:980px){.abertura-grid{grid-template-columns:1fr;gap:48px}.abertura-side{position:static}}
+
+/* CAPA I - A CONSULTA (layout 2 colunas com marginalia) */
+.consulta{background:var(--bg);border-bottom:1px solid var(--line);position:relative}
+.consulta-grid{display:grid;grid-template-columns:1fr 240px;gap:60px;align-items:start}
+.consulta-text p{font-family:var(--serif);font-size:19px;line-height:1.7;color:var(--ink2);margin-bottom:24px;max-width:620px}
+.consulta-text p:first-of-type::first-line{font-variant:small-caps;letter-spacing:.04em;color:var(--ink)}
+.consulta-text p strong{color:var(--ink);font-weight:500}
+.consulta-aside{position:sticky;top:32px;padding:24px;background:var(--bg3);border:1px solid var(--line);font-family:var(--mono);font-size:12px;line-height:1.7;color:var(--ink2)}
+.consulta-aside .lbl{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:12px;display:block}
+.consulta-aside ul{list-style:none;padding:0;margin:0 0 18px}
+.consulta-aside li{padding:6px 0;border-bottom:1px dotted var(--line)}
+.consulta-aside li:last-child{border:0}
+.consulta-aside li b{display:block;color:var(--ink);font-weight:500;font-family:var(--sans);margin-bottom:2px}
+@media(max-width:980px){.consulta-grid{grid-template-columns:1fr;gap:32px}.consulta-aside{position:static}}
+
+/* CAPA II - CLINICA E COMPORTAMENTAL (2 colunas) */
+.dupla{background:var(--bg2);border-bottom:1px solid var(--line)}
+.dupla-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:48px}
+.dupla-col h3{font-family:var(--serif);font-size:28px;font-weight:500;margin-bottom:12px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.dupla-col h3 small{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:500;font-style:normal}
+.dupla-col .it{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ink2);margin-bottom:18px;line-height:1.45}
+.dupla-col p{font-size:15.5px;line-height:1.65;color:var(--ink2);margin-bottom:14px}
+.dupla-col ul{list-style:none;padding:0;margin-top:18px;border-top:1px solid var(--line-soft)}
+.dupla-col li{font-family:var(--serif);font-size:15.5px;color:var(--ink2);padding:10px 0 10px 20px;border-bottom:1px solid var(--line-soft);position:relative;line-height:1.45}
+.dupla-col li::before{content:'\2731';position:absolute;left:0;top:10px;color:var(--accent);font-size:14px}
+@media(max-width:820px){.dupla-grid{grid-template-columns:1fr;gap:48px}}
+
+/* CAPA III - PUBLICOS (lista telefônica) */
+.publicos-lista{border-top:2px solid var(--ink)}
+.pub-row{display:grid;grid-template-columns:60px 1fr 2fr 80px;gap:32px;align-items:baseline;padding:28px 0;border-bottom:1px solid var(--line);transition:padding .25s ease,background .2s;cursor:default}
+.pub-row:hover{padding-left:16px;background:var(--bg3)}
+.pub-row .num{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--accent);font-weight:500;text-transform:uppercase}
+.pub-row h3{font-family:var(--serif);font-size:24px;font-weight:500;letter-spacing:-.01em;line-height:1.2;margin:0}
+.pub-row p{font-family:var(--serif);font-size:15.5px;color:var(--ink2);line-height:1.5;font-style:italic;margin:0}
+.pub-row .ref{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--ink3);text-align:right;text-transform:uppercase}
+@media(max-width:820px){.pub-row{grid-template-columns:50px 1fr;gap:12px 16px;padding:22px 0}.pub-row p{grid-column:2}.pub-row .ref{display:none}}
+
+/* CAPA IV - SOBRE (asymmetric, polaroid) */
+.sobre{background:var(--bg);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.sobre::before{content:'';position:absolute;left:0;right:0;top:48%;height:1px;background:var(--line)}
+.sobre-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:80px;align-items:center;position:relative}
+.sobre-text .bio{font-family:var(--serif);font-size:19px;line-height:1.65;color:var(--ink2);margin-bottom:22px}
+.sobre-text .bio strong{color:var(--ink);font-weight:500}
+.sobre-text .bio:first-of-type::first-letter{font-family:var(--serif);font-size:64px;float:left;line-height:.85;padding:8px 12px 0 0;color:var(--accent);font-weight:400}
+.sobre-photo{position:relative;padding:80px 0}
+.sobre-photo .polaroid{position:relative;background:#FBF6E8;padding:18px 18px 80px;box-shadow:6px 8px 24px rgba(44,31,20,.18);transform:rotate(-3deg);max-width:380px;margin:0 auto}
+.sobre-photo .polaroid img{width:100%;height:auto;display:block;filter:sepia(.12) saturate(1.05)}
+.sobre-photo .polaroid .handwriting{position:absolute;left:18px;right:18px;bottom:18px;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink2);text-align:center;line-height:1.4}
+.sobre-photo .stamp{position:absolute;top:30px;right:30px;width:90px;height:90px;border:2px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;line-height:1.3;transform:rotate(8deg);opacity:.85}
+.sobre-photo .stamp b{display:block;font-size:14px;font-family:var(--serif);font-weight:500;letter-spacing:.04em;margin-top:2px}
+.sobre-photo .caption-bottom{margin-top:32px;font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);text-align:center}
+@media(max-width:980px){.sobre-grid{grid-template-columns:1fr;gap:48px}.sobre-photo{padding:0}.sobre-photo .polaroid{max-width:340px;transform:rotate(-2deg)}}
+
+/* CAPA V - CONTATO (ficha de fichario) */
+.contato{background:var(--bg2);border-bottom:2px solid var(--ink)}
+.ficha{background:var(--bg3);border:1px solid var(--ink);padding:64px 56px;position:relative;max-width:880px;margin:0 auto;box-shadow:8px 8px 0 var(--line-soft)}
+.ficha::before{content:'Ficha de atendimento';position:absolute;top:-12px;left:32px;background:var(--bg2);padding:0 16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3)}
+.ficha::after{content:'';position:absolute;top:16px;right:16px;width:60px;height:60px;border:1.5px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent);font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;text-align:center;line-height:1.2}
+.ficha-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px 56px}
+.ficha-col .field{padding:14px 0;border-bottom:1px solid var(--line-soft)}
+.ficha-col .field:last-child{border-bottom:0}
+.ficha-col .field .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:6px;display:block}
+.ficha-col .field .val{font-family:var(--serif);font-size:18px;color:var(--ink);line-height:1.4}
+.ficha-col .field .val a{border-bottom:1px solid var(--ink);transition:color .2s,border-color .2s}
+.ficha-col .field .val a:hover{color:var(--accent);border-color:var(--accent)}
+.ficha-col .field .val small{font-size:14.5px;color:var(--ink2);display:block;margin-top:2px;font-style:italic}
+.ficha-col .field .val b{font-weight:500;color:var(--ink)}
+.ficha-cta{margin-top:48px;padding-top:32px;border-top:1px solid var(--ink);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.ficha-cta p{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink2);max-width:420px;line-height:1.5}
+.ficha-cta .ctas{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:760px){.ficha{padding:48px 24px}.ficha::after{display:none}.ficha-grid{grid-template-columns:1fr;gap:0}.ficha-cta{flex-direction:column;align-items:flex-start}}
+
+/* FOOTER - linha fina classificada */
+footer{padding:48px 0 32px;background:var(--ink);color:var(--bg2)}
+footer .row{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase}
+footer .row .left,.footer .row .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+footer .row a{color:var(--bg2);border-bottom:1px solid var(--line);padding-bottom:1px;transition:color .2s,border-color .2s}
+footer .row a:hover{color:var(--accent);border-color:var(--accent)}
+footer .row .sep{color:var(--ink3);opacity:.5}
+footer .carimbo{margin-top:32px;padding-top:24px;border-top:1px solid var(--ink2);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink2)}
+footer .carimbo .stamp{font-family:var(--mono);font-style:normal;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);line-height:1.5;text-align:right}
+
+/* FAB */
+.fab{position:fixed;right:24px;bottom:24px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.4);transition:transform .2s,background .2s}
+.fab:hover{transform:scale(1.08);background:var(--accent-dark)}
+.fab svg{width:28px;height:28px}
+
+/* REVEAL . sem bloqueio de visibilidade */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.rv.on{opacity:1;transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<aside class="topbar">
+  <div class="container topbar-inner">
+    <div class="left">
+      <span>Tais Ferreira, nutricionista</span><span class="sep">.</span><span>Ilha do Governador, RJ</span>
+    </div>
+    <div class="right">
+      <a href="mailto:contato@nutritaisferreira.com">contato@nutritaisferreira.com</a><span class="sep">.</span><a href="https://wa.me/5521987990463?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ta%C3%ADs%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener">(21) 98799-0463</a>
+    </div>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="container site-header-inner">
+    <a href="#top" class="brand">
+      <span class="monograma">TF</span>
+      <span class="brand-text">Tais Ferreira<small>Nutricao clinica e comportamental . Ilha do Governador</small></span>
+    </a>
+    <nav class="site-nav">
+      <a href="#abertura">Abertura</a>
+      <a href="#consulta">Consulta</a>
+      <a href="#dupla">Abordagem</a>
+      <a href="#publicos">Publicos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+      <a class="btn btn-ghost" href="https://wa.me/5521987990463?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ta%C3%ADs%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<section id="top" class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text rv">
+        <div class="kicker">Nutricao clinica e comportamental</div>
+        <h1>Tais Ferreira. <em>Nutricionista</em> na Ilha do Governador.</h1>
+        <p class="lead">Atendimento presencial na Ilha do Governador e online para todo o Brasil. Emagrecimento, gestacao, diabetes, hipertensao, performance, transtornos alimentares, publico vegano. Um metodo pratico construido a partir da sua rotina, sem dieta da moda.</p>
+        <div class="ctas">
+          <a class="btn btn-accent" href="https://wa.me/5521987990463?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ta%C3%ADs%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+          <a class="btn btn-ghost" href="#consulta">Conhecer a consulta</a>
+        </div>
+        <div class="reputation">
+          <div class="item"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><b>5.0</b></div>
+          <div class="item"><b>67</b><span>avaliacoes no Google</span></div>
+          <div class="item"><b>5</b><span>dias por semana, agenda aberta</span></div>
+        </div>
+      </div>
+      <div class="hero-img rv">
+        <div class="frame">
+          <img src="img/botanica-erva-cidreira.jpg" alt="Ilustracao botanica classica de Melissa officinalis, erva-cidreira, em papel envelhecido">
+          <div class="caption"><b>Fig. 01</b>Melissa officinalis, erva-cidreira. Calma, digestao, sono.</div>
+        </div>
+        <div class="tag">Plantas do consultorio</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="sumario" aria-label="Sumario">
+  <div class="container">
+    <div class="sumario-grid">
+      <a class="all" href="#abertura">
+        <span class="roman-num">I</span>
+        <span class="titulo">Abertura</span>
+        <span class="desc">Como eu trabalho, em poucas linhas.</span>
+        <span class="pg">pag. 01</span>
+      </a>
+      <a class="all" href="#consulta">
+        <span class="roman-num">II</span>
+        <span class="titulo">A consulta</span>
+        <span class="desc">O que acontece na primeira sessao.</span>
+        <span class="pg">pag. 02</span>
+      </a>
+      <a class="all" href="#dupla">
+        <span class="roman-num">III</span>
+        <span class="titulo">Clinica e comportamental</span>
+        <span class="desc">As duas frentes do trabalho.</span>
+        <span class="pg">pag. 03</span>
+      </a>
+      <a class="all" href="#publicos">
+        <span class="roman-num">IV</span>
+        <span class="titulo">Os publicos</span>
+        <span class="desc">Oito perfis, um mesmo cuidado.</span>
+        <span class="pg">pag. 04</span>
+      </a>
+      <a class="all" href="#sobre">
+        <span class="roman-num">V</span>
+        <span class="titulo">Sobre a Tais</span>
+        <span class="desc">Quem esta do outro lado.</span>
+        <span class="pg">pag. 05</span>
+      </a>
+      <a class="all" href="#contato">
+        <span class="roman-num">VI</span>
+        <span class="titulo">Marcar a sessao</span>
+        <span class="desc">Como agendar e onde estar.</span>
+        <span class="pg">pag. 06</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- SECAO I - ABERTURA (texto editorial) -->
+<section id="abertura" class="abertura">
+  <div class="container">
+    <div class="abertura-grid">
+      <div class="abertura-text rv">
+        <div class="kicker">I. Como eu trabalho</div>
+        <h2>Nao existe comida certa. Existe <em>comida sua</em>.</h2>
+        <p>Muito antes de falar de macronutrientes, a gente precisa conversar sobre a sua vida. Sobre o que voce come no domingo a noite, no cafe do trabalho, no intervalo do estudio, na ida ao mercado com pressa.</p>
+        <p>Meu trabalho e construir com voce um plano <strong>que cabe na rotina</strong> em vez de uma rotina que gira em torno de regras. Em vez de dietas da moda, um metodo pratico com acompanhamento humano. Em vez de protocolo, um plano desenhado a partir do que voce come, do que voce gosta e do que faz sentido.</p>
+        <p>Atendo presencialmente na Ilha do Governador, e online para todo o Brasil. Agenda aberta de segunda a sexta, das 08h00 as 20h00.</p>
+        <p class="signature"><b>Tais Ferreira</b>, CRN ativa<br>Nutricao clinica e comportamental</p>
+      </div>
+      <aside class="abertura-side rv">
+        <div class="stamp">Para quem e este site</div>
+        <p>Para quem ja tentou de tudo e precisa de um metodo que respeite a vida real. Para quem busca emagrecer com saude, engravidar, controlar diabetes, melhorar performance, ou simplesmente entender melhor a relacao com a comida. Nao e um site de promessas. E um site de consulta.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SECAO II - A CONSULTA (2 colunas com marginalia) -->
+<section id="consulta" class="consulta">
+  <div class="container">
+    <div class="section-head rv">
+      <div class="num">II.</div>
+      <div class="head">
+        <h2>O que acontece na primeira sessao.</h2>
+      </div>
+    </div>
+    <div class="consulta-grid">
+      <div class="consulta-text rv">
+        <p>A primeira sessao dura em media uma hora e comeca com uma conversa aberta. Quero entender a sua historia, nao so clinica, mas de vida. <strong>O que voce ja tentou, o que funcionou, o que nao funcionou, o que voce tem medo de tentar de novo.</strong></p>
+        <p>Em seguida, a gente parte para a avaliacao. Historia clinica detalhada, habitos atuais, qualidade do sono, nivel de estresse, rotina de atividade fisica. Medicoes de composicao corporal com bioimpedancia: peso, IMC, percentual de gordura, relacao cintura-quadril.</p>
+        <p>Ao final, eu construo e entrego o primeiro rascunho do seu plano alimentar. Nao um cardapio generico, mas um <strong>documento personalizado</strong> construido a partir de tudo que a gente conversou. Com lista de compras, horarios flexiveis e refeicoes que cabem na sua rotina.</p>
+        <p>A partir dai, a gente marca retornos. O primeiro geralmente em 15 dias, depois mensais. E entre as consultas, tem suporte por WhatsApp para duvidas do dia a dia. Mudanca que dura comeca com consistencia, e consistencia comeca com alguem do outro lado.</p>
+      </div>
+      <aside class="consulta-aside rv">
+        <span class="lbl">Marginalia</span>
+        <ul>
+          <li><b>Duracao</b>60 minutos</li>
+          <li><b>Investimento</b>A combinar</li>
+          <li><b>Formato</b>Presencial ou online</li>
+          <li><b>Retorno</b>15 dias, depois mensal</li>
+        </ul>
+        <span class="lbl">O que levar</span>
+        <ul>
+          <li>Exames recentes de sangue</li>
+          <li>Lista de medicamentos em uso</li>
+          <li>Diario alimentar de 3 dias, se tiver</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SECAO III - CLINICA E COMPORTAMENTAL (2 colunas) -->
+<section id="dupla" class="dupla">
+  <div class="container">
+    <div class="section-head rv">
+      <div class="num">III.</div>
+      <div class="head">
+        <div class="kicker">Secao III. As duas frentes</div>
+        <h2>Nutricao clinica e comportamental.</h2>
+      </div>
+    </div>
+    <div class="dupla-grid">
+      <div class="dupla-col rv">
+        <h3>Clinica <small>Frente A</small></h3>
+        <p class="it">Para tratar e prevenir doencas com a alimentacao como ferramenta.</p>
+        <p>Atendo pessoas com diabetes tipo 1 e 2, hipertensao, obesidade, sindrome metabolica, intolerancias e doencas cardiovasculares. Tambem acompanhamento pos-cirurgia bariatrica e suporte nutricional durante tratamentos como quimioterapia.</p>
+        <p>Em todos os casos, o cardapio e desenhado em conjunto com o medico que acompanha voce. Nao substitui tratamento, completa.</p>
+        <ul>
+          <li>Diabetes e resistencia a insulina</li>
+          <li>Hipertensao e doencas cardiovasculares</li>
+          <li>Obesidade e pos-cirurgia bariatrica</li>
+          <li>Intolerancias e alergias alimentares</li>
+        </ul>
+      </div>
+      <div class="dupla-col rv">
+        <h3>Comportamental <small>Frente B</small></h3>
+        <p class="it">Para mudar a relacao com a comida, nao so a composicao do prato.</p>
+        <p>Muitos pacientes chegam ao consultorio depois de anos de dietas que nao duraram. Em vez de propor mais uma, a gente trabalha a relacao com a comida. Compulsao, alimentacao emocional, ansiedade, ciclo de restricao e excesso.</p>
+        <p>O objetivo e construir uma relacao mais leve, em que a alimentacao e uma aliada e nao uma fonte constante de culpa.</p>
+        <ul>
+          <li>Compulsao alimentar periodica</li>
+          <li>Transtornos alimentares em recuperacao</li>
+          <li>Ansiedade e alimentacao emocional</li>
+          <li>Ciclos de dieta com efeito sanfona</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECAO IV - OS PUBLICOS (lista telefonica) -->
+<section id="publicos" class="container" style="padding:120px 0;border-bottom:1px solid var(--line)">
+  <div class="section-head rv">
+    <div class="num">IV.</div>
+    <div class="head">
+      <h2>Oito perfis, um mesmo cuidado.</h2>
+    </div>
+  </div>
+  <div class="publicos-lista rv">
+    <article class="pub-row"><span class="num">P.01</span><h3>Emagrecimento e estilo de vida</h3><p>Para quem quer perder peso com saude, ganhar energia e construir habitos que duram alem da dieta.</p><span class="ref">Ref. 01</span></article>
+    <article class="pub-row"><span class="num">P.02</span><h3>Maes e gestantes</h3><p>Planejamento gestacional, gestacao trimestre a trimestre e recuperacao pos-parto com suporte nutricional.</p><span class="ref">Ref. 02</span></article>
+    <article class="pub-row"><span class="num">P.03</span><h3>Condicoes de saude</h3><p>Diabetes, hipertensao, obesidade, intolerancias e doencas cardiovasculares. Tratamento nutricional clinico.</p><span class="ref">Ref. 03</span></article>
+    <article class="pub-row"><span class="num">P.04</span><h3>Condicionamento fisico</h3><p>Hipertrofia, definicao, resistencia ou perda de gordura com objetivo estetico. Plano alinhado ao treino.</p><span class="ref">Ref. 04</span></article>
+    <article class="pub-row"><span class="num">P.05</span><h3>Atletas amadores e profissionais</h3><p>Otimizar nutricao pre e pos treino, acelerar recuperacao e atingir metas especificas da temporada.</p><span class="ref">Ref. 05</span></article>
+    <article class="pub-row"><span class="num">P.06</span><h3>Profissionais atarefados</h3><p>Solucoes praticas para quem tem agenda corrida. Refeicoes rapidas, marmitas e estrategia de viagens.</p><span class="ref">Ref. 06</span></article>
+    <article class="pub-row"><span class="num">P.07</span><h3>Adolescentes e estudantes</h3><p>Habitos saudaveis na adolescencia, questoes de crescimento, foco nos estudos e energia para o dia a dia.</p><span class="ref">Ref. 07</span></article>
+    <article class="pub-row"><span class="num">P.08</span><h3>Vegano e vegetariano</h3><p>Nutricao equilibrada sem produtos de origem animal, com suplementacao quando necessario.</p><span class="ref">Ref. 08</span></article>
+  </div>
+</section>
+
+<!-- SECAO V - SOBRE A TAIS (com polaroid) -->
+<section id="sobre" class="sobre">
+  <div class="container">
+    <div class="section-head rv">
+      <div class="num">V.</div>
+      <div class="head">
+        <h2>Quem esta do outro lado.</h2>
+      </div>
+    </div>
+    <div class="sobre-grid">
+      <div class="sobre-text rv">
+        <p class="bio">Sou a <strong>Tais Ferreira</strong>, nutricionista formada em nutricao clinica e comportamental, com foco em emagrecimento, reeducacao alimentar, gestacao e performance. Atendo presencialmente na Ilha do Governador, em consultorio proprio, e online para quem mora em qualquer lugar do Brasil.</p>
+        <p class="bio">Minha formacao e voltada a duas frentes que se complementam: o tratamento clinico de doencas como diabetes, hipertensao e obesidade, e o trabalho comportamental com pacientes que ja tentaram de tudo e precisam de um metodo que respeite a vida real.</p>
+        <p class="bio">Atendo desde adolescentes em fase de crescimento ate idosos com condicoes cronicas. Tambem trabalho com publico vegano, vegetariano e pessoas em recuperacao de transtornos alimentares. Para mim, cada pessoa que chega ao consultorio tem um contexto proprio, e o plano e sempre desenhado a partir desse contexto.</p>
+        <p class="bio">Minha agenda e aberta de segunda a sexta, das 08h00 as 20h00. Atendo particular e alguns convenios. Para saber valores e disponibilidade, o caminho mais rapido e o WhatsApp.</p>
+      </div>
+      <div class="sobre-photo rv">
+        <div class="polaroid">
+          <img src="img/polaroid-tais.jpg" alt="Consultorio de nutricao, caderno aberto, laptop e planta em vaso de barro">
+          <div class="handwriting">Consultorio na Ilha.<br>Agosto, 2026.</div>
+        </div>
+        <div class="stamp"><span>Selo<br><b>CRN</b><br>ativa</span></div>
+        <div class="caption-bottom">Acima, o consultorio. Abaixo, o carimbo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECAO VI - CONTATO (ficha de fichario) -->
+<section id="contato" class="contato">
+  <div class="container">
+    <div class="section-head rv">
+      <div class="num">VI.</div>
+      <div class="head">
+        <h2>Marcar a sessao.</h2>
+      </div>
+    </div>
+    <div class="ficha rv">
+      <div class="ficha-grid">
+        <div class="ficha-col">
+          <div class="field">
+            <span class="lbl">WhatsApp</span>
+            <div class="val"><a href="https://wa.me/5521987990463?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ta%C3%ADs%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener">(21) 98799-0463</a><small>Resposta em horario comercial, em ate 4h uteis.</small></div>
+          </div>
+          <div class="field">
+            <span class="lbl">Email</span>
+            <div class="val"><a href="mailto:contato@nutritaisferreira.com">contato@nutritaisferreira.com</a><small>Para duvidas, segunda via e relatorios.</small></div>
+          </div>
+          <div class="field">
+            <span class="lbl">Atendimento online</span>
+            <div class="val"><b>Para todo o Brasil</b><small>Por videochamada, com a mesma duracao e a mesma profundidade.</small></div>
+          </div>
+        </div>
+        <div class="ficha-col">
+          <div class="field">
+            <span class="lbl">Consultorio</span>
+            <div class="val"><b>Estrada do Galeao, 1035, sala 207</b><small>Jardim Guanabara, Ilha do Governador, Rio de Janeiro, RJ</small></div>
+          </div>
+          <div class="field">
+            <span class="lbl">Horarios</span>
+            <div class="val"><b>Segunda a sexta, das 08h00 as 20h00</b><small>Agendamento previo. Ultima entrada do dia as 19h00.</small></div>
+          </div>
+          <div class="field">
+            <span class="lbl">Como chegar</span>
+            <div class="val"><b>Estacionamento no local.</b><small>A 8 min da estacao de trem da Ilha. Onibus na porta.</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="ficha-cta">
+        <p>A primeira sessao dura sessenta minutos. A gente conversa sobre sua rotina, seus exames e o que voce ja tentou.</p>
+        <div class="ctas">
+          <a class="btn btn-ghost" href="mailto:contato@nutritaisferreira.com">Enviar email</a>
+          <a class="link-underline" href="https://wa.me/5521987990463?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ta%C3%ADs%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener">Abrir WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="left">
+        <span>O Plano. Edicao 07. Agosto de 2026.</span>
+        <span class="sep">.</span>
+        <a href="#abertura">Topo</a>
+        <span class="sep">.</span>
+        <a href="#consulta">Consulta</a>
+        <span class="sep">.</span>
+        <a href="#publicos">Publicos</a>
+        <span class="sep">.</span>
+        <a href="#sobre">Sobre</a>
+        <span class="sep">.</span>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="right">
+        <a href="https://wa.me/5521987990463?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ta%C3%ADs%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener">(21) 98799-0463</a>
+        <span class="sep">.</span>
+        <a href="mailto:contato@nutritaisferreira.com">contato@nutritaisferreira.com</a>
+      </div>
+    </div>
+    <div class="carimbo">
+      <span>Tais Ferreira, nutricionista. CRN ativa. Ilha do Governador, Rio de Janeiro.</span>
+      <span class="stamp">Impresso no Rio<br>Agosto de 2026</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/5521987990463?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Ta%C3%ADs%20e%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.8-.9-2.9-1.6-4.1-3.6-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1 2.7.1.2 1.9 2.9 4.6 4.1 1.6.7 2.2.8 3 .7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+<script>
+(function(){
+  // reveal
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});
+  },{threshold:0,rootMargin:'0px 0px 200px 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  function revealVisible(){
+    document.querySelectorAll('.rv:not(.on)').forEach(function(el){
+      var r=el.getBoundingClientRect();
+      if(r.top < window.innerHeight + 200 && r.bottom > -200){el.classList.add('on');io.unobserve(el);}
+    });
+  }
+  revealVisible();
+  window.addEventListener('load',revealVisible);
+  window.addEventListener('scroll',revealVisible,{passive:true});
+  setTimeout(revealVisible,500);
+  setTimeout(revealVisible,1500);
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Pastas/arquivos desnecessarios no container
+.git/
+.gitignore
+*.bak
+*_backup*
+*~
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+.DS_Store

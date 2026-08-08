@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A importancia dos alimentos organicos . Blog Amanda Nobrega</title>
+<meta name="description" content="A preocupacao com a saude e com a alimentacao vem crescendo. Os organicos sao cultivados sem agrotoxicos e trazem beneficios para a saude e o meio ambiente.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF5F0; --bg2:#F3E6E0; --ink:#2A1820; --ink2:#7A5560;
+  --accent:#C24170; --accent-dark:#9F2E57; --cream:#F4E7DD;
+  --line:#E5D2D8; --card:#FFFCFD;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:1280px;margin:0 auto;padding:0 32px}
+section{padding:120px 0}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;letter-spacing:-.02em}
+h1{font-size:clamp(40px,6vw,84px);font-weight:300}
+h2{font-size:clamp(32px,4vw,56px);font-weight:400}
+h3{font-size:clamp(22px,2vw,28px);font-weight:500}
+p{font-size:16.5px;line-height:1.65;color:var(--ink2)}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(251,245,240,.92);backdrop-filter:saturate(120%);border-bottom:1px solid var(--line);padding:18px 0;transition:padding .3s ease}
+.header.scrolled{padding:12px 0}
+.header .container{display:flex;align-items:center;justify-content:space-between;gap:32px}
+.brand{font-family:var(--serif);font-size:18px;font-weight:500;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.brand .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.brand-sub{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;color:var(--ink2);text-transform:uppercase;margin-top:2px}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{font-size:14px;color:var(--ink2);font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.nav .btn-agendar{padding:10px 22px;background:var(--accent);color:#fff;border-radius:0;font-size:13px;letter-spacing:.04em}
+.nav .btn-agendar:hover{background:var(--accent-dark)}
+.menu-toggle{display:none;background:transparent;border:0;color:var(--ink);font-size:24px;cursor:pointer;padding:8px}
+@media(max-width:780px){
+  .nav{position:fixed;top:0;right:0;bottom:0;width:280px;background:var(--bg);flex-direction:column;align-items:flex-start;padding:96px 32px 32px;gap:24px;transform:translateX(100%);transition:transform .35s ease;border-left:1px solid var(--line)}
+  .nav.open{transform:translateX(0)}
+  .nav a{font-size:18px}
+  .menu-toggle{display:block}
+  body.menu-open{overflow:hidden}
+}
+.post-hero{background:var(--bg2);padding:160px 0 80px}
+.breadcrumb{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin-bottom:32px;display:flex;gap:12px;align-items:center}
+.breadcrumb a{color:var(--ink2);border-bottom:1px solid var(--line);padding-bottom:1px;transition:color .2s}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb .sep{color:var(--line)}
+.post-hero .cat{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:24px}
+.post-hero h1{margin-bottom:32px;max-width:980px}
+.post-hero .lead{font-size:20px;max-width:680px;color:var(--ink2);line-height:1.5}
+.post-hero .meta-row{display:flex;gap:32px;margin-top:48px;padding-top:32px;border-top:1px solid var(--line);flex-wrap:wrap;align-items:center}
+.post-hero .meta-row .item{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
+.post-hero .meta-row .item b{color:var(--ink);font-family:var(--serif);font-size:18px;font-weight:500;letter-spacing:-.01em;display:block;margin-bottom:4px;text-transform:none}
+@media(max-width:780px){.post-hero{padding:120px 0 56px}.post-hero .meta-row{gap:24px}}
+.post-hero-img{width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--bg)}
+.post-hero-img img{width:100%;height:100%;object-fit:cover}
+.post-body{background:var(--bg)}
+.post-layout{display:grid;grid-template-columns:1fr 320px;gap:80px;align-items:start}
+.post-content{font-size:18px;line-height:1.7}
+.post-content p{margin-bottom:24px;color:var(--ink2);font-size:17.5px;line-height:1.65}
+.post-content h3{font-size:24px;margin:48px 0 20px;color:var(--ink);font-weight:500;letter-spacing:-.01em}
+.post-content ol,.post-content ul{margin:24px 0 24px 24px;color:var(--ink2);font-size:17.5px;line-height:1.65}
+.post-content li{margin-bottom:8px}
+.post-content li::marker{color:var(--accent);font-weight:500}
+.post-content em{color:var(--ink);font-style:italic;font-weight:500}
+.post-content strong{color:var(--ink);font-weight:600}
+.cta-box{background:var(--card);border:1px solid var(--line);padding:36px;margin:64px 0;text-align:center}
+.cta-box .label{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.cta-box h3{font-size:24px;margin-bottom:14px;color:var(--ink);font-weight:500}
+.cta-box p{font-size:15.5px;margin-bottom:24px;color:var(--ink2)}
+.cta-box .btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 32px;font-size:14px;font-weight:500;letter-spacing:.04em;border-radius:0}
+.cta-box .btn:hover{background:var(--accent-dark)}
+.post-aside{position:sticky;top:120px;display:flex;flex-direction:column;gap:40px}
+.aside-block{border-top:1px solid var(--ink);padding-top:24px}
+.aside-block h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;font-weight:500}
+.aside-block .rel{display:flex;flex-direction:column;gap:20px}
+.aside-block .rel a{display:flex;gap:14px;text-decoration:none;color:var(--ink);transition:color .2s}
+.aside-block .rel a:hover{color:var(--accent)}
+.aside-block .rel .img{width:80px;height:60px;flex:none;overflow:hidden;background:var(--bg2)}
+.aside-block .rel .img img{width:100%;height:100%;object-fit:cover}
+.aside-block .rel .txt{font-size:14px;line-height:1.4;font-weight:500}
+.aside-block .rel .meta{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);margin-top:6px;display:block}
+.aside-block .cats{display:flex;flex-wrap:wrap;gap:8px}
+.aside-block .cats a{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);padding:8px 14px;border:1px solid var(--line);transition:all .2s}
+.aside-block .cats a:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+@media(max-width:1024px){.post-layout{grid-template-columns:1fr;gap:48px}.post-aside{position:static}}
+.post-nav{padding:64px 0;border-top:1px solid var(--line);background:var(--bg)}
+.post-nav .container{display:flex;justify-content:space-between;gap:32px;align-items:stretch}
+.post-nav a{display:flex;flex-direction:column;padding:24px 28px;border:1px solid var(--line);max-width:48%;flex:1;background:var(--card);transition:background .2s}
+.post-nav a:hover{background:var(--bg2)}
+.post-nav .dir{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.post-nav .title{font-family:var(--serif);font-size:18px;line-height:1.2;color:var(--ink);font-weight:500}
+.post-nav .next{text-align:right;align-items:flex-end}
+@media(max-width:680px){.post-nav .container{flex-direction:column}.post-nav a{max-width:100%}}
+footer{background:#1A0E14;color:#D6C0C8;padding:72px 0 32px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
+footer .brand{color:#fff;margin-bottom:18px}
+footer .brand-sub{color:#9F7A86}
+footer p{color:#9F7A86;font-size:13.5px;line-height:1.6;margin-bottom:18px}
+footer h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin-bottom:18px;font-weight:500}
+footer a{color:#D6C0C8;display:block;font-size:14px;padding:6px 0;transition:color .2s}
+footer a:hover{color:#fff}
+footer .foot-bottom{margin-top:48px;padding-top:24px;border-top:1px solid #3A1F2A;font-size:11.5px;color:#7A5560;text-align:center;letter-spacing:.04em}
+@media(max-width:780px){footer .cols{grid-template-columns:1fr;gap:32px}}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container">
+    <a href="../amanda-nobrega-nutri.html" class="brand">
+      <span class="dot"></span>
+      <div>
+        <div>Amanda Nobrega</div>
+        <span class="brand-sub">Nutricionista . Tijuca, RJ</span>
+      </div>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="../amanda-nobrega-nutri.html#servicos">Especialidades</a>
+      <a href="../amanda-nobrega-nutri.html#sobre">Sobre</a>
+      <a href="../amanda-nobrega-nutri.html#como">Como funciona</a>
+      <a href="../blog.html" style="color:var(--ink)">Blog</a>
+      <a href="../amanda-nobrega-nutri.html#contato">Contato</a>
+      <a href="https://wa.me/5521999955095?text=Ola%2C%20vim%20pelo%20site%20da%20Amanda%20e%20quero%20agendar." target="_blank" rel="noopener" class="btn-agendar">Agendar</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">&#9776;</button>
+  </div>
+</header>
+
+<section class="post-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../blog.html">Blog</a><span class="sep">/</span><span>A importancia dos alimentos organicos</span></div>
+    <div class="cat">Reeducacao</div>
+    <h1>A importancia dos alimentos organicos</h1>
+    <p class="lead">A preocupacao com a saude e com a alimentacao vem crescendo. Os organicos sao cultivados sem agrotoxicos e trazem beneficios para a saude e o meio ambiente.</p>
+    <div class="meta-row">
+      <div class="item"><b>Amanda Nobrega</b>Nutricionista, CRN ativo</div>
+      <div class="item"><b>21 de julho de 2017</b>publicado</div>
+      <div class="item"><b>6 min</b>de leitura</div>
+    </div>
+  </div>
+</section>
+
+<figure class="post-hero-img"><img src="img/03-organicos.jpg" alt="A importancia dos alimentos organicos"></figure>
+
+<section class="post-body">
+  <div class="container post-layout">
+    <article class="post-content">
+      <p>Nos ultimos tempos, a preocupacao com a saude e com a alimentacao vem crescendo bastante. As pessoas estao investindo cada vez mais numa alimentacao de qualidade. E toda essa preocupacao se relaciona diretamente com as novas tecnicas de producao de alimentos, em especial, a crescente producao de alimentos organicos, caracterizados por serem cultivados sem o uso de adubos quimicos ou agrotoxicos.</p>
+      <h3>Os organicos no Brasil</h3><p>Os alimentos organicos vem ganhando um espaco cada vez maior aqui no Brasil. Nosso pais exporta alguns alimentos organicos. Os principais sao o cafe e a soja. Ja para importacao, o Brasil compra hortalicas, mel e feijao.</p><p>Mas um fato interessante e que, alem de frutas, verduras, legumes e graos organicos, tambem ja sao encontrados no Brasil, carnes e ovos. Na producao de ovos e carnes organicos, o cuidado maior e com os animais, que devem ser criados sem hormonios, anabolizantes, antibioticos, alem de nao poderem ser levados ao estresse.</p>
+<h3>Saude e meio ambiente</h3><p>Alem de possuirem a vantagem de serem livres de agrotoxicos, os alimentos organicos trazem alguns outros beneficios, como preservacao do meio ambiente, preservacao da qualidade nutricional, preservacao de caracteristicas sensoriais como cor, sabor, textura, aroma, e menor indice de toxicidade.</p><p>A producao dos alimentos organicos tem tambem cuidado especial com a agua e com o solo, que e preservado ja que sao utilizadas materia vegetal e animal para a adubacao.</p><p>E importante ressaltar que, mesmo sendo organicos, a higienizacao desses produtos deve ser feita, pois nao estao livres de contaminacao por bacterias e coliformes fecais.</p>
+<h3>Custo ainda alto, mas possivel contornar</h3><p>A unica desvantagem ainda e o custo. Apesar dos precos ja terem caido, o valor dos organicos ainda e considerado elevado, quando comparado com os alimentos nao organicos. No entanto, uma boa estrategia para quem nao pode comprar todos os alimentos organicos e pelo menos substituir aqueles que sabidamente possuem mais agrotoxicos, como pimentao, morango, couve e tomate.</p><p>Vale muito investir neles. Acredito que assim podemos fortalecer mais esses produtos no mercado, e quem sabe, daqui a algum tempo, o custo possa ser ainda menor.</p>
+      <p>Uma alimentacao organica nao precisa ser um luxo. Pequenas substituicoes estrategicas, feitas dentro do que cabe no seu orcamento, ja fazem muita diferenca para a saude e para o meio ambiente.</p>
+      <div class="cta-box">
+        <div class="label">CONSULTA</div>
+        <h3>Quer acompanhamento profissional?</h3>
+        <p>A Amanda atende presencialmente em Tijuca e online para todo o Brasil. Manda uma mensagem com seu objetivo.</p>
+        <a class="btn" href="https://wa.me/5521999955095?text=Ola%2C%20vim%20pelo%20blog%20da%20Amanda%20e%20quero%20agendar." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+      </div>
+    </article>
+    <aside class="post-aside">
+      <div class="aside-block">
+        <h4>TAMBEM NO BLOG</h4>
+        <div class="rel"><a href="02-bisfenol.html"><div class="img"><img src="img/02-bisfenol.jpg" alt="Por que voce deve se preocupar com o Bisfenol A" loading="lazy"></div><div><div class="txt">Por que voce deve se preocupar com o Bisfenol A</div><span class="meta">21 de julho de 2017</span></div></a>
+<a href="05-panela.html"><div class="img"><img src="img/05-panela.jpg" alt="Qual panela voce deve utilizar na hora da preparacao" loading="lazy"></div><div><div class="txt">Qual panela voce deve utilizar na hora da preparacao</div><span class="meta">20 de novembro de 2016</span></div></a>
+<a href="01-erros-emagrecer.html"><div class="img"><img src="img/01-erros-emagrecer.jpg" alt="10 erros na hora de tentar emagrecer" loading="lazy"></div><div><div class="txt">10 erros na hora de tentar emagrecer</div><span class="meta">16 de abril de 2020</span></div></a></div>
+      </div>
+      <div class="aside-block">
+        <h4>CATEGORIAS</h4>
+        <div class="cats"><a href="../blog.html">Clinica</a>
+<a href="../blog.html">Emagrecimento</a>
+<a href="../blog.html">Reeducacao</a></div>
+      </div>
+      <div class="aside-block">
+        <h4>ATENDIMENTO</h4>
+        <p style="font-size:14px;line-height:1.55;margin-bottom:12px">Rua Engenheiro Enaldo Cravo Peixoto, 105<br>Sala 920 . Tijuca, RJ</p>
+        <a href="https://wa.me/5521999955095" target="_blank" rel="noopener" style="display:inline-block;background:var(--accent);color:#fff;padding:10px 18px;font-size:12px;font-weight:500;letter-spacing:.04em">WhatsApp</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="post-nav">
+  <div class="container"><a href="02-bisfenol.html" class="prev"><span class="dir">ANTERIOR</span><span class="title">Por que voce deve se preocupar com o Bisfenol A</span></a><a href="04-celulite.html" class="next"><span class="dir">PROXIMO</span><span class="title">Alimentos que auxiliam a minimizar a celulite</span></a></div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="cols">
+      <div>
+        <div class="brand">Amanda Nobrega</div>
+        <p>Nutricionista em Tijuca, RJ. Reeducacao alimentar, nutricao clinica, esportiva e estetica. Atendimento presencial e online.</p>
+        <p style="font-size:12px">Rua Engenheiro Enaldo Cravo Peixoto, 105 . Sala 920<br>Tijuca . Rio de Janeiro, RJ<br>(21) 99955-5095</p>
+      </div>
+      <div>
+        <h4>NAVEGACAO</h4>
+        <a href="../amanda-nobrega-nutri.html#servicos">Especialidades</a>
+        <a href="../amanda-nobrega-nutri.html#sobre">Sobre</a>
+        <a href="../amanda-nobrega-nutri.html#como">Como funciona</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../amanda-nobrega-nutri.html#contato">Contato</a>
+      </div>
+      <div>
+        <h4>CONTATO</h4>
+        <a href="https://wa.me/5521999955095?text=Ola%2C%20vim%20pelo%20site%20da%20Amanda" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:contato@nutrindosaude.com.br">contato@nutrindosaude.com.br</a>
+        <a href="https://www.doctoralia.com.br/amanda-nobrega-fernandes-da-costa/nutricionista/rio-de-janeiro" target="_blank" rel="noopener">Doctoralia</a>
+        <a href="https://www.instagram.com/nutrindosaudens" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/nutrindosaudens" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div class="foot-bottom">Amanda Nobrega, nutricionista no Rio de Janeiro. Blog . 2026.</div>
+  </div>
+</footer>
+
+<script>
+  const toggle=document.getElementById("menuToggle"),nav=document.getElementById("nav");
+  if(toggle){toggle.addEventListener("click",function(){nav.classList.toggle("open");document.body.classList.toggle("menu-open")});}
+  nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("open");document.body.classList.remove("menu-open")});});
+  var h=document.getElementById("header");
+  window.addEventListener("scroll",function(){h.classList.toggle("scrolled",window.scrollY>40)});
+</script>
+</body>
+</html>

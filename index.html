@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prospector - Sites dos Leads</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #0f0f0f; color: #f5f5f5; min-height: 100vh; padding: 60px 20px; }
+.container { max-width: 960px; margin: 0 auto; }
+h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+.sub { color: #888; margin-bottom: 48px; font-size: 15px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+a.card { display: block; padding: 24px; background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; text-decoration: none; color: #f5f5f5; transition: all 0.2s; }
+a.card:hover { border-color: #555; background: #222; transform: translateY(-2px); }
+.card .name { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.card .meta { font-size: 13px; color: #888; }
+.card .path { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; color: #4ade80; margin-top: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Prospector</h1>
+<p class="sub">Sites estaticos dos leads prospectados. Hospedado na VPS via Coolify + nginx.</p>
+<div class="grid">
+<a class="card" href="/amanda-nobrega/"><div class="name">Amanda Nobrega</div><div class="meta">Nutricionista - Tijuca, RJ</div><div class="path">/amanda-nobrega/</div></a>
+<a class="card" href="/tais-ferreira/"><div class="name">Tais Ferreira</div><div class="meta">Nutricionista - Ilha do Governador, RJ</div><div class="path">/tais-ferreira/</div></a>
+<a class="card" href="/priscilla-ribeiro/"><div class="name">Priscilla Ribeiro</div><div class="meta">Nutricionista + Personal - Ilha do Governador, RJ</div><div class="path">/priscilla-ribeiro/</div></a>
+<a class="card" href="/isis-orona/"><div class="name">Isis Orona</div><div class="meta">Nutricionista - Ilha do Governador, RJ</div><div class="path">/isis-orona/</div></a>
+<a class="card" href="/lucas-borda/"><div class="name">Lucas Borda</div><div class="meta">Nutricionista esportivo - Botafogo, RJ</div><div class="path">/lucas-borda/</div></a>
+<a class="card" href="/mariana-silveira/"><div class="name">Mariana Silveira</div><div class="meta">Nutricionista - Ilha do Governador, RJ</div><div class="path">/mariana-silveira/</div></a>
+<a class="card" href="/matheus-azevedo/"><div class="name">Matheus Azevedo</div><div class="meta">Nutricionista - Copacabana + Niteroi, RJ</div><div class="path">/matheus-azevedo/</div></a>
+<a class="card" href="/michelle-pires/"><div class="name">Michelle Pires</div><div class="meta">Nutricionista - Copacabana, RJ</div><div class="path">/michelle-pires/</div></a>
+</div>
+</div>
+</body>
+</html>
