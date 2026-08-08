@@ -194,6 +194,11 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 }
 
 .wa-ico{width:18px;height:18px;flex-shrink:0;fill:#fff;margin-right:8px;display:inline-block;vertical-align:-3px}
+
+/* ===== REVEAL ON SCROLL ===== */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -229,7 +234,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 <!-- HERO -->
 <section class="hero" id="inicio">
   <div class="hero-grid">
-    <div class="hero-copy">
+    <div class="hero-copy reveal">
       <div class="eyebrow">Nutricionista em Botafogo</div>
       <h1>Avance no treino com uma <em>nutrição</em> que acompanha o seu ritmo</h1>
       <p class="lead">Do esporte à clínica, um plano individual para quem quer resultados reais, saúde consistente e performance de verdade no dia a dia.</p>
@@ -239,7 +244,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
       </div>
       <span class="hero-note">Resposta rápida no WhatsApp, em horário comercial</span>
     </div>
-    <div class="hero-média">
+    <div class="hero-média reveal" style="transition-delay:.1s">
       <div class="hero-img">
         <img src="img/hero-lucas.jpg" alt="Prato de refeição esportiva rica em proteína com frango grelhado, legumes coloridos e grãos integrais, base da dieta para hipertrofia">
       </div>
@@ -254,15 +259,15 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 <!-- PROOF -->
 <section class="proof">
   <div class="container">
-    <div class="proof-item">
+    <div class="proof-item reveal">
       <span class="num">5.0<small>★</small></span>
       <span><span class="lbl">Nota no Google</span><p>Reconhecimento dos pacientes na região.</p></span>
     </div>
-    <div class="proof-item">
+    <div class="proof-item reveal">
       <span class="num">130<small>+</small></span>
       <span><span class="lbl">Avaliações</span><p>Uma base sólida de acompanhamentos já realizados.</p></span>
     </div>
-    <div class="proof-item">
+    <div class="proof-item reveal">
       <span class="num">100<small>%</small></span>
       <span><span class="lbl">Personalizado</span><p>Plano construído para o seu objetivo e a sua rotina.</p></span>
     </div>
@@ -272,37 +277,37 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 <!-- SERVICOS -->
 <section class="servicos" id="atendimento">
   <div class="container">
-    <div class="serv-head">
+    <div class="serv-head reveal">
       <h2>Do esporte à <em>clínica</em></h2>
       <p>Atuação ampla e rigorosa, com estratégias desenhadas para cada objetivo. Do alto desempenho ao cuidado clínico, com a mesma base científica.</p>
     </div>
     <div class="serv-bento">
-      <div class="cell cell-4">
+      <div class="cell cell-4 reveal">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div>
         <h3>Nutrição clínica</h3>
         <p>Acompanhamento de saúde individual, com avaliação e plano dietético ajustados à sua condição, no seu ritmo. Indicado para quem busca tratar questões clínicas com informação e apoio.</p>
       </div>
-      <div class="cell cell-2">
+      <div class="cell cell-2 reveal">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg></div>
         <h3>Hipertrofia e performance</h3>
         <p>Alimentação que sustenta o treino e potencializa resultados, com periodização para ganho de força e massa muscular.</p>
       </div>
-      <div class="cell cell-2">
+      <div class="cell cell-2 reveal">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M14 2 5 13h6l-1 9 9-11h-6z"/></svg></div>
         <h3>Esporte e estética</h3>
         <p>Estratégias esportivas e estéticas para quem busca melhorar a composição corporal com constância.</p>
       </div>
-      <div class="cell cell-2">
+      <div class="cell cell-2 reveal">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 12c0-4 3-6 8-6 5 0 8 2 8 6"/><path d="M12 6c2 3 2 9 0 12"/></svg></div>
         <h3>Vegetarianismo</h3>
         <p>Plano completo e proteico para quem vive sem carnes, garantindo os nutrientes no esporte e na saúde.</p>
       </div>
-      <div class="cell cell-2">
+      <div class="cell cell-2 reveal">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 1 18 0"/><path d="M12 3v9l5 3"/></svg></div>
         <h3>Emagrecimento</h3>
         <p>Perda de peso saudável com acompanhamento próximo, sem pressa e com metas alcançáveis que se mantêm.</p>
       </div>
-      <div class="cell cell-2">
+      <div class="cell cell-2 reveal">
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3v13m6-9V3M6 7v13"/></svg></div>
         <h3>Health coaching</h3>
         <p>Apoio contínuo a hábitos e mudança de comportamento, para que a nova rotina se sustente de verdade.</p>
@@ -314,11 +319,11 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 <!-- SOBRE -->
 <section class="sobre" id="sobre">
   <div class="container">
-    <div class="sobre-grid">
-      <div class="sobre-imgwrap">
+    <div class="sobre-grid reveal">
+      <div class="sobre-imgwrap reveal">
         <img src="img/sobre-lucas.jpg" alt="Bowl vegano de alto teor proteico com grão-de-bico, folhas verdes, tofu grelhado e abacate, exemplo de nutrição para vegetarianos">
       </div>
-      <div class="sobre-txt">
+      <div class="sobre-txt reveal">
         <div class="eyebrow">Sobre</div>
         <h2>Formação sólida, <em>prática</em> de verdade</h2>
         <p>Lucas é nutricionista formado pela UNIRIO, com pós-graduação em Nutrição Esportiva e Estética e formação como Health Coach pelo Institute for Integrative Nutrition de Nova Iorque.</p>
@@ -338,22 +343,22 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 <!-- COMO FUNCIONA -->
 <section class="como" id="como">
   <div class="container">
-    <div class="como-head">
+    <div class="como-head reveal">
       <h2>O caminho até o plano</h2>
       <p>Um processo claro, começando por uma conversa sobre o que você busca.</p>
     </div>
     <div class="como-steps">
-      <div class="como-step">
+      <div class="como-step reveal">
         <span class="n">01</span>
         <h3>Conversa</h3>
         <p>Você chama no WhatsApp, conta histórico, treino e objetivo. Esclarece tudo antes de começar.</p>
       </div>
-      <div class="como-step">
+      <div class="como-step reveal">
         <span class="n">02</span>
         <h3>Avaliação</h3>
         <p>Avalio hábitos, composição e rotina para entender onde você está, sem julgamento e sem atalhos.</p>
       </div>
-      <div class="como-step">
+      <div class="como-step reveal">
         <span class="n">03</span>
         <h3>Plano e seguimento</h3>
         <p>Um plano individual com ajustes contínuos, acompanhamento e correção de rota até o objetivo.</p>
@@ -366,15 +371,15 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 <section class="local" id="local">
   <div class="container">
     <div>
-      <h2>Atendimento em <em>Botafogo</em> e online</h2>
+      <h2 class="reveal">Atendimento em <em>Botafogo</em> e online</h2>
       <p>Acompanhamento presencial na Zona Sul do Rio de Janeiro e consultas online para todo o Brasil, com a mesma estrutura e rigor.</p>
     </div>
     <div>
-      <div class="local-point">
+      <div class="local-point reveal">
         <svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
         <div>Área de atendimento<small>Presencial em Botafogo, Zona Sul do Rio de Janeiro</small></div>
       </div>
-      <div class="local-point">
+      <div class="local-point reveal">
         <svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 7h6M9 11h6"/></svg>
         <div>Atendimento online<small>Para qualquer lugar do Brasil, com a mesma estrutura do presencial</small></div>
       </div>
@@ -386,8 +391,8 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 <!-- CTA -->
 <section class="cta-band">
   <div class="container">
-    <h2>Pronto para o seu <em>próximo passo</em>?</h2>
-    <a class="btn btn-primary" href="https://wa.me/5521981448483?text=Ol%C3%A1%2C%20Lucas%2C%20quero%20agendar%20uma%20conversa%20sobre%20acompanhamento%20nutricional." target="_blank" rel="noopener"><svg class="wa-ico" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zm-7.01 15.24c-1.5 0-2.96-.4-4.24-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.23-8.19 8.23zm4.51-6.16c-.25-.12-1.47-.74-1.69-.83-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.15.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.65-1.23-1.45-1.38-1.7-.14-.25-.02-.39.11-.5.11-.11.25-.29.37-.43.13-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.34-.76-1.84-.2-.49-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.57c.12.16 1.74 2.65 4.21 3.72.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.28z"/></svg>Conversar no WhatsApp</a>
+    <h2 class="reveal">Pronto para o seu <em>próximo passo</em>?</h2>
+    <a class="btn btn-primary reveal" href="https://wa.me/5521981448483?text=Ol%C3%A1%2C%20Lucas%2C%20quero%20agendar%20uma%20conversa%20sobre%20acompanhamento%20nutricional." target="_blank" rel="noopener"><svg class="wa-ico" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zm-7.01 15.24c-1.5 0-2.96-.4-4.24-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.23-8.19 8.23zm4.51-6.16c-.25-.12-1.47-.74-1.69-.83-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.15.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.65-1.23-1.45-1.38-1.7-.14-.25-.02-.39.11-.5.11-.11.25-.29.37-.43.13-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.34-.76-1.84-.2-.49-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.57c.12.16 1.74 2.65 4.21 3.72.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.28z"/></svg>Conversar no WhatsApp</a>
   </div>
 </section>
 
@@ -429,5 +434,29 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
         <path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zm-7.01 15.24c-1.5 0-2.96-.4-4.24-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.23-8.19 8.23zm4.51-6.16c-.25-.12-1.47-.74-1.69-.83-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.15.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.65-1.23-1.45-1.38-1.7-.14-.25-.02-.39.11-.5.11-.11.25-.29.37-.43.13-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.34-.76-1.84-.2-.49-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.57c.12.16 1.74 2.65 4.21 3.72.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.28z"/></svg>
 </a>
 
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(en){
+    en.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e)});
+  function revealVisible(){
+    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){
+      var r=el.getBoundingClientRect();
+      if(r.top<window.innerHeight&&r.bottom>0){el.classList.add('in')}
+    });
+  }
+  revealVisible();
+  window.addEventListener('load',revealVisible);
+  window.addEventListener('scroll',revealVisible,{passive:true});
+  setTimeout(revealVisible,400);
+  setTimeout(revealVisible,1200);
+})();
+</script>
 </body>
 </html>
