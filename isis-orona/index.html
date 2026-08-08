@@ -242,10 +242,10 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 /* ===== REVEAL ===== */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
 .reveal.in{opacity:1;transform:none}
-@média (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
 /* ===== RESPONSIVO ===== */
-@média (max-width:1080px){
+@media(max-width:1080px){
   .hero{padding:56px 0 64px}
   .hero-grid{grid-template-columns:1fr;gap:48px}
   .hero-média{max-width:560px;min-height:0}
@@ -260,7 +260,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
   .cta-band .meta{text-align:left}
   .footer-top{grid-template-columns:1fr 1fr;gap:32px}
 }
-@média (max-width:720px){
+@media(max-width:720px){
   .container{padding:0 20px}
   .masthead .container{font-size:9px;letter-spacing:.14em}
   .nav a{display:none}
