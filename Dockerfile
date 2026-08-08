@@ -14,5 +14,3 @@ EXPOSE 80
 
 # Nginx em foreground (necessario pra Docker)
 CMD ["nginx", "-g", "daemon off;"]
-ts 
-1786187856
