@@ -175,9 +175,25 @@ footer a:hover{color:#fff}
 /* reveal */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
 .rv.on{opacity:1;transform:none}
+::selection{background:var(--accent);color:#fff}
+*{scrollbar-width:thin;scrollbar-color:var(--accent) var(--bg2)}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--bg2)}::-webkit-scrollbar-thumb{background:var(--accent);border:3px solid var(--bg2)}
+.skip-link{position:fixed;top:12px;left:12px;z-index:100;transform:translateY(-160%);background:var(--ink);color:#fff;padding:10px 16px;font-weight:600;transition:transform .2s ease}
+.skip-link:focus{transform:none}
+:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.btn:active,.fab:active,.link-arrow:active{transform:translateY(1px) scale(.98)}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty;max-width:68ch}
+.hero{min-height:100dvh}
+.hero-stats{box-shadow:0 28px 64px rgba(42,24,32,.28),inset 0 1px 0 rgba(255,255,255,.16)}
+.sobre .photo img{aspect-ratio:510/664}
+.contato-map{box-shadow:0 24px 60px rgba(122,85,96,.14)}
+@media(max-width:600px){.container{padding:0 20px}section{padding:84px 0}.hero-inner{padding-inline:20px}.hero-stats{grid-template-columns:1fr;gap:18px;border-radius:12px}.marquee figure{flex-basis:260px;height:195px}.fab{right:16px;bottom:16px;width:54px;height:54px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.marquee-track{animation:none;transform:none}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <header id="top" class="header">
   <div class="container header-inner">
@@ -190,12 +206,13 @@ footer a:hover{color:#fff}
       <a href="#contato">Contato</a>
       <a class="btn btn-primary" href="https://wa.me/5521999955095?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Amanda%20e%20quero%20agendar." target="_blank" rel="noopener">Agendar</a>
     </nav>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
+<main id="conteudo">
 <section class="hero">
-  <img class="hero-bg" src="img/cor_01.webp" alt="Comida nutritiva, smoothie bowl colorido" fetchpriority="high">
+  <img class="hero-bg" src="img/cor_01.webp" alt="Comida nutritiva, smoothie bowl colorido" width="1000" height="746" fetchpriority="high">
   <div class="container hero-inner">
     <div>
       <div class="hero-eyebrow">Nutrição . Rio de Janeiro</div>
@@ -282,7 +299,7 @@ footer a:hover{color:#fff}
 <section id="sobre" class="sobre">
   <div class="container sobre-grid">
     <div class="photo">
-      <img src="hero.webp" alt="Amanda Nóbrega, nutricionista em Tijuca" loading="lazy">
+      <img src="hero.webp" alt="Amanda Nóbrega, nutricionista em Tijuca" width="510" height="664" loading="lazy">
       <div class="caption">Amanda . CRN ativo . Tijuca</div>
     </div>
     <div class="sobre-text">
@@ -349,7 +366,7 @@ footer a:hover{color:#fff}
       </div>
       <div class="row">
         <div class="ic">E-mail</div>
-        <div><b>contato@nutrindosaúde.com.br</b><span>Resposta em até 24h em dias úteis</span></div>
+        <div><b>contato@nutrindosaude.com.br</b><span>Resposta em até 24h em dias úteis</span></div>
       </div>
       <div class="row">
         <div class="ic">Atendimento</div>
@@ -361,7 +378,7 @@ footer a:hover{color:#fff}
       </div>
       <div class="actions">
         <a class="btn btn-primary" href="https://wa.me/5521999955095?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Amanda%20e%20quero%20agendar." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
-        <a class="btn btn-ghost" href="https://www.nutrindosaúde.com.br/blog" target="_blank" rel="noopener">Ler o Blog</a>
+        <a class="btn btn-ghost" href="https://www.nutrindosaude.com.br/blog" target="_blank" rel="noopener">Ler o Blog</a>
       </div>
     </div>
     <div class="contato-map">
@@ -370,6 +387,8 @@ footer a:hover{color:#fff}
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="container">
@@ -388,9 +407,9 @@ footer a:hover{color:#fff}
       <div>
         <h4>Contato</h4>
         <a href="https://wa.me/5521999955095?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Amanda%20e%20quero%20agendar." target="_blank" rel="noopener">(21) 99955-5095</a>
-        <span>contato@nutrindosaúde.com.br</span>
+        <span>contato@nutrindosaude.com.br</span>
         <a href="https://www.doctoralia.com.br/amanda-nobrega-fernandes-da-costa/nutricionista/rio-de-janeiro" target="_blank" rel="noopener">Perfil Doctoralia</a>
-        <a href="https://www.nutrindosaúde.com.br/blog" target="_blank" rel="noopener">Blog Nutrindo Saúde</a>
+        <a href="https://www.nutrindosaude.com.br/blog" target="_blank" rel="noopener">Blog Nutrindo Saúde</a>
       </div>
     </div>
     <div class="copyright">Amanda Nóbrega, nutricionista, CRN ativo, Rio de Janeiro. Todos os direitos reservados.</div>
@@ -407,20 +426,16 @@ addEventListener('scroll',function(){h.classList.toggle('scrolled',scrollY>10)},
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.servico,.step,.sobre-text,.sobre .photo,.contato-info,.contato-map').forEach(function(el){el.classList.add('rv');io.observe(el)});
 var nt=document.getElementById('nav-toggle');
-nt.addEventListener('click',function(){
-  var nav=document.getElementById('nav');
-  var open=nav.classList.toggle('open');
+var nav=document.getElementById('nav');
+function setNav(open){
+  nav.classList.toggle('open',open);
   document.body.classList.toggle('menu-open',open);
-});
-document.querySelectorAll('#nav a').forEach(function(a){
-  a.addEventListener('click',function(){
-    document.getElementById('nav').classList.remove('open');
-    document.body.classList.remove('menu-open');
-  });
-});
-document.addEventListener('keydown',function(e){
-  if(e.key==='Escape'){document.getElementById('nav').classList.remove('open');document.body.classList.remove('menu-open');}
-});
+  nt.setAttribute('aria-expanded',open?'true':'false');
+  nt.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
+}
+nt.addEventListener('click',function(){setNav(!nav.classList.contains('open'));});
+document.querySelectorAll('#nav a').forEach(function(a){a.addEventListener('click',function(){setNav(false);});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')setNav(false);});
 </script>
 </body>
 </html>

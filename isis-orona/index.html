@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<script>document.documentElement.classList.add('js')</script>
 <title>Isis Orona . Nutricionista . Ilha do Governador, Rio de Janeiro</title>
 <meta name="description" content="Nutricionista na Ilha do Governador, Rio de Janeiro, com atendimento online e presencial. Acompanhamento individual em metabolismo, nutrição esportiva, emagrecimento e qualidade de vida. Nota 5.0 no Google com 94 avaliações.">
 <meta name="theme-color" content="#2D4530">
@@ -31,14 +32,24 @@
   --mono:'JetBrains Mono',ui-monospace,monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scrollbar-color:var(--moss) var(--paper2);scrollbar-width:thin}
 body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-feature-settings:"ss01","cv11"}
+::selection{background:var(--apricot);color:#fff}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--paper2)}
+::-webkit-scrollbar-thumb{background:var(--moss);border:2px solid var(--paper2)}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:inherit}
+:focus-visible{outline:3px solid var(--apricot);outline-offset:4px}
+.skip-link{position:fixed;left:16px;top:12px;z-index:100;transform:translateY(-160%);background:var(--moss-dark);color:var(--paper);padding:11px 16px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;transition:transform .2s}
+.skip-link:focus{transform:translateY(0)}
 .serif{font-family:var(--serif);font-weight:400}
 .mono{font-family:var(--mono);font-weight:400}
 .container{max-width:1320px;margin:0 auto;padding:0 32px}
+h1,h2,h3,h4{text-wrap:balance}
+p{max-width:68ch;text-wrap:pretty}
+section{scroll-margin-top:96px}
 
 /* ===== MASTHEAD (estilo jornal) ===== */
 .masthead{background:var(--moss);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:10px 0}
@@ -56,14 +67,16 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 .brand-text .b1{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);letter-spacing:-.01em}
 .brand-text .b2{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-top:3px}
 .nav{display:flex;gap:28px;align-items:center}
-.nav a:not(.nav-cta){font-size:13px;font-weight:500;color:var(--ink2);transition:color .2s;letter-spacing:.01em}
-.nav a:not(.nav-cta):hover{color:var(--moss)}
+.nav a:not(.btn):not(.nav-cta){font-size:13px;font-weight:500;color:var(--ink2);transition:color .2s;letter-spacing:.01em}
+.nav a:not(.btn):not(.nav-cta):hover{color:var(--moss)}
 .nav-cta{background:var(--moss);color:#fff;padding:12px 22px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-family:var(--mono);font-weight:500;transition:all .2s;border-radius:999px}
 .nav-cta:hover{background:var(--apricot);color:#fff}
 
 /* ===== HERO (manifesto + foto de comida com card de "prato do dia") ===== */
-.hero{position:relative;overflow:hidden;background:var(--paper);padding:72px 0 88px}
+.hero{position:relative;overflow:hidden;background:var(--paper);padding:72px 0 96px}
 .hero::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--line)}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(25% - 1px),rgba(214,202,174,.16) 25%);mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 78%)}
+.hero .container{position:relative;z-index:1}
 .hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:clamp(40px,5vw,72px);align-items:end}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:14px;margin-bottom:30px}
 .hero-eyebrow .ord{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--apricot);text-transform:uppercase}
@@ -73,7 +86,8 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 .hero h1 .dot-acc{color:var(--apricot)}
 .hero .lead{font-family:var(--serif);font-size:clamp(18px,1.6vw,21px);line-height:1.5;color:var(--ink2);max-width:540px;margin-bottom:38px;font-weight:400}
 .hero-cta-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:42px}
-.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 28px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-family:var(--mono);font-weight:500;border-radius:999px;transition:all .2s;width:fit-content;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 28px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-family:var(--mono);font-weight:500;border-radius:999px;transition:transform .2s,background-color .2s,border-color .2s,color .2s,box-shadow .2s;width:fit-content;white-space:nowrap}
+.btn:active,.nav-cta:active,.serv-item .cta:active,.wa-fab:active{transform:translateY(1px) scale(.98)}
 .btn-primary{background:var(--moss);color:var(--paper);border:1px solid var(--moss)}
 .btn-primary:hover{background:var(--apricot);border-color:var(--apricot);transform:translateY(-2px);box-shadow:0 14px 30px rgba(199,90,46,.22)}
 .btn-ghost{color:var(--ink);border:1px solid var(--line);background:transparent}
@@ -117,8 +131,8 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 .section-head p{font-family:var(--serif);font-size:clamp(17px,1.5vw,19px);line-height:1.55;color:var(--ink2);max-width:580px;margin-top:22px}
 
 .desp-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(180px,auto);gap:14px}
-.desp-cell{position:relative;background:var(--paper2);border:1px solid var(--line);border-radius:6px;overflow:hidden;padding:22px 22px 24px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .25s,border-color .25s}
-.desp-cell:hover{transform:translateY(-3px);border-color:var(--moss)}
+.desp-cell{position:relative;background:var(--paper2);border:1px solid var(--line);border-radius:6px;overflow:hidden;padding:22px 22px 24px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .25s,border-color .25s,box-shadow .25s}
+.desp-cell:hover{transform:translateY(-3px);border-color:var(--moss);box-shadow:0 18px 34px -28px rgba(27,35,28,.6)}
 .desp-cell .num{font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:var(--apricot);text-transform:uppercase;margin-bottom:10px}
 .desp-cell h3{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ink);line-height:1.1;margin-bottom:6px;letter-spacing:-.01em}
 .desp-cell p{font-size:13px;color:var(--ink3);line-height:1.5}
@@ -143,7 +157,8 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 .servicos .section-head{margin-bottom:54px}
 .serv-list{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
 .serv-item{padding:42px 8px 42px 0;border-bottom:1px solid var(--line);position:relative;transition:background .2s}
-.serv-item:hover{background:rgba(45,69,48,.02)}
+.serv-item:hover{background:rgba(45,69,48,.035)}
+.serv-item:hover h3{color:var(--moss)}
 .serv-item.right{padding-left:48px;padding-right:8px;border-left:1px solid var(--line)}
 .serv-item .ord{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--apricot);text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:14px}
 .serv-item .ord::after{content:"";flex:1;height:1px;background:var(--line)}
@@ -240,9 +255,13 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 .wa-ico{width:18px;height:18px;flex-shrink:0;fill:#fff;margin-right:8px;display:inline-block;vertical-align:-3px}
 
 /* ===== REVEAL ===== */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .js .reveal{opacity:1;transform:none}
+}
 
 /* ===== RESPONSIVO ===== */
 @media(max-width:1080px){
@@ -263,19 +282,21 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 @media(max-width:720px){
   .container{padding:0 20px}
   .masthead .container{font-size:9px;letter-spacing:.14em}
+  .masthead .right span:last-child{display:none}
   .nav a{display:none}
   .nav .nav-cta{display:inline-flex}
   .header .container{padding:14px 20px}
-  .hero{padding:40px 0 56px}
-  .hero h1{font-size:clamp(38px,9.5vw,56px)}
-  .hero .lead{font-size:16px}
+  .brand-text .b2{display:none}
+  .hero{padding:40px 0 64px}
+  .hero h1{font-size:clamp(38px,11vw,56px)}
+  .hero .lead{font-size:17px}
   .hero-meta{gap:18px;flex-wrap:wrap}
   .hero-meta .div{display:none}
   .proof{padding:48px 0}
   .proof .container{grid-template-columns:1fr;gap:28px}
   .proof-stats{gap:24px;flex-wrap:wrap}
   .despensa,.servicos,.sobre,.como,.avaliações,.cta-band{padding:72px 0}
-  .desp-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:minmax(160px,auto)}
+  .desp-grid{grid-template-columns:1fr;grid-auto-rows:minmax(220px,auto)}
   .desp-cell.s1,.desp-cell.s2,.desp-cell.s3,.desp-cell.s4,.desp-cell.s5,.desp-cell.s6,.desp-cell.s7,.desp-cell.s8{grid-column:span 1;grid-row:span 1}
   .serv-list{grid-template-columns:1fr}
   .serv-item.right{padding-left:8px;border-left:0}
@@ -296,6 +317,8 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 </style>
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 
 <!-- MASTHEAD -->
 <div class="masthead">
@@ -330,6 +353,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
   </div>
 </header>
 
+<main id="conteudo">
 <!-- HERO -->
 <section class="hero" id="topo">
   <div class="container">
@@ -640,6 +664,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
     </div>
   </div>
 </section>
+</main>
 
 <!-- FOOTER -->
 <footer class="footer">

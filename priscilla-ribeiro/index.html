@@ -25,16 +25,26 @@
   --mono:'JetBrains Mono',ui-monospace,monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scrollbar-color:var(--gold-dark) var(--bg2);scrollbar-width:thin}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--terra);color:var(--bg)}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--gold-dark);border:2px solid var(--bg2)}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:inherit}
+:focus-visible{outline:3px solid var(--terra);outline-offset:4px}
+.skip-link{position:fixed;left:16px;top:12px;z-index:100;transform:translateY(-160%);background:var(--ink);color:var(--bg);padding:11px 16px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;transition:transform .2s}
+.skip-link:focus{transform:translateY(0)}
 .serif{font-family:var(--serif);font-weight:400}
 .mono{font-family:var(--mono);font-weight:400}
 .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dark)}
 .container{max-width:1280px;margin:0 auto;padding:0 32px}
 .divider{height:1px;background:var(--line);border:0;margin:0}
+h1,h2,h3,h4{text-wrap:balance}
+p,li{max-width:68ch;text-wrap:pretty}
+section{scroll-margin-top:96px}
 
 /* ===== TOPBAR ===== */
 .topbar{background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:9px 0}
@@ -54,8 +64,8 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 .brand-text .b1{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--ink);font-style:italic;letter-spacing:-.01em}
 .brand-text .b2{font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);margin-top:2px}
 .nav{display:flex;gap:28px;align-items:center}
-.nav a:not(.nav-cta){font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--ink2);transition:color .2s}
-.nav a:not(.nav-cta):hover{color:var(--gold-dark)}
+.nav a:not(.btn):not(.nav-cta){font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--ink2);transition:color .2s}
+.nav a:not(.btn):not(.nav-cta):hover{color:var(--gold-dark)}
 .nav-cta{background:var(--ink);color:#fff;padding:11px 22px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);transition:all .2s;border-radius:999px}
 .nav-cta:hover{background:var(--gold-dark);color:#fff}
 .nav-toggle{display:none;background:none;border:0;cursor:pointer;width:40px;height:40px;position:relative;flex-shrink:0}
@@ -66,8 +76,8 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 .hero{position:relative;overflow:hidden;background:var(--bg);padding:0}
 .hero-split{display:grid;grid-template-columns:1fr 1fr;min-height:88vh;align-items:stretch}
 .hero-half{padding:80px 60px;display:flex;flex-direction:column;justify-content:center;position:relative}
-.hero-left{background:var(--bg);color:var(--ink);padding-left:max(60px,calc((100vw - 1280px)/2 + 60px))}
-.hero-right{background:var(--ink);color:var(--bg);padding-right:max(60px,calc((100vw - 1280px)/2 + 60px))}
+.hero-left{background:linear-gradient(145deg,var(--bg) 0%,var(--bg) 68%,var(--bg2) 100%);color:var(--ink);padding-left:max(60px,calc((100vw - 1280px)/2 + 60px))}
+.hero-right{background:linear-gradient(155deg,#2A231B 0%,var(--ink) 64%,#17130F 100%);color:var(--bg);padding-right:max(60px,calc((100vw - 1280px)/2 + 60px))}
 .hero-half h1{font-family:var(--serif);font-size:clamp(40px,4.6vw,68px);line-height:1.02;font-weight:400;letter-spacing:-.02em;margin-bottom:24px}
 .hero-half h1 em{font-style:italic;color:var(--gold-dark);font-weight:500}
 .hero-right h1 em{color:var(--terra);font-style:italic}
@@ -78,7 +88,9 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 .hero-left .hero-tag{color:var(--gold-dark)}
 .hero-right .hero-tag{color:var(--terra)}
 .hero-tag .pill{padding:4px 10px;border:1px solid currentColor;font-weight:500}
-.btn{padding:16px 28px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--mono);font-weight:500;transition:all .2s;display:inline-flex;align-items:center;gap:12px;border-radius:999px;width:fit-content}
+.btn{padding:16px 28px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--mono);font-weight:500;transition:transform .2s,background-color .2s,border-color .2s,color .2s,box-shadow .2s;display:inline-flex;align-items:center;gap:12px;border-radius:999px;width:fit-content}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px -14px rgba(31,26,20,.55)}
+.btn:active,.nav-cta:active,.contato-way:active,.wa-fab:active{transform:translateY(1px) scale(.98)}
 .btn-primary{background:var(--ink);color:var(--bg);border:1px solid var(--ink)}
 .hero-right .btn-primary{background:var(--terra);color:var(--bg);border-color:var(--terra)}
 .btn-primary:hover{background:var(--gold-dark);border-color:var(--gold-dark)}
@@ -101,7 +113,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 
 /* HERO photo side */
 .hero-half.hero-left{grid-template-rows:auto 1fr;display:grid;align-content:start}
-.hero-photo-side{position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;background:var(--ink);border:1px solid var(--line);margin-bottom:36px}
+.hero-photo-side{position:relative;width:100%;aspect-ratio:478/540;max-height:44vh;overflow:hidden;background:var(--ink);border:1px solid var(--line);margin-bottom:36px;box-shadow:0 24px 50px -34px rgba(31,26,20,.55)}
 .hero-photo-side img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(.95) contrast(1.02)}
 .hero-photo-side::after{content:"";position:absolute;left:-1px;top:-1px;bottom:-1px;width:6px;background:var(--terra)}
 .hero-photo-badge{position:absolute;bottom:16px;right:16px;background:var(--bg);padding:10px 14px;display:flex;flex-direction:column;gap:2px;z-index:2}
@@ -272,7 +284,8 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 .contato-3ways{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden;margin-bottom:64px}
 .contato-way{padding:36px 28px;background:var(--bg);border-right:1px solid var(--line);text-align:center;display:flex;flex-direction:column;align-items:center;transition:all .25s;text-decoration:none;color:inherit}
 .contato-way:last-child{border-right:0}
-.contato-way:hover{background:var(--bg2)}
+.contato-way:hover{background:var(--bg2);transform:translateY(-3px);box-shadow:0 18px 34px -28px rgba(31,26,20,.55)}
+.contato-way:hover .w-btn{color:var(--terra-dark)}
 .contato-way .w-eyebrow{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:16px;display:block}
 .contato-way .w-icon{width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--terra);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
 .contato-way.nutri .w-icon{background:var(--nutri-bg);color:var(--bg)}
@@ -351,12 +364,33 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
   .footer .container{grid-template-columns:1fr;gap:32px}
 }
 @media(max-width:560px){
+  .container{padding:0 18px}
+  .header .container{padding:14px 18px}
+  .brand-text .b2{display:none}
   .topbar{font-size:9px;letter-spacing:.1em;padding:6px 0}
   .topbar .container{flex-wrap:nowrap;gap:10px}
   .topbar .tb-left{gap:10px}
-  .topbar .tb-left span:nth-child(2){display:none}
-  .hero-half h1{font-size:38px}
+  .topbar .tb-left span:nth-child(2),.topbar .tb-right{display:none}
+  .hero-half{padding:48px 18px 56px}
+  .hero-half h1{font-size:clamp(36px,11vw,46px)}
+  .hero-half p{font-size:17px}
+  .hero-stats{gap:10px}
+  .hero-stats .num{font-size:25px}
+  .hero-photo-side{max-height:none;margin-bottom:28px}
+  .method245,.dupla,.cases,.esp,.sobre,.como,.contato{padding:80px 0}
+  .method245-head,.dupla-head,.cases-head,.esp-head,.sobre-head,.como-head,.contato-head{margin-bottom:44px}
+  .method245-col,.case,.esp-card .esp-side,.sobre-col,.como-step,.contato-way{padding-left:22px;padding-right:22px}
   .method245-col .phases{grid-template-columns:1fr}
+  .dupla-col{aspect-ratio:4/5}
+  .dupla-col .col-text{left:14px;right:14px;bottom:14px}
+  .contato-grid{gap:24px}
+  .ficha-row{align-items:flex-start;gap:18px}
+  .wa-fab{right:16px;bottom:16px;width:54px;height:54px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .wa-fab .wa-pulse{display:none}
 }
 
 .nav .nav-cta{background:var(--terra);color:#fff;border:1px solid var(--terra)}
@@ -364,6 +398,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 </style>
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <!-- TOPBAR -->
 <div class="topbar">
@@ -388,7 +423,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
         <div class="b2">Personal &amp; Nutri . Method 2x45</div>
       </div>
     </a>
-    <nav class="nav">
+    <nav class="nav" aria-label="Navegação principal">
       <a href="#method245">Method 2x45</a>
       <a href="#dupla">Dupla</a>
       <a href="#cases">Casos</a>
@@ -400,12 +435,13 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
   </div>
 </header>
 
+<main id="conteudo">
 <!-- HERO (bipartidário) -->
 <section class="hero">
   <div class="hero-split">
     <div class="hero-half hero-left">
       <div class="hero-photo-side">
-        <img src="img/hero-priscilla.jpg" alt="Priscilla Ribeiro, personal trainer e nutricionista" loading="eager">
+        <img src="img/hero-priscilla.jpg" alt="Priscilla Ribeiro, personal trainer e nutricionista" loading="eager" width="478" height="540">
         <div class="hero-photo-badge"><span class="b1">5 anos</span><span class="b2">de consultório</span></div>
       </div>
       <div class="hero-tag"><span class="pill">Treino</span><span>Lado esquerdo</span></div>
@@ -493,7 +529,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
     <div class="dupla-split">
       <div class="dupla-col treino">
         <span class="col-label">TREINO</span>
-        <img src="img/method-treino.jpg" alt="Personal training guiando aluna no kettlebell" loading="lazy">
+        <img src="img/method-treino.jpg" alt="Personal training guiando aluna no kettlebell" loading="lazy" width="1600" height="2142">
         <div class="col-text">
           <h4>Força <em>direcionada</em></h4>
           <p>Periodização por objetivo. Força, hipertrofia, resistência, recomposição, gestante ou pós-lesão. O plano muda, o método não.</p>
@@ -505,7 +541,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
       </div>
       <div class="dupla-col nutri">
         <span class="col-label">NUTRI</span>
-        <img src="img/method-prato.jpg" alt="Bowl fitness com frango, quinoa, abacate e batata-doce" loading="lazy">
+        <img src="img/method-prato.jpg" alt="Bowl fitness com frango, quinoa, abacate e batata-doce" loading="lazy" width="1600" height="1600">
         <div class="col-text">
           <h4>Estrutura <em>sem dieta</em></h4>
           <p>Plano alimentar individual, montado em cima do que você já come. Sem refeição separada, sem suplemento caro, sem terrorismo nutricional.</p>
@@ -667,7 +703,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
       <h2>Personal <em>&amp;</em> Nutri. Uma só profissional.</h2>
     </div>
     <div class="sobre-photo-wrap">
-      <img src="img/sobre-priscilla.jpg" alt="Priscilla Ribeiro, personal trainer e nutricionista esportiva" loading="lazy">
+      <img src="img/sobre-priscilla.jpg" alt="Priscilla Ribeiro, personal trainer e nutricionista esportiva" loading="lazy" width="280" height="250">
       <div class="ph-name">Priscilla <em>Ribeiro</em></div>
       <span class="ph-tag">Personal Trainer . Nutricionista Esportiva . CRN RJ 21101937</span>
     </div>
@@ -774,7 +810,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
     </div>
     <div class="contato-grid">
       <div class="contato-mapa">
-        <iframe src="https://www.google.com/maps?q=Estrada+do+Gale%C3%A3o+1245+Jardim+Guanabara+Ilha+do+Governador+Rio+de+Janeiro&hl=pt-BR&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="Mapa do consultório de Priscilla Ribeiro" src="https://www.google.com/maps?q=Estrada+do+Gale%C3%A3o+1245+Jardim+Guanabara+Ilha+do+Governador+Rio+de+Janeiro&hl=pt-BR&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="contato-ficha">
         <div class="ficha-row">
@@ -805,6 +841,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
     </div>
   </div>
 </section>
+</main>
 
 <!-- FOOTER -->
 <footer class="footer">

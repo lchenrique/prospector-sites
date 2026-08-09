@@ -230,7 +230,7 @@ h3{font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
 .vídeo-section{padding:80px 0;border-bottom:1px solid var(--line);background:var(--bg3)}
 .vídeo-section .section-head{text-align:left;max-width:760px;margin-bottom:48px}
 .vídeo-frame{position:relative;width:100%;aspect-ratio:16/9;background:var(--ink);overflow:hidden;border:1px solid var(--line)}
-.vídeo-frame vídeo{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.vídeo-frame video{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
 .vídeo-cta{margin-top:28px;text-align:center}
 .vídeo-caption{margin-top:18px;text-align:center;font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink3)}
 @media(max-width:760px){.vídeo-section .section-head{text-align:center}}
@@ -272,7 +272,7 @@ footer{padding:48px 0 32px;background:var(--ink);color:var(--bg2)}
 footer .row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08)}
 footer .row a{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--bg2);transition:color .2s ease}
 footer .row a:hover{color:var(--accent)}
-footer .row .left,.footer .row .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+footer .row .left,footer .row .right{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 footer .row .sep{color:var(--ink3);margin:0 4px}
 footer .carimbo{padding-top:24px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:18px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3)}
 footer .carimbo .stamp{color:var(--accent);text-align:right;line-height:1.4}
@@ -284,10 +284,24 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
 .rv.on{opacity:1;transform:translateY(0)}
 
 .site-header .btn-ghost{background:var(--accent);color:#fff;border-color:var(--accent)}
-.site-header .btn-ghost:hover{background:var(--accent);color:#fff;filter:brightness(1.08);transform:translateY(-1px);box-shadow:0 8px 20px rgba(139,42,27,.30)}
+.site-header .btn-ghost:hover{background:var(--accent-dark);color:#fff;transform:translateY(-1px);box-shadow:0 10px 28px rgba(92,24,16,.24)}
+::selection{background:var(--accent);color:var(--bg)}
+*{scrollbar-width:thin;scrollbar-color:var(--accent) var(--bg2)}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--bg2)}::-webkit-scrollbar-thumb{background:var(--accent);border:3px solid var(--bg2)}
+.skip-link{position:fixed;top:12px;left:12px;z-index:100;transform:translateY(-160%);background:var(--ink);color:var(--bg);padding:10px 16px;font-weight:600;transition:transform .2s ease}
+.skip-link:focus{transform:none}
+:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.btn:active,.chat-fab:active,.link-underline:active,.ajudar-card:active{transform:translateY(1px) scale(.98)}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty;max-width:70ch}
+.hero-img .frame,.photo-frame,.mapa-overlay{box-shadow:0 22px 56px rgba(92,70,50,.18)}
+.ajudar-card:focus-visible,.pub-card:focus-within{position:relative;z-index:1}
+@media(max-width:560px){.container{padding:0 20px}section,.vídeo-section{padding:64px 0}.hero{padding:48px 0 64px}.hero-img .tag{right:8px}.chat-bubble{right:16px;bottom:16px}.chat-panel{max-width:calc(100vw - 32px)}.mapa-overlay{position:relative;left:auto;right:auto;bottom:auto;max-width:none;border-width:1px 0 0;box-shadow:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <aside class="topbar">
   <div class="container">
@@ -308,7 +322,7 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
       <span class="monograma">TF</span>
       <span class="brand-text"><b>Tais Ferreira</b><small>Nutrição clínica e comportamental</small></span>
     </a>
-    <nav class="site-nav">
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
       <a href="#abertura">Abertura</a>
       <a href="#consulta">Consulta</a>
       <a href="#dupla">Abordagem</a>
@@ -317,10 +331,11 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
       <a href="#contato">Contato</a>
       <a class="btn btn-ghost" href="#" data-chat="open" aria-label="Abrir conversa com a Tais">Conversar</a>
     </nav>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
+<main id="conteudo">
 <section id="top" class="hero">
   <div class="container">
     <div class="hero-grid">
@@ -340,7 +355,7 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
       </div>
       <div class="hero-img rv">
         <div class="frame">
-          <img src="img/hero-food-mamao-manga.webp?v=3" alt="Mamão e manga fatiados em tábua de madeira, com frasco de chia e lupa ao lado, em mesa de mármore cream">
+          <img src="img/hero-food-mamao-manga.webp?v=3" alt="Mamão e manga fatiados em tábua de madeira, com frasco de chia e lupa ao lado, em mesa de mármore cream" width="1288" height="1600" fetchpriority="high">
           <div class="caption"><b>Fig. 01</b>Frutas frescas, sementes e avaliação. Nutrição que começa no detalhe.</div>
         </div>
         <div class="tag">Nutrição clínica</div>
@@ -359,7 +374,7 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
       </div>
     </div>
     <div class="vídeo-frame rv">
-      <vídeo src="video/consultorio-tais.mp4" controls preload="metadata" playsinline poster="img/video-poster-tais.webp"></vídeo>
+      <video src="video/consultorio-tais.mp4" controls preload="metadata" playsinline poster="img/video-poster-tais.webp"></video>
     </div>
     <p class="vídeo-caption">Gravado no consultório da Tais, na Ilha do Governador, RJ.</p>
     <div class="vídeo-cta rv">
@@ -557,7 +572,7 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
     <div class="sobre-grid">
       <div class="sobre-photo rv">
         <div class="photo-frame">
-          <img src="img/photo-tais-portrait.jpg?v=3" alt="Tais Ferreira, nutricionista, no consultório da Ilha do Governador">
+          <img src="img/photo-tais-portrait.jpg?v=3" alt="Tais Ferreira, nutricionista, no consultório da Ilha do Governador" width="900" height="1080" loading="lazy">
         </div>
         <div class="formation-card">
           <span class="lbl">Formação</span>
@@ -591,11 +606,11 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
     </div>
     <div class="contato-galeria rv">
       <figure class="galeria-item">
-        <img src="img/abordagem-bioimpedancia.webp?v=2" alt="Bioimpedância, fita métrica, maçã verde e caderno com plano alimentar aberto em mesa cream">
+        <img src="img/abordagem-bioimpedancia.webp?v=2" alt="Bioimpedância, fita métrica, maçã verde e caderno com plano alimentar aberto em mesa cream" width="1194" height="1600" loading="lazy">
         <figcaption><b>Fig. A</b>Avaliação completa. Composição corporal, IMC, bioimpedância.</figcaption>
       </figure>
       <figure class="galeria-item">
-        <img src="img/consultorio-arrumado.webp?v=2" alt="Consultório da Tais com poltrona verde, diploma na parede e planta na janela">
+        <img src="img/consultorio-arrumado.webp?v=2" alt="Consultório da Tais com poltrona verde, diploma na parede e planta na janela" width="1288" height="1600" loading="lazy">
         <figcaption><b>Fig. B</b>O consultório. Ilha do Governador, sala 207.</figcaption>
       </figure>
     </div>
@@ -650,6 +665,8 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="container">
     <div class="row">
@@ -674,12 +691,12 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
 
 <!-- BALAO DE CHAT SIMULADO (feedback Carlos 2026-08-07) -->
 <div class="chat-bubble" id="chat-bubble">
-  <button class="chat-fab" id="chat-fab" type="button" aria-label="Abrir conversa com a Tais">
+  <button class="chat-fab" id="chat-fab" type="button" aria-label="Abrir conversa com a Tais" aria-controls="chat-panel" aria-expanded="false">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
   </button>
   <div class="chat-panel" id="chat-panel" role="dialog" aria-label="Chat com a Tais Ferreira" hidden>
     <div class="chat-header">
-      <div class="chat-avatar"><img src="img/photo-tais-portrait.jpg?v=3" alt="Tais Ferreira"></div>
+      <div class="chat-avatar"><img src="img/photo-tais-portrait.jpg?v=3" alt="Tais Ferreira" width="900" height="1080" loading="lazy"></div>
       <div class="chat-info">
         <b>Tais Ferreira</b>
         <span class="chat-status">Atendimento em horário comercial</span>
@@ -735,6 +752,7 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
   }
   function openChat(){
     panel.hidden = false;
+    fab.setAttribute('aria-expanded','true');
     if(opened) return;
     opened = true;
     setTimeout(function(){
@@ -793,7 +811,7 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
       }, 700);
     }, 300);
   }
-  function closeChat(){ panel.hidden = true; }
+  function closeChat(){ panel.hidden = true; fab.setAttribute('aria-expanded','false'); }
 
   fab.addEventListener('click', function(){ panel.hidden ? openChat() : closeChat(); });
   close.addEventListener('click', closeChat);
