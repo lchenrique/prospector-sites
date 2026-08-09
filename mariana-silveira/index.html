@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -264,6 +264,40 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
   .fab-pulse{animation:none}
 }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style id="visual-overhaul-v2">
+/* visual overhaul v2: split humano */
+:root{--bg:#fbfaf6;--bg2:#eef0e8;--bg3:#dfe4d8;--bg4:#243026;--ink:#202722;--ink2:#505c52;--ink3:#788078;--sage:#536b57;--sage-deep:#344a38;--sage-soft:#91a18f;--terra:#c75f46;--line:#cfd5cc}
+.topbar{background:#c75f46;color:#fff}.topbar .row span,.topbar .row span b{color:#fff}.header{background:rgba(251,250,246,.95)}.brand-mark{border-radius:2px;background:#536b57}.nav-cta,.btn{border-radius:2px}
+.hero{padding:0;text-align:left;min-height:calc(100dvh - 116px);display:grid;align-items:stretch;background:#fbfaf6}.hero::before{display:none}.hero-inner{max-width:1440px;width:100%;display:grid;grid-template-columns:minmax(360px,.88fr) minmax(0,1.12fr);grid-template-rows:auto auto auto auto auto;column-gap:clamp(44px,7vw,110px);align-content:center;padding:48px clamp(20px,4vw,64px)}
+.hero-visual{grid-column:1;grid-row:1/6;width:100%;height:min(720px,72dvh);object-fit:cover;object-position:center;border-radius:52% 52% 4px 4px;box-shadow:0 30px 70px -36px rgba(32,39,34,.45);align-self:center}.hero .eyebrow,.hero h1,.hero .lead,.hero-ctas,.hero-meta{grid-column:2}
+.hero .eyebrow{justify-content:flex-start;margin-bottom:14px}.hero .eyebrow::before{width:38px}.hero .eyebrow::after{display:none}.hero h1{font-size:clamp(52px,5.8vw,84px);line-height:.9;max-width:10ch;margin-bottom:20px;letter-spacing:-.045em}.hero h1 br{display:none}.hero h1 em{color:#c75f46;line-height:1.05}.hero .lead{margin:0 0 22px;max-width:42ch;font-family:var(--sans);font-style:normal;font-size:17px}.hero-ctas{justify-content:flex-start}.hero-meta{justify-content:flex-start;margin-top:22px}
+.trust{background:#536b57;border:0;color:#fff}.trust-item .txt,.trust-item .txt b{color:#fff}.trust-sep{background:rgba(255,255,255,.34)}
+.sobre{background:#fbfaf6}.sobre-inner{grid-template-columns:.8fr 1.2fr}.sobre-copy h2,.atend-head h2,.método-head h2{font-size:clamp(48px,6vw,78px);line-height:.94}.sobre-art .quote-card{border-radius:2px;background:#243026;box-shadow:14px 14px 0 #c75f46}.sobre-art .leaf{border-radius:2px;border:0;right:-40px}
+.atend{background:#eef0e8}.atend-head{text-align:left;margin-left:0}.atend-grid{grid-template-columns:1.25fr .75fr}.atend-card{border-radius:2px}.atend-card:first-child{transform:translateY(-24px)}.atend-img .badge{display:none}
+.método-head{text-align:left;margin-left:0}.método-track{grid-template-columns:1fr}.método-track::before{left:38px;right:auto;top:0;bottom:0;width:1px;height:auto}.método-step{text-align:left;display:grid;grid-template-columns:78px 220px 1fr;gap:28px;align-items:center;padding:24px 0}.método-num{margin:0;border-radius:2px}.método-step p{max-width:48ch;margin:0}
+.galeria{background:#243026}.galeria-img{border-radius:2px}.cta-final{text-align:left;background:#c75f46}.cta-inner{margin-left:0}.cta-final::before{display:none}.cta-final h2{font-size:clamp(52px,7vw,92px);max-width:9ch}.cta-final p{margin-left:0}.cta-final .eyebrow{justify-content:flex-start}.cta-meta{justify-content:flex-start}
+@media(max-width:900px){.hero{min-height:auto}.hero-inner{grid-template-columns:minmax(0,1fr);padding-top:34px}.hero-visual{grid-column:1;grid-row:1;height:52vh;min-height:420px;margin-bottom:40px}.hero .eyebrow,.hero h1,.hero .lead,.hero-ctas,.hero-meta{grid-column:1}.sobre-inner{grid-template-columns:1fr}.sobre-art .leaf{right:0}}
+@media(max-width:780px){.atend-grid{grid-template-columns:1fr}.atend-card:first-child{transform:none}.método-step{grid-template-columns:64px 1fr}.método-step p{grid-column:2}.hero-inner{padding-block:28px}.hero-visual{grid-row:6;height:260px;min-height:0;margin:28px 0 0}.hero h1{font-size:clamp(46px,13vw,60px);overflow-wrap:anywhere}.hero .lead{margin-bottom:22px}.hero-meta{margin-top:22px}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#top">Pular para o conte&uacute;do</a>
@@ -301,7 +335,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 <section class="hero">
   <div class="container hero-inner reveal">
     <span class="eyebrow">Nutrição clínica . Ilha do Governador</span>
-    <h1>Comer bem é um <em>ato de cuidado</em><br>que começa em você.</h1>
+    <h1>Comer bem é um <em>ato de cuidado</em><br> que começa em você.</h1>
     <p class="lead">Avaliação nutricional humana, plano alimentar realista e acompanhamento próximo para quem quer emagrecer com saúde, recuperar energia ou simplesmente se entender melhor na cozinha e no dia a dia.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="https://wa.me/5521971220955?text=Olá%20Mariana%2C%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20nutricional." target="_blank" rel="noopener">
@@ -317,6 +351,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
       <div class="sep"></div>
       <div class="stat"><span class="big">100<em>%</em></span><span class="lbl">Online e presencial</span></div>
     </div>
+    <img class="hero-visual" src="img/hero-mariana.webp" alt="Mariana Silveira em seu atendimento nutricional" width="1024" height="1280" fetchpriority="high">
   </div>
 </section>
 
