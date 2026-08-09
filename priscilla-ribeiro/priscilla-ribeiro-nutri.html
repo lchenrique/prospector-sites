@@ -108,7 +108,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 .hero-photo-badge .b1{font-family:var(--serif);font-size:18px;font-weight:500;line-height:1;color:var(--ink);font-style:italic}
 .hero-photo-badge .b2{font-family:var(--mono);font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-top:2px;display:block}
 
-@média(max-width:980px){
+@media(max-width:980px){
   .hero-half.hero-left{display:flex;flex-direction:column}
   .hero-photo-side{margin-bottom:24px}
 }
@@ -313,7 +313,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 @keyframes waPulse{0%{transform:scale(1);opacity:.5}100%{transform:scale(1.6);opacity:0}}
 
 /* ===== RESPONSIVO ===== */
-@média(max-width:980px){
+@media(max-width:980px){
   .container{padding:0 24px}
   .nav{position:fixed;inset:0;z-index:45;flex-direction:column;justify-content:center;align-items:center;gap:30px;background:var(--bg);opacity:0;pointer-events:none;transition:opacity .25s ease;overflow:auto}
   .nav.open{opacity:1;pointer-events:auto}
@@ -350,7 +350,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
   .contato-grid{grid-template-columns:1fr;gap:32px}
   .footer .container{grid-template-columns:1fr;gap:32px}
 }
-@média(max-width:560px){
+@media(max-width:560px){
   .topbar{font-size:9px;letter-spacing:.1em;padding:6px 0}
   .topbar .container{flex-wrap:nowrap;gap:10px}
   .topbar .tb-left{gap:10px}
@@ -361,6 +361,21 @@ button{font-family:inherit;cursor:pointer;border:0;background:transparent;color:
 
 .nav .nav-cta{background:var(--terra);color:#fff;border:1px solid var(--terra)}
 .nav .nav-cta:hover{background:var(--terra-dark);color:#fff;border-color:var(--terra-dark)}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<style id="visual-overhaul-shared">
+/* shared guard for public Priscilla pages: hero photo must not push the CTA below the desktop fold */
+@media(min-width:981px){.hero-photo-side{max-height:270px}.hero-half{padding:56px 60px}}
 </style>
 </head>
 <body>

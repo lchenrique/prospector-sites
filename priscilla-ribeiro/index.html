@@ -415,21 +415,57 @@ section{scroll-margin-top:96px}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <style id="visual-overhaul-v2">
 /* visual overhaul v2: pôster brutal */
 :root{--bg:#fff4dc;--bg2:#ffc44d;--bg3:#ffdf91;--ink:#11110f;--ink2:#312e28;--ink3:#5c5549;--gold:#ff8a00;--gold-dark:#cc4a00;--line:#11110f;--line-soft:#c9aa64;--terra:#ff4e1f;--treino-bg:#11110f;--nutri-bg:#ff4e1f}
 .topbar{background:#ff4e1f;color:#111;border-bottom:3px solid #111}.header{background:#fff4dc;border-bottom:3px solid #111}.brand-mark{border-radius:0;background:#111;color:#ffc44d}.nav-cta,.btn{border-radius:0}.header .nav-cta{background:#111;color:#fff}.hero-right .btn-primary{background:#a92d12;color:#fff;border-color:#a92d12}
 .hero{border-bottom:4px solid #111}.hero-split{min-height:calc(100dvh - 98px);grid-template-columns:1fr 1fr}.hero-half{padding-top:28px;padding-bottom:28px;min-width:0}.hero-left{background:#ffc44d}.hero-right{background:#111;color:#fff}
-.hero-half.hero-left{display:flex}.hero-photo-side{height:30vh;min-height:220px;aspect-ratio:auto;max-height:300px;border:4px solid #111;box-shadow:12px 12px 0 #ff4e1f;margin-bottom:20px}.hero-photo-side::after{display:none}.hero-photo-badge{border:3px solid #111;border-radius:0}
+.hero-half.hero-left{display:flex}.hero-photo-side{height:30vh;min-height:220px;aspect-ratio:auto;max-height:300px;border:4px solid #111;box-shadow:12px 12px 0 #ff4e1f;margin-bottom:20px}.hero-left h1,.hero-left p,.hero-left .hero-tag,.hero-left .hero-stats{color:#11110f} .hero-left .hero-stats{border-top-color:#11110f}.hero-left .hero-stats .label{color:#312e28}.hero-photo-side::after{display:none}.hero-photo-badge{border:3px solid #111;border-radius:0}
 .hero-half h1{font-family:var(--sans);font-size:clamp(46px,4.8vw,70px);font-weight:600;line-height:.9;text-transform:uppercase;letter-spacing:-.045em;max-width:10ch;overflow-wrap:normal}.hero-half h1 em{font-family:var(--serif);text-transform:none}.hero-half p{font-family:var(--sans);font-size:16px;max-width:44ch}.hero-tag{display:none}
 .hero-divider{width:4px;background:#111}.hero-divider::before{width:92px;height:92px;border:4px solid #111;border-radius:0;transform:translate(-50%,-50%) rotate(45deg)}.hero-divider::after{font-size:15px;font-weight:600;color:#111}
 .hero-stats{border-top:3px solid currentColor}.hero-stats .num{font-family:var(--sans);font-weight:700}
 .method245{background:#fff4dc;border-bottom:4px solid #111}.method245-head{text-align:left;margin-left:0}.method245-head h2,.dupla-head h2,.cases-head h2,.esp-head h2,.sobre-head h2{font-family:var(--sans);font-weight:700;text-transform:uppercase;line-height:.86;font-size:clamp(48px,7vw,88px)}
-.method245-split,.dupla-split,.cases-grid,.esp-grid,.sobre-split{border:4px solid #111;border-radius:0}.method245-mid,.dupla-mid{border-color:#111;background:#ffc44d}.method245-col{min-height:520px}.dupla{background:#ff4e1f;border-bottom:4px solid #111}.dupla-head{text-align:left;margin-left:0}.dupla-col .col-label,.dupla-col .col-text{border-radius:0;border:3px solid #111;box-shadow:8px 8px 0 #ffc44d}
+.method245-split,.dupla-split,.cases-grid,.esp-grid,.sobre-split{width:min(100%,1180px);margin-inline:auto;border:4px solid #111;border-radius:0}.method245-mid,.dupla-mid{border-color:#111;background:#ffc44d}.method245-col{min-height:520px}.dupla{background:#ff4e1f;border-bottom:4px solid #111}.dupla-head{text-align:left;margin-left:0}.dupla-head .eyebrow{color:#11110f}.dupla-col .col-label,.dupla-col .col-text{border-radius:0;border:3px solid #111;box-shadow:8px 8px 0 #ffc44d}.dupla-col.nutri{color:#11110f}.dupla-col.nutri .col-label,.dupla-col.nutri .col-text,.dupla-col.nutri .col-text h4,.dupla-col.nutri .col-text p{color:#11110f;background:#fff4dc} .method245-col.nutri,.esp-card .esp-side.nutri{color:#11110f}.method245-col.nutri .col-tag,.method245-col.nutri .phase p{color:#11110f}.case .case-meta,.case .case-result .r-lbl{color:#fff4dc}
 .cases{background:#111;color:#fff}.cases-head h2,.cases-head p{color:#fff}.case{background:#111;border-color:#fff}.case:hover{background:#28251f}.case .case-name,.case .case-quote,.case .case-result .r-val{color:#fff}
 .esp{background:#ffc44d}.esp-head,.sobre-head{text-align:left;margin-left:0}.sobre-photo-wrap img{border-radius:0;border:4px solid #111;box-shadow:12px 12px 0 #ff4e1f}.sobre-bio{text-align:left;margin-left:0}
-@media(max-width:980px){.hero-split{grid-template-columns:minmax(0,1fr)}.hero-divider{display:none}.hero-half{min-width:0;padding:30px 24px}.hero-left,.hero-right{padding-inline:24px}.hero-half h1{max-width:9ch;overflow-wrap:anywhere}.hero-photo-side{height:250px;min-height:0}.method245-split,.dupla-split{grid-template-columns:1fr}.method245-mid,.dupla-mid{display:none}}
-@media(max-width:560px){.hero-half{padding-block:24px}.hero-half h1{font-size:clamp(42px,13vw,58px)}.hero-half p{font-size:15px;margin-bottom:20px}.hero-photo-side{height:190px;min-height:0;margin-bottom:16px}.hero-stats{grid-template-columns:1fr 1fr;margin-top:20px;padding-top:16px}.method245-split,.dupla-split,.cases-grid,.esp-grid,.sobre-split{border-width:3px}.method245-head h2,.dupla-head h2,.cases-head h2,.esp-head h2,.sobre-head h2{font-size:clamp(40px,13vw,58px);overflow-wrap:anywhere}}
+@media(max-width:980px){.hero-split{grid-template-columns:minmax(0,1fr)}.hero-divider{display:none}.hero-half{min-width:0;padding:30px 24px}.hero-left,.hero-right{padding-inline:24px}.hero-half h1{max-width:9ch;overflow-wrap:normal}.hero-photo-side{height:250px;min-height:0}.method245-split,.dupla-split{grid-template-columns:1fr}.method245-mid,.dupla-mid{display:none}}
+@media(max-width:560px){.hero-half{padding-block:24px}.hero-half h1{font-size:clamp(42px,13vw,58px)}.hero-half p{font-size:15px;margin-bottom:20px}.hero-photo-side{height:190px;min-height:0;margin-bottom:16px}.hero-stats{grid-template-columns:1fr 1fr;margin-top:20px;padding-top:16px}.method245-split,.dupla-split,.cases-grid,.esp-grid,.sobre-split{border-width:3px}.method245-head h2,.dupla-head h2,.cases-head h2,.esp-head h2,.sobre-head h2{font-size:clamp(40px,13vw,58px);overflow-wrap:normal}.dupla-head h2,.sobre-head h2{font-size:47.8px}}
 </style>
 </head>
 <body>

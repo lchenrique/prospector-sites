@@ -73,7 +73,7 @@ h3{font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
 .topbar .sep{color:var(--ink3);margin:0 4px}
 .topbar a{transition:color .2s ease}
 .topbar a:hover{color:var(--bg)}
-@média(max-width:560px){
+@media(max-width:560px){
   .topbar{font-size:9px;letter-spacing:.12em;padding:6px 0}
   .topbar .row{flex-wrap:nowrap;gap:12px}
   .topbar .row .left{display:none}
@@ -95,12 +95,12 @@ h3{font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
 .nav-toggle{display:none;background:none;border:0;cursor:pointer;width:40px;height:40px;position:relative;flex-shrink:0}
 .nav-toggle span{position:absolute;left:7px;right:7px;height:2px;background:var(--ink);transition:.25s}
 .nav-toggle span:nth-child(1){top:13px}.nav-toggle span:nth-child(2){top:19px}.nav-toggle span:nth-child(3){top:25px}
-@média(max-width:920px){
+@media(max-width:920px){
   .site-nav a:not(.btn){display:none}
   .nav-toggle{display:block}
 }
 /* MENU MOBILE - overlay fullscreen */
-@média(max-width:920px){
+@media(max-width:920px){
   .site-nav{position:fixed;inset:0;z-index:40;flex-direction:column;justify-content:center;align-items:center;gap:26px;background:var(--bg);opacity:0;pointer-events:none;transition:opacity .22s ease;overflow:auto}
   .site-nav.open{opacity:1;pointer-events:auto}
   .site-nav a:not(.btn){display:block;font-size:15px;letter-spacing:.2em;padding:6px 0}
@@ -129,7 +129,7 @@ h3{font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
 .hero-img .caption{position:absolute;left:22px;right:22px;bottom:18px;font-family:var(--serif);font-style:italic;font-size:13px;color:var(--ink3);text-align:center;line-height:1.3}
 .hero-img .caption b{font-style:normal;font-weight:500;color:var(--ink2);font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:4px}
 .hero-img .tag{position:absolute;top:-18px;right:-18px;background:var(--accent);color:var(--bg);padding:10px 16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;transform:rotate(4deg);box-shadow:2px 3px 0 var(--ink)}
-@média(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero{padding:56px 0 72px}}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero{padding:56px 0 72px}}
 
 /* COMO POSSO TE AJUDAR */
 .como-ajudar{background:var(--bg3);border-bottom:1px solid var(--line)}
@@ -145,8 +145,8 @@ h3{font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
 .ajudar-card p{font-size:13.5px;line-height:1.55;color:var(--ink2)}
 .ajudar-card .more{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-top:auto;display:flex;align-items:center;gap:8px;transition:gap .25s ease}
 .ajudar-card:hover .more{gap:14px}
-@média(max-width:920px){.ajudar-grid{grid-template-columns:repeat(2,1fr)}.ajudar-card{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.ajudar-card:nth-child(2n){border-right:0}.ajudar-card:nth-last-child(-n+2){border-bottom:0}}
-@média(max-width:560px){.ajudar-grid{grid-template-columns:1fr}.ajudar-card{border-right:0!important;border-bottom:1px solid var(--line)!important}.ajudar-card:last-child{border-bottom:0}}
+@media(max-width:920px){.ajudar-grid{grid-template-columns:repeat(2,1fr)}.ajudar-card{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.ajudar-card:nth-child(2n){border-right:0}.ajudar-card:nth-last-child(-n+2){border-bottom:0}}
+@media(max-width:560px){.ajudar-grid{grid-template-columns:1fr}.ajudar-card{border-right:0!important;border-bottom:1px solid var(--line)!important}.ajudar-card:last-child{border-bottom:0}}
 
 /* ABERTURA - texto editorial + side */
 .abertura{border-bottom:1px solid var(--line)}
@@ -158,7 +158,7 @@ h3{font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
 .abertura-text .signature b{color:var(--ink);font-weight:500;font-family:var(--serif);font-size:18px;display:block}
 .abertura-side{position:sticky;top:88px;padding:24px 28px;background:var(--bg3);border:1px solid var(--line);font-family:var(--serif);font-size:15px;line-height:1.55;color:var(--ink2);font-style:italic}
 .abertura-side .stamp{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-style:normal;display:block;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
-@média(max-width:980px){.abertura-grid{grid-template-columns:1fr;gap:48px}.abertura-side{position:relative;top:0}}
+@media(max-width:980px){.abertura-grid{grid-template-columns:1fr;gap:48px}.abertura-side{position:relative;top:0}}
 
 /* CONSULTA - 2 cols com marginalia */
 .consulta{background:var(--bg);border-bottom:1px solid var(--line)}
@@ -174,7 +174,7 @@ h3{font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
 .consulta-aside li{font-family:var(--serif);font-size:15px;line-height:1.5;color:var(--ink2);padding:8px 0;border-bottom:1px solid var(--line-soft)}
 .consulta-aside li:last-child{border-bottom:0}
 .consulta-aside li b{color:var(--ink);font-weight:500;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:2px}
-@média(max-width:980px){.consulta-grid{grid-template-columns:1fr;gap:48px}.consulta-aside{position:relative;top:0}}
+@media(max-width:980px){.consulta-grid{grid-template-columns:1fr;gap:48px}.consulta-aside{position:relative;top:0}}
 
 /* DUPLA - clínica + comportamental */
 .dupla{background:var(--bg3);border-bottom:1px solid var(--line)}
@@ -189,7 +189,7 @@ h3{font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
 .dupla-col li{font-family:var(--serif);font-size:15px;color:var(--ink);padding:8px 0 8px 22px;position:relative;border-bottom:1px solid var(--line-soft)}
 .dupla-col li:last-child{border-bottom:0}
 .dupla-col li::before{content:'+';position:absolute;left:0;top:8px;color:var(--accent);font-family:var(--mono);font-weight:500}
-@média(max-width:760px){.dupla-grid{grid-template-columns:1fr;gap:32px}}
+@media(max-width:760px){.dupla-grid{grid-template-columns:1fr;gap:32px}}
 
 /* PÚBLICOS - 8 cards */
 .públicos{border-bottom:1px solid var(--line)}
@@ -202,7 +202,7 @@ h3{font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
 .pub-card:hover{background:var(--bg3)}
 .pub-card h3{font-size:19px;font-weight:500;margin-bottom:10px;line-height:1.2}
 .pub-card p{font-family:var(--serif);font-size:14.5px;line-height:1.55;color:var(--ink2)}
-@média(max-width:760px){.públicos-grid{grid-template-columns:1fr}.pub-card{border-right:0!important;border-bottom:1px solid var(--line)!important}.pub-card:last-child{border-bottom:0}}
+@media(max-width:760px){.públicos-grid{grid-template-columns:1fr}.pub-card{border-right:0!important;border-bottom:1px solid var(--line)!important}.pub-card:last-child{border-bottom:0}}
 
 /* SOBRE - foto + bio (alinhamento PERFEITO) */
 .sobre{background:var(--bg);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
@@ -223,8 +223,8 @@ h3{font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
 .stat-block b{font-family:var(--serif);font-size:38px;font-weight:500;color:var(--accent);line-height:1;display:block;margin-bottom:8px}
 .stat-block span{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);line-height:1.4;display:block}
 .sobre-text .ctas{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
-@média(max-width:980px){.sobre-grid{grid-template-columns:1fr;gap:48px}}
-@média(max-width:760px){.sobre-stats{grid-template-columns:1fr;gap:18px}}
+@media(max-width:980px){.sobre-grid{grid-template-columns:1fr;gap:48px}}
+@media(max-width:760px){.sobre-stats{grid-template-columns:1fr;gap:18px}}
 
 /* VÍDEO - vídeo Wix real */
 .vídeo-section{padding:80px 0;border-bottom:1px solid var(--line);background:var(--bg3)}
@@ -233,7 +233,7 @@ h3{font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
 .vídeo-frame vídeo{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
 .vídeo-cta{margin-top:28px;text-align:center}
 .vídeo-caption{margin-top:18px;text-align:center;font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink3)}
-@média(max-width:760px){.vídeo-section .section-head{text-align:center}}
+@media(max-width:760px){.vídeo-section .section-head{text-align:center}}
 
 /* CONTATO - mapa + ficha */
 .contato{border-bottom:1px solid var(--line)}
@@ -265,7 +265,7 @@ h3{font-size:clamp(20px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
 .galeria-item img{width:100%;height:340px;object-fit:cover;display:block;filter:sepia(.10) saturate(1.05)}
 .galeria-item figcaption{margin-top:14px;font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--ink3);line-height:1.4}
 .galeria-item figcaption b{font-style:normal;font-weight:500;color:var(--ink2);font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:4px}
-@média(max-width:980px){.contato-grid{grid-template-columns:1fr;gap:48px}.mapa iframe{height:320px}.contato-galeria{grid-template-columns:1fr;gap:24px}.galeria-item img{height:240px}}
+@media(max-width:980px){.contato-grid{grid-template-columns:1fr;gap:48px}.mapa iframe{height:320px}.contato-galeria{grid-template-columns:1fr;gap:24px}.galeria-item img{height:240px}}
 
 /* FOOTER */
 footer{padding:48px 0 32px;background:var(--ink);color:var(--bg2)}
@@ -277,7 +277,7 @@ footer .row .sep{color:var(--ink3);margin:0 4px}
 footer .carimbo{padding-top:24px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:18px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3)}
 footer .carimbo .stamp{color:var(--accent);text-align:right;line-height:1.4}
 footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-top:4px}
-@média(max-width:760px){footer .row{flex-direction:column;align-items:flex-start}footer .carimbo{flex-direction:column;align-items:flex-start}footer .carimbo .stamp{text-align:left}}
+@media(max-width:760px){footer .row{flex-direction:column;align-items:flex-start}footer .carimbo{flex-direction:column;align-items:flex-start}footer .carimbo .stamp{text-align:left}}
 
 /* REVEAL ANIMATION */
 .rv{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
@@ -285,6 +285,47 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
 
 .site-header .btn-ghost{background:var(--accent);color:#fff;border-color:var(--accent)}
 .site-header .btn-ghost:hover{background:var(--accent);color:#fff;filter:brightness(1.08);transform:translateY(-1px);box-shadow:0 8px 20px rgba(139,42,27,.30)}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style id="visual-overhaul-shared">
+/* shared visual tokens for public Tais pages */
+:root{--bg:#fffdf7;--bg2:#efe9dc;--ink:#181512;--ink2:#4f463e;--accent:#b31220;--accent-dark:#760913;--line:#bfb6a8}
+body{background:var(--bg);color:var(--ink)}
+.site-header{background:#fffdf7;border-bottom-color:var(--ink)}
+.site-nav a:not(.btn){color:var(--ink2)}.site-nav a:not(.btn):hover{color:var(--accent)}
+.site-nav .btn{background:var(--accent);color:#fff}
+footer{background:var(--ink);color:#fff}
+@media(max-width:920px){.site-nav a:not(.btn){display:none}}
 </style>
 </head>
 <body>
@@ -340,7 +381,7 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
       </div>
       <div class="hero-img rv">
         <div class="frame">
-          <img src="img/hero-food-mamão-manga.jpg?v=3" alt="Mamão e manga fatiados em tábua de madeira, com frasco de chia e lupa ao lado, em mesa de mármore cream">
+          <img src="img/hero-food-mamao-manga.jpg?v=3" alt="Mamão e manga fatiados em tábua de madeira, com frasco de chia e lupa ao lado, em mesa de mármore cream">
           <div class="caption"><b>Fig. 01</b>Frutas frescas, sementes e avaliação. Nutrição que começa no detalhe.</div>
         </div>
         <div class="tag">Nutrição clínica</div>
@@ -591,11 +632,11 @@ footer .carimbo .stamp b{color:var(--bg);font-weight:500;display:block;margin-to
     </div>
     <div class="contato-galeria rv">
       <figure class="galeria-item">
-        <img src="img/abordagem-bioimpedância.jpg?v=2" alt="Bioimpedância, fita métrica, maçã verde e caderno com plano alimentar aberto em mesa cream">
+        <img src="img/abordagem-bioimpedancia.jpg?v=2" alt="Bioimpedância, fita métrica, maçã verde e caderno com plano alimentar aberto em mesa cream">
         <figcaption><b>Fig. A</b>Avaliação completa. Composição corporal, IMC, bioimpedância.</figcaption>
       </figure>
       <figure class="galeria-item">
-        <img src="img/consultório-arrumado.jpg?v=2" alt="Consultório da Tais com poltrona verde, diploma na parede e planta na janela">
+        <img src="img/consultorio-arrumado.jpg?v=2" alt="Consultório da Tais com poltrona verde, diploma na parede e planta na janela">
         <figcaption><b>Fig. B</b>O consultório. Ilha do Governador, sala 207.</figcaption>
       </figure>
     </div>

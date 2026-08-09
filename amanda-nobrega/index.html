@@ -210,6 +210,42 @@ p{text-wrap:pretty;max-width:68ch}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <style id="visual-overhaul-v2">
 /* visual overhaul v2: bloco berry */
 :root{--bg:#fff8fa;--bg2:#f7e8ee;--ink:#25131a;--ink2:#6f4d59;--accent:#b51f56;--accent-dark:#7e1239;--line:#e7cbd5;--card:#fff}
@@ -218,16 +254,16 @@ p{text-wrap:pretty;max-width:68ch}
 .hero{background:var(--accent-dark);min-height:calc(100dvh - 76px);color:#fff}
 .hero-bg{left:auto;right:0;width:48%;filter:saturate(1.08) contrast(1.03);object-position:center}
 .hero::before{background:linear-gradient(90deg,var(--accent-dark) 0 45%,rgba(126,18,57,.55) 58%,rgba(37,19,26,.08) 100%)}
-.hero-inner{grid-template-columns:minmax(0,1.08fr) minmax(330px,.72fr);align-items:center;padding:112px 56px 46px;gap:7vw}
+.hero-inner{box-sizing:border-box;grid-template-columns:minmax(0,1.08fr) minmax(330px,.72fr);align-items:center;padding:clamp(88px,8vw,112px) clamp(28px,4vw,64px) 46px;gap:clamp(32px,5vw,80px)}
 .hero h1{font-size:clamp(52px,7.2vw,102px);max-width:8.6ch;line-height:.88;letter-spacing:-.045em;margin-bottom:28px}
-.hero h1 em{color:#ffb3cb;font-weight:500}
+.hero h1 em{color:#ffb3cb;font-weight:400}
 .hero .lead{max-width:44ch;font-size:clamp(17px,1.4vw,20px)}
 .hero-eyebrow{display:none}
 .hero-ctas .btn{min-height:54px}
 .hero-ctas .btn-primary{background:#fff;color:var(--accent-dark)}
 .hero-stats{align-self:end;border:0;border-left:1px solid rgba(255,255,255,.42);border-radius:0;background:rgba(37,19,26,.68);padding:30px;grid-template-columns:1fr;gap:18px;box-shadow:none}
 .hero-stats .item{display:grid;grid-template-columns:100px 1fr;gap:16px;align-items:baseline;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.16)}
-.hero-stats .item:last-child{border:0;padding-bottom:0}.hero-stats .item .n{font-size:30px}
+.hero-stats .item:last-child{border:0;padding-bottom:0}.hero-stats .item .n{font-size:30px}.hero-stats .item .l{font-size:13.5px;font-weight:500;line-height:1.45}
 .hero-photo-credit{display:none}
 .marquee{background:#ffcfdd;border:0}.marquee-track{padding:14px 0;gap:14px}.marquee figure{height:180px;flex-basis:260px}
 .servicos{background:#fff8fa}.servicos-head{grid-template-columns:.8fr 1.2fr;align-items:start}.servicos-head h2{font-size:clamp(44px,5vw,72px);color:var(--accent-dark)}

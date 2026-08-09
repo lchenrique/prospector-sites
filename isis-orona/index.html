@@ -334,16 +334,52 @@ section{scroll-margin-top:96px}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <style id="visual-overhaul-v2">
 /* visual overhaul v2: floresta editorial */
 :root{--paper:#f3f0e5;--paper2:#e5e0cf;--paper3:#d6cfb8;--ink:#172018;--ink2:#39453b;--ink3:#687166;--moss:#173e2d;--moss-dark:#0b251a;--moss-soft:#73906d;--apricot:#e05a2a;--line:#c9c1aa}
-.masthead{background:#e05a2a;color:#fff}.masthead b{color:#fff}.header{background:rgba(243,240,229,.94);border-bottom:1px solid rgba(23,62,45,.22)}
+.masthead{background:#e05a2a;color:#11110f}.masthead b{color:#11110f}.header{background:rgba(243,240,229,.94);border-bottom:1px solid rgba(23,62,45,.22)}
 .hero{background:var(--moss-dark);color:#fff;padding:54px 0 62px;min-height:calc(100dvh - 118px);display:grid;align-items:center}.hero::after{background:repeating-linear-gradient(90deg,transparent 0,transparent calc(20% - 1px),rgba(255,255,255,.055) 20%);mask-image:none}
-.hero-grid{grid-template-columns:minmax(0,.82fr) minmax(420px,1.18fr);align-items:center;gap:6vw}.hero-copy{order:2}.hero-média{order:1;min-height:640px}.hero-photo{border-radius:46% 46% 4px 4px;border:1px solid rgba(255,255,255,.28);aspect-ratio:4/5;box-shadow:none}.hero-photo img{filter:saturate(.9) contrast(1.04)}.hero-photo .corner,.hero-plato{display:none}
-.hero-eyebrow{display:none}.hero h1{color:#fff;font-size:clamp(58px,7.2vw,102px);line-height:.88;max-width:7.4ch;letter-spacing:-.045em}.hero h1 em{color:#e8b395}.hero .lead{color:#d5dfd7;max-width:40ch;font-size:clamp(18px,1.6vw,22px)}
+.hero-grid{width:min(100%,1260px);margin-inline:auto;grid-template-columns:minmax(0,.82fr) minmax(360px,1.18fr);align-items:center;gap:clamp(32px,5vw,72px)}.hero-copy{order:2}.hero-média{order:1;min-height:640px}.hero-photo{border-radius:46% 46% 4px 4px;border:1px solid rgba(255,255,255,.28);aspect-ratio:4/5;box-shadow:none}.hero-photo img{filter:saturate(.9) contrast(1.04)}.hero-photo .corner,.hero-plato{display:none}
+.hero-eyebrow{display:none}.hero h1{color:#fff;font-size:clamp(56px,5.2vw,88px);line-height:.92;max-width:10ch;letter-spacing:-.045em}.hero h1 em{color:#e8b395}.hero .lead{color:#d5dfd7;max-width:40ch;font-size:clamp(18px,1.6vw,22px)}
 .btn{border-radius:3px}.btn-primary,.header .nav-cta{background:#a53d1a;border-color:#a53d1a;color:#fff}.btn-ghost{color:#fff;border-color:rgba(255,255,255,.38)}.hero-meta{border-top-color:rgba(255,255,255,.2)}.hero-meta .rating b,.hero-meta .stat b{color:#fff}.hero-meta .stat,.hero-meta .rating small{color:#bdc9bf}.hero-meta .div{background:rgba(255,255,255,.2)}
-.proof{background:#e05a2a;border:0}.proof h2,.proof-stats .st b,.proof-stats .st span{color:#fff}
-.despensa{background:#f3f0e5}.section-head h2{font-size:clamp(46px,6vw,82px);max-width:9ch}.desp-grid{gap:0;border:1px solid var(--moss)}.desp-cell{border-radius:0;border-color:rgba(23,62,45,.28)}
+.proof{background:#e05a2a;border:0;color:#11110f}.proof h2,.proof h2 em,.proof-stats .st b,.proof-stats .st span{color:#11110f}
+.despensa{background:#f3f0e5}.section-head h2{font-size:clamp(48px,4.8vw,72px);line-height:.95;max-width:12ch}.desp-grid{gap:0;border:1px solid var(--moss)}.desp-cell{border-radius:0;border-color:rgba(23,62,45,.28)}.desp-cell.has-pic::before{background:rgba(11,37,26,.86)}.desp-cell.has-pic h3,.desp-cell.has-pic p{color:#fff}.desp-cell .num{font-size:11px;color:#9a3f1c}.meta,.lbl,.lbl-tipo{font-size:11px;color:#39453b}
 .servicos{background:#dfe6da}.serv-list{border-top:2px solid var(--moss)}.serv-item{padding:52px 18px}.serv-item h3{font-size:clamp(30px,3vw,44px)}
 .sobre{background:var(--moss-dark);color:#fff}.sobre-inner{text-align:left;margin-left:0}.sobre-inner h2,.sobre-quote,.sobre-assinatura .nome,.cred b{color:#fff}.credenciais{background:transparent;border-color:rgba(255,255,255,.24)}.cred{border-color:rgba(255,255,255,.24)}.cred span{color:#bdc9bf}
 .como{background:#f3f0e5;color:var(--ink)}.como .section-head h2{color:var(--moss-dark)}.como .section-head p,.tl-step .body p{color:var(--ink2)}.tl-step .body h3{color:var(--ink)}.timeline::before{background:var(--apricot)}.tl-step .dot{background:var(--moss);color:#fff}
