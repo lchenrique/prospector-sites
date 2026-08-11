@@ -33,6 +33,27 @@ img{display:block;max-width:100%}
 button{font:inherit}
 :focus-visible{outline:3px solid var(--coral);outline-offset:4px}
 ::selection{background:var(--yellow);color:var(--ink)}
+@media(prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.is-in{opacity:1;transform:none}
+  .reveal-stagger > *{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal-stagger.is-in > *{opacity:1;transform:none}
+  .reveal-stagger.is-in > *:nth-child(1){transition-delay:.05s}
+  .reveal-stagger.is-in > *:nth-child(2){transition-delay:.15s}
+  .reveal-stagger.is-in > *:nth-child(3){transition-delay:.25s}
+  .reveal-stagger.is-in > *:nth-child(4){transition-delay:.35s}
+  .hero h1>*{display:inline-block;opacity:0;transform:translateY(24px);animation:priscillaRise .9s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero h1>*:nth-child(1){animation-delay:.05s}
+  .hero h1>*:nth-child(2){animation-delay:.18s}
+  .hero h1>*:nth-child(3){animation-delay:.31s}
+  .hero-claim{opacity:0;transform:translateY(18px);animation:priscillaFade .8s cubic-bezier(.2,.7,.2,1) .45s forwards}
+  .hero-lead{opacity:0;transform:translateY(18px);animation:priscillaFade .8s cubic-bezier(.2,.7,.2,1) .55s forwards}
+  .hero-actions,.hero-proof{opacity:0;transform:translateY(18px);animation:priscillaFade .8s cubic-bezier(.2,.7,.2,1) .65s forwards}
+  .hero-bg{transform:scale(1.04);animation:priscillaBg 18s ease-out forwards}
+  @keyframes priscillaRise{to{opacity:1;transform:none}}
+  @keyframes priscillaFade{to{opacity:1;transform:none}}
+  @keyframes priscillaBg{to{transform:scale(1)}}
+}
 .container{width:min(1180px,calc(100% - 48px));margin-inline:auto}
 .eyebrow{font-size:12px;font-weight:600;text-transform:uppercase;color:var(--coral)}
 .section-title{font-family:var(--serif);font-size:64px;font-weight:400;line-height:.98;max-width:760px}
@@ -315,15 +336,15 @@ button{font:inherit}
     </div>
   </div>
 
-  <section class="approach" id="atendimento">
-    <div class="container">
-      <div class="approach-head">
-        <div><span class="eyebrow">Atendimento nutricional</span><h2 class="section-title">Estratégia no papel. <em>Vida real no prato.</em></h2></div>
-        <p class="approach-intro">A consulta organiza o que hoje parece confuso. Sem cardápio genérico, proibições automáticas ou uma rotina impossível de sustentar.</p>
-      </div>
-      <div class="approach-grid">
-        <div class="approach-image"><img src="img/consultorio.webp" alt="Consultório de nutrição" loading="lazy"></div>
-        <div class="approach-copy">
+      <section class="approach" id="atendimento">
+        <div class="container">
+          <div class="approach-head reveal">
+            <div><span class="eyebrow">Atendimento nutricional</span><h2 class="section-title">Estratégia no papel. <em>Vida real no prato.</em></h2></div>
+            <p class="approach-intro">A consulta organiza o que hoje parece confuso. Sem cardápio genérico, proibições automáticas ou uma rotina impossível de sustentar.</p>
+          </div>
+          <div class="approach-grid reveal">
+            <div class="approach-image"><img src="img/consultorio.webp" alt="Consultório de nutrição" loading="lazy"></div>
+            <div class="approach-copy">
           <span class="eyebrow">Plano individual</span>
           <h3>Você não precisa caber em uma dieta.</h3>
           <p>O plano é construído a partir da sua realidade: horários, preferências, exames, orçamento, contexto familiar e objetivo.</p>
@@ -337,52 +358,52 @@ button{font:inherit}
     </div>
   </section>
 
-  <section class="services" id="especialidades">
-    <div class="container">
-      <div class="services-head">
-        <div><span class="eyebrow">Frentes de cuidado</span><h2 class="section-title">Nutrição para <em>diferentes fases.</em></h2></div>
-        <p>O ponto de partida muda de pessoa para pessoa. A conduta também, sempre dentro da atuação nutricional.</p>
-      </div>
-      <div class="services-grid">
-        <article class="service"><span class="service-num">01</span><h3>Saúde e composição corporal</h3><p>Estratégias alimentares para emagrecimento, ganho de massa e melhora de marcadores de saúde, respeitando o seu contexto clínico.</p></article>
-        <article class="service"><span class="service-num">02</span><h3>Performance esportiva</h3><p>Organização da alimentação em torno da modalidade, dos horários e das demandas de energia, recuperação e composição corporal.</p></article>
-        <article class="service"><span class="service-num">03</span><h3>Gestação e família</h3><p>Acompanhamento nutricional na gestação, no pós-parto e em diferentes fases da alimentação materno-infantil.</p></article>
-        <article class="service"><span class="service-num">04</span><h3>Nutrição clínica integrativa</h3><p>Leitura de exames, hábitos e sintomas para uma estratégia nutricional criteriosa, incluindo fitoterapia quando indicada.</p></article>
-      </div>
-    </div>
-  </section>
+      <section class="services" id="especialidades">
+        <div class="container">
+          <div class="services-head reveal">
+            <div><span class="eyebrow">Frentes de cuidado</span><h2 class="section-title">Nutrição para <em>diferentes fases.</em></h2></div>
+            <p>O ponto de partida muda de pessoa para pessoa. A conduta também, sempre dentro da atuação nutricional.</p>
+          </div>
+          <div class="services-grid reveal-stagger">
+            <article class="service"><span class="service-num">01</span><h3>Saúde e composição corporal</h3><p>Estratégias alimentares para emagrecimento, ganho de massa e melhora de marcadores de saúde, respeitando o seu contexto clínico.</p></article>
+            <article class="service"><span class="service-num">02</span><h3>Performance esportiva</h3><p>Organização da alimentação em torno da modalidade, dos horários e das demandas de energia, recuperação e composição corporal.</p></article>
+            <article class="service"><span class="service-num">03</span><h3>Gestação e família</h3><p>Acompanhamento nutricional na gestação, no pós-parto e em diferentes fases da alimentação materno-infantil.</p></article>
+            <article class="service"><span class="service-num">04</span><h3>Nutrição clínica integrativa</h3><p>Leitura de exames, hábitos e sintomas para uma estratégia nutricional criteriosa, incluindo fitoterapia quando indicada.</p></article>
+          </div>
+        </div>
+      </section>
 
-  <section class="process" id="consulta">
-    <div class="container">
-      <div class="process-head"><span class="eyebrow">Sua consulta</span><h2 class="section-title">Um processo claro, <em>do início ao retorno.</em></h2><p>Você entende o que será feito, por que cada escolha foi tomada e como acompanhar sua evolução.</p></div>
-      <div class="steps">
-        <article class="step"><span class="step-num">01</span><h3>Avaliar</h3><p>Anamnese, rotina alimentar, objetivos, exames e composição corporal quando o atendimento for presencial.</p></article>
+      <section class="process" id="consulta">
+        <div class="container">
+          <div class="process-head reveal"><span class="eyebrow">Sua consulta</span><h2 class="section-title">Um processo claro, <em>do início ao retorno.</em></h2><p>Você entende o que será feito, por que cada escolha foi tomada e como acompanhar sua evolução.</p></div>
+          <div class="steps reveal-stagger">
+            <article class="step"><span class="step-num">01</span><h3>Avaliar</h3><p>Anamnese, rotina alimentar, objetivos, exames e composição corporal quando o atendimento for presencial.</p></article>
         <article class="step"><span class="step-num">02</span><h3>Construir</h3><p>Plano alimentar individual com orientações e alternativas compatíveis com a sua semana real.</p></article>
         <article class="step"><span class="step-num">03</span><h3>Ajustar</h3><p>No retorno, avaliamos o que funcionou, o que precisa mudar e quais serão os próximos passos.</p></article>
       </div>
     </div>
   </section>
 
-  <section class="about" id="sobre">
-    <div class="about-grid">
-      <div class="about-copy">
-        <span class="eyebrow">Sobre a nutricionista</span>
+      <section class="about" id="sobre">
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <span class="eyebrow">Sobre a nutricionista</span>
         <h2>Priscilla Christine Ribeiro.</h2>
         <p>Nutricionista com atendimento em consultório na Ilha do Governador e online para todo o Brasil.</p>
         <p>Sua abordagem parte de uma avaliação individual e transforma informação nutricional em decisões práticas, sem separar saúde, rotina e prazer de comer.</p>
         <div class="credentials"><span class="credential">CRN RJ 21101937</span><span class="credential">Presencial</span><span class="credential">Online</span></div>
-      </div>
-      <div class="about-media">
-        <img src="img/method-prato.webp" alt="Prato colorido com alimentos variados" loading="lazy">
-        <span class="about-media-label">Nutrição com contexto.</span>
-      </div>
+        </div>
+        <div class="about-media reveal">
+          <img src="img/method-prato.webp" alt="Prato colorido com alimentos variados" loading="lazy">
+          <span class="about-media-label">Nutrição com contexto.</span>
+        </div>
     </div>
   </section>
 
-  <section class="contact" id="contato">
-    <div class="container contact-grid">
-      <div>
-        <span class="eyebrow">Contato</span>
+      <section class="contact" id="contato">
+        <div class="container contact-grid">
+          <div class="reveal">
+            <span class="eyebrow">Contato</span>
         <h2>Vamos conversar sobre <em>o seu objetivo?</em></h2>
         <p class="contact-lead">Envie uma mensagem para consultar disponibilidade e escolher entre atendimento presencial ou online.</p>
         <div class="contact-info">
@@ -390,10 +411,10 @@ button{font:inherit}
           <div class="info-row"><span>WhatsApp</span><span>(21) 97224-8314</span></div>
           <div class="info-row"><span>Instagram</span><span>@priscillafeooficial</span></div>
           <div class="info-row"><span>Registro</span><span>CRN RJ 21101937</span></div>
-        </div>
-      </div>
-      <div class="contact-panel">
-        <span class="eyebrow">Agendamento</span>
+            </div>
+          </div>
+          <div class="contact-panel reveal">
+            <span class="eyebrow">Agendamento</span>
         <h3>Consulta nutricional</h3>
         <p>Atendimento individual, presencial na Ilha do Governador ou online. Consulta inicial a partir de R$ 250.</p>
         <a class="btn btn-dark" href="https://wa.me/message/VU3NMZVWWKAZD1" target="_blank" rel="noopener">Falar com Priscilla <span class="btn-arrow">→</span></a>
@@ -429,6 +450,25 @@ button{font:inherit}
   toggle.addEventListener('click',function(){setOpen(!nav.classList.contains('open'));});
   nav.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){setOpen(false);});});
   document.addEventListener('keydown',function(event){if(event.key==='Escape')setOpen(false);});
+})();
+
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var targets=document.querySelectorAll('.reveal,.reveal-stagger');
+  if(!targets.length)return;
+  if(reduce||!('IntersectionObserver' in window)){
+    targets.forEach(function(el){el.classList.add('is-in');});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-in');
+        io.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.18,rootMargin:'0px 0px -40px 0px'});
+  targets.forEach(function(el){io.observe(el);});
 })();
 </script>
 </body>
