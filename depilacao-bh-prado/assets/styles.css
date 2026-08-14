@@ -41,13 +41,9 @@ h1 em, h2 em { color: var(--coral); font-weight: 400; }
 .site-header { position: fixed; z-index: 50; inset: 0 0 auto; border-bottom: 1px solid transparent; transition: background .25s ease, border-color .25s ease, box-shadow .25s ease; }
 .site-header.is-scrolled { border-color: var(--line); background: rgba(244, 239, 230, .9); box-shadow: 0 8px 28px rgba(18, 61, 59, .06); backdrop-filter: blur(16px); }
 .nav-wrap { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-.brand { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); font-size: 12px; line-height: 1.06; letter-spacing: -.02em; }
-.brand-copy { display: grid; gap: 3px; }
-.brand-copy strong { color: var(--ink); font-family: var(--sans); font-size: 20px; font-weight: 800; letter-spacing: -.06em; }
-.brand-copy small { color: var(--muted); font-size: 8px; font-weight: 800; letter-spacing: .08em; line-height: 1.2; text-transform: uppercase; }
-.brand-mark { position: relative; display: grid; width: 42px; height: 42px; flex: 0 0 42px; place-items: center; border-radius: 50%; color: #fff; background: var(--coral); box-shadow: 0 12px 28px rgba(16,180,197,.22); }
-.brand-mark b { font-family: var(--sans); font-size: 21px; font-weight: 800; letter-spacing: -.1em; }
-.brand-mark::before, .brand-mark i { content: none; }
+.brand { display: inline-flex; align-items: center; color: var(--ink); line-height: 1; }
+.brand picture { display: block; }
+.brand-logo { display: block; width: 220px; height: auto; }
 .nav-links { display: flex; align-items: center; gap: clamp(18px, 2.7vw, 36px); color: var(--muted); font-size: 12px; font-weight: 700; }
 .nav-links > a:not(.nav-cta) { position: relative; padding: 8px 0; }
 .nav-links > a:not(.nav-cta)::after { content: ""; position: absolute; inset: auto 0 1px; height: 1px; transform: scaleX(0); transform-origin: left; background: var(--coral); transition: transform .2s ease; }
@@ -141,12 +137,12 @@ h1 em, h2 em { color: var(--coral); font-weight: 400; }
 .manifesto { background: var(--paper); }
 .manifesto-head { display: grid; grid-template-columns: 1.1fr .7fr; align-items: end; gap: 70px; margin-bottom: 54px; }
 .manifesto-head > p { max-width: 400px; margin: 0 0 7px; color: var(--muted); }
-.brand-card { position: relative; min-height: 420px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding: clamp(34px, 6vw, 72px); color: #fff; background: linear-gradient(135deg, #0b2025, #102f35 55%, #007d8f); box-shadow: var(--shadow); }
-.brand-card::before { content: ""; position: absolute; width: 430px; height: 430px; right: -150px; top: -170px; border: 1px solid rgba(255,255,255,.3); border-radius: 50%; }
-.brand-card-orbit { position: absolute; width: 285px; height: 285px; right: 9%; top: 12%; border: 1px solid rgba(136,244,249,.68); border-radius: 50%; box-shadow: 0 0 60px rgba(16,180,197,.38); }
-.brand-card-word { position: relative; z-index: 1; color: #fff; font-family: var(--sans); font-size: clamp(64px, 10vw, 132px); font-weight: 800; letter-spacing: -.1em; line-height: .86; }
-.brand-card-sub { position: relative; z-index: 1; margin-top: 24px; color: rgba(255,255,255,.82); font-size: clamp(15px, 1.6vw, 20px); font-weight: 600; line-height: 1.35; }
-.brand-card-note { position: absolute; z-index: 1; right: 28px; bottom: 25px; color: #9cf3f5; font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.brand-card { position: relative; min-height: 360px; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding: clamp(34px, 6vw, 72px); color: var(--ink); background: linear-gradient(135deg, #e1f3f5, #f1fafb 58%, #bfe8ec); border: 1px solid rgba(21,55,60,.12); box-shadow: var(--shadow); }
+.brand-card::before { content: ""; position: absolute; width: 430px; height: 430px; right: -150px; top: -170px; border: 1px solid rgba(0,125,143,.26); border-radius: 50%; }
+.brand-card-orbit { position: absolute; width: 285px; height: 285px; right: 9%; top: 12%; border: 1px solid rgba(0,125,143,.42); border-radius: 50%; box-shadow: 0 0 60px rgba(16,180,197,.22); }
+.brand-card-logo { position: relative; z-index: 1; display: block; width: min(100%, 720px); }
+.brand-card-logo img { width: 100%; height: auto; }
+.brand-card-note { position: absolute; z-index: 1; right: 28px; bottom: 25px; color: var(--coral-dark); font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
 
 .faq { background: var(--white); }
 .faq-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(60px, 9vw, 130px); }
@@ -183,9 +179,8 @@ h1 em, h2 em { color: var(--coral); font-weight: 400; }
 .site-footer { padding: 54px 0; color: rgba(255,255,255,.68); background: var(--ink-dark); }
 .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr .65fr .8fr; align-items: start; gap: 40px; }
 .brand-footer { color: #fff; }
-.brand-footer .brand-mark { color: var(--ink-dark); background: #9cf3f5; box-shadow: none; }
-.brand-footer .brand-copy strong { color: #fff; }
-.brand-footer .brand-copy small { color: rgba(255,255,255,.65); }
+.brand-footer picture { padding: 7px 11px; border-radius: 9px; background: #e1f3f5; }
+.brand-footer .brand-logo { width: 190px; }
 .footer-grid p, .footer-grid small { margin: 0; font-size: 10px; line-height: 1.7; }
 .footer-grid > div { display: grid; gap: 5px; color: #fff; font-size: 11px; font-weight: 700; }
 .floating-cta { position: fixed; z-index: 40; right: 20px; bottom: 20px; display: inline-flex; min-height: 48px; align-items: center; gap: 9px; padding: 0 17px; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; color: #fff; background: #197b59; box-shadow: 0 14px 35px rgba(8,43,43,.26); font-size: 11px; font-weight: 800; transition: transform .2s ease, background .2s ease; }
@@ -236,8 +231,8 @@ h1 em, h2 em { color: var(--coral); font-weight: 400; }
 
 @media (max-width: 540px) {
   .shell { width: min(var(--max), calc(100% - 28px)); }
-  .brand-copy strong { font-size: 18px; }
-  .brand-mark { width: 34px; height: 34px; flex-basis: 34px; }
+  .brand-logo { width: 178px; }
+  .brand-footer .brand-logo { width: 178px; }
   .hero { padding-top: 112px; }
   h1 { font-size: clamp(51px, 16vw, 72px); line-height: .9; }
   h2 { font-size: clamp(42px, 13vw, 60px); }
