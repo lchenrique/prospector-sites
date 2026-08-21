@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-lead-id="4499b040-300f-4311-9424-c5a4ea530b41">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="lead-id" content="4499b040-300f-4311-9424-c5a4ea530b41">
+<meta name="theme-color" content="#FBF7F4">
+<title>Estética Danielle Bocchi . Estética avançada no Centro Cívico de Curitiba</title>
+<meta name="description" content="Estética avançada, harmonização facial e rejuvenescimento no Centro Cívico de Curitiba. Clínica da Danielle Bocchi com 5,0 de nota no Google e 503 avaliações. Agende sua avaliação.">
+<meta name="format-detection" content="telephone=yes">
+<meta property="og:title" content="Estética Danielle Bocchi . Centro Cívico, Curitiba">
+<meta property="og:description" content="Estética avançada com avaliação individual e protocolo sob medida. 5,0 de nota no Google com 503 avaliações.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F8F8F6;
+  --bg2:#F0EFEC;
+  --bg3:#E6E3DD;
+  --sand:#E4CBB8;
+  --ink:#1B1A1F;
+  --ink2:#5B5A61;
+  --ink3:#8D8072;
+  --noir:#211712;
+  --noir2:#170F0C;
+  --cream:#F7EFE6;
+  --champagne:#E3AAB2;
+  --accent:#A9764C;
+  --accent-dark:#8A3B4E;
+  --rose:#B98A82;
+  --line:#E3D6C7;
+  --card:#FFFFFF;
+  --wa:#25D366;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --r:20px;
+  --r-sm:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none}
+.container{width:100%;max-width:1280px;margin:0 auto;padding:0 32px}
+section{padding:150px 0;position:relative}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.03;letter-spacing:-.02em;color:var(--ink)}
+h1{font-size:clamp(40px,6vw,84px);font-weight:300;letter-spacing:-.028em}
+h2{font-size:clamp(36px,4.6vw,70px);letter-spacing:-.022em}
+h3{font-size:clamp(23px,2.1vw,30px);font-weight:500;letter-spacing:-.01em}
+h4{font-size:15px;font-family:var(--sans);font-weight:600;letter-spacing:.02em}
+p{color:var(--ink2);font-size:16.5px;line-height:1.7;max-width:68ch}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-dark);font-weight:500;display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:24px;height:1px;background:var(--accent-dark);display:inline-block}
+.muted{color:var(--ink2)}
+.text-accent{color:var(--accent)}
+em{font-family:var(--serif);font-style:italic;font-weight:400}
+
+/* skip */
+.skip-link{position:fixed;top:12px;left:12px;z-index:100;background:var(--noir);color:var(--cream);padding:12px 20px;font-weight:600;border-radius:var(--r-sm);transform:translateY(-180%);transition:transform .25s var(--ease)}
+.skip-link:focus{transform:translateY(0)}
+:focus-visible{outline:3px solid var(--accent-dark);outline-offset:3px;border-radius:4px}
+.proof :focus-visible,footer :focus-visible,.skip-link:focus-visible{outline-color:var(--champagne)}
+::selection{background:var(--accent-dark);color:#fff}
+
+/* header */
+.header{position:fixed;top:0;left:0;right:0;z-index:50;padding:20px 0;background:rgba(251,247,244,.78);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid transparent;transition:padding .25s var(--ease),border-color .25s var(--ease),background .25s var(--ease)}
+.header.scrolled{padding:12px 0;border-bottom-color:var(--line);background:rgba(251,247,244,.94)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:14px;font-family:var(--serif);font-weight:500;font-size:18px;color:var(--ink);letter-spacing:-.01em}
+.brand .mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--rose));display:inline-flex;align-items:center;justify-content:center;position:relative;flex-shrink:0}
+.brand .mark::after{content:"";position:absolute;inset:4px;border:1px solid rgba(255,255,255,.4);border-radius:50%}
+.brand .mark span{font-family:var(--serif);font-style:italic;color:#fff;font-size:15px;font-weight:500;position:relative;z-index:1}
+.brand .name{display:flex;flex-direction:column;line-height:1.15}
+.brand .name small{font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:.18em;color:var(--ink3);text-transform:uppercase;margin-top:3px}
+.nav{display:flex;gap:34px;align-items:center}
+.nav a{font-size:14px;font-weight:500;color:var(--ink);position:relative;padding:6px 0;transition:color .2s var(--ease)}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--accent-dark);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
+.nav a:hover{color:var(--accent-dark)}
+.nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav .btn{padding:13px 22px;font-size:13.5px}
+.nav a.btn-primary{color:var(--cream)}
+.nav a.btn-primary:hover{color:#fff}
+.nav-toggle{display:none;width:44px;height:44px;background:transparent;border:1px solid var(--line);border-radius:12px;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer;transition:background .2s,border-color .2s}
+.nav-toggle:hover{background:var(--bg2);border-color:var(--accent-dark)}
+.nav-toggle span{width:18px;height:1.5px;background:var(--ink);transition:transform .25s var(--ease),opacity .2s var(--ease);display:block}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+@media(max-width:1024px){
+  .nav{position:fixed;top:0;right:0;bottom:0;left:0;background:var(--bg);flex-direction:column;align-items:flex-start;padding:120px 32px 40px;transform:translateX(100%);transition:transform .35s var(--ease);gap:18px;z-index:65;overflow-y:auto}
+  body.menu-open .fab{opacity:0;pointer-events:none;transition:opacity .2s}
+  .nav.open{transform:none}
+  .nav a{font-size:22px;padding:10px 0;width:100%;border-bottom:1px solid var(--line)}
+  .nav a:last-of-type{border:0}
+  .nav .btn{margin-top:8px;align-self:flex-start}
+  .nav-toggle{display:flex;position:relative;z-index:50}
+  body.menu-open{overflow:hidden}
+}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:500;font-size:14.5px;padding:16px 28px;border-radius:999px;transition:transform .2s var(--ease),background .2s var(--ease),box-shadow .25s var(--ease),color .2s var(--ease),border-color .2s var(--ease);border:1px solid transparent;cursor:pointer;font-family:inherit;letter-spacing:.005em;line-height:1;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex-shrink:0;transition:transform .2s var(--ease)}
+.btn-primary{background:var(--noir);color:var(--cream);box-shadow:0 8px 24px -8px rgba(23,15,12,.4)}
+.btn-primary:hover{background:var(--accent-dark);color:#fff;transform:translateY(-2px);box-shadow:0 14px 32px -8px rgba(138,59,78,.45)}
+.btn-primary:hover svg{transform:translateX(2px)}
+.btn-ghost{background:transparent;border:1px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--bg);transform:translateY(-2px)}
+.btn-outline-light{background:transparent;border:1px solid rgba(247,239,230,.4);color:var(--cream)}
+.btn-outline-light:hover{background:var(--cream);color:var(--noir);transform:translateY(-2px);border-color:var(--cream)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 24px -8px rgba(37,211,102,.5)}
+.btn-wa:hover{background:#1fb859;transform:translateY(-2px);box-shadow:0 14px 32px -8px rgba(37,211,102,.55)}
+.btn:active{transform:translateY(0) scale(.98)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--bg2)}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:.9;filter:saturate(1.12) contrast(1.06) sepia(.1) brightness(.99)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(122deg,rgba(243,234,225,.97) 0%,rgba(243,234,225,.74) 42%,rgba(243,234,225,.18) 100%);z-index:2}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:180px;background:linear-gradient(180deg,transparent,var(--bg));z-index:2;pointer-events:none}
+.hero-floral{position:absolute;top:8%;right:-40px;width:280px;height:280px;object-fit:contain;opacity:.22;mix-blend-mode:multiply;transform:rotate(8deg);pointer-events:none;z-index:2}
+.hero-inner{position:relative;z-index:3;width:100%;display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center;padding:96px 32px 56px}
+.hero-content{max-width:700px}
+.hero-eyebrow{margin-bottom:28px;animation:heroIn .9s .05s both var(--ease)}
+.hero h1{margin-bottom:30px;max-width:15ch;animation:heroIn 1s .15s both var(--ease)}
+.hero h1 em{color:var(--accent-dark);font-weight:400;font-style:italic;display:inline-block}
+.hero .lead{font-size:18.5px;line-height:1.6;color:var(--ink);max-width:54ch;margin-bottom:40px;animation:heroIn 1s .25s both var(--ease)}
+.hero .lead strong{color:var(--accent-dark);font-weight:600}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;animation:heroIn 1s .35s both var(--ease)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:rgba(255,255,255,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:var(--r);align-self:start;align-content:start;animation:heroIn 1s .45s both var(--ease);overflow:hidden}
+.hero-stats .item{padding:26px 24px;border-right:1px solid var(--line);border-top:1px solid var(--line);position:relative;transition:background .25s var(--ease)}
+.hero-stats .item:hover{background:rgba(255,255,255,.7)}
+.hero-stats .item:last-child{border-right:0}
+.hero-stats .item .n{font-family:var(--serif);font-size:clamp(26px,2.8vw,36px);font-weight:500;line-height:1;color:var(--accent-dark);display:block;margin-bottom:8px;letter-spacing:-.02em}
+.hero-stats .item .l{font-size:12px;color:var(--ink2);line-height:1.5;display:block;letter-spacing:.005em}
+.hero-stats .item-featured{grid-column:1/-1;border-top:0;border-right:0;display:flex;align-items:center;gap:22px;padding:30px 28px;border-bottom:1px solid var(--line);background:linear-gradient(120deg,rgba(227,170,178,.22),transparent 70%)}
+.hero-stats .item-featured .n{font-size:clamp(58px,7.4vw,92px);margin:0;color:var(--accent-dark)}
+.hero-stats .item-featured .stars{color:var(--accent-dark);font-size:19px;letter-spacing:2px;line-height:1;margin-bottom:6px;display:block}
+.hero-stats .item-featured .l{font-size:13px;max-width:26ch}
+@keyframes heroIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;padding:100px 24px 56px;gap:48px}
+  .hero-bg{opacity:.38}
+  .hero::before{background:linear-gradient(180deg,rgba(243,234,225,.95),rgba(243,234,225,.88) 60%,rgba(243,234,225,.92))}
+  .hero h1{font-size:clamp(40px,9vw,72px)}
+  .hero-floral{display:none}
+}
+@media(max-width:600px){
+  .hero-inner{padding:92px 20px 48px;gap:36px}
+  .hero h1{font-size:clamp(36px,11.5vw,54px)}
+  .hero .lead{font-size:16.5px;margin-bottom:32px}
+  .hero-ctas{flex-direction:column;align-items:stretch}
+  .hero-ctas .btn{width:100%}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .hero-stats .item{padding:20px 16px;border-right:0}
+  .hero-stats .item:not(.item-featured):nth-child(odd){border-right:1px solid var(--line)}
+  .hero-stats .item .l{font-size:11.5px}
+  .hero-stats .item-featured{flex-direction:column;align-items:flex-start;gap:8px;padding:24px 18px}
+  .hero-stats .item-featured .n{font-size:clamp(46px,15vw,58px)}
+}
+
+/* section base */
+.sec-head{display:grid;grid-template-columns:1.15fr 1fr;gap:60px;align-items:end;margin-bottom:88px}
+.sec-head h2{max-width:680px}
+.sec-head p{color:var(--ink2);font-size:17px;max-width:380px;line-height:1.55}
+@media(max-width:900px){.sec-head{grid-template-columns:1fr;gap:24px;margin-bottom:52px}}
+
+/* servicos */
+.servicos{background:var(--bg);overflow:hidden}
+.servicos-floral{position:absolute;left:-60px;bottom:-40px;width:420px;height:420px;object-fit:cover;opacity:.16;mix-blend-mode:multiply;transform:rotate(-9deg);pointer-events:none;z-index:0}
+.servico-list{position:relative;z-index:1;display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.servico{position:relative;overflow:hidden;display:grid;grid-template-columns:80px 1.5fr 2.6fr auto;gap:32px;align-items:start;padding:40px 0;border-bottom:1px solid var(--line);transition:padding .35s var(--ease)}
+.servico:hover{padding-left:18px}
+.servico:hover .num{color:var(--accent-dark)}
+.servico:hover h3{color:var(--accent-dark)}
+.servico:hover .servico-ghost{-webkit-text-stroke-color:var(--accent-dark);text-stroke-color:var(--accent-dark);opacity:.5}
+.servico .num{position:relative;z-index:1;font-family:var(--mono);font-size:12px;color:var(--accent-dark);font-weight:500;letter-spacing:.1em;padding-top:6px;transition:color .2s}
+.servico h3{position:relative;z-index:1;font-family:var(--serif);font-size:clamp(24px,2.4vw,34px);font-weight:500;letter-spacing:-.015em;transition:color .2s}
+.servico p{position:relative;z-index:1;color:var(--ink2);font-size:15.5px;line-height:1.6;max-width:540px}
+.servico .link-arrow{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:500;font-size:13px;color:var(--accent-dark);transition:gap .25s var(--ease),color .2s;min-height:44px;padding:0 4px 2px;border-bottom:1px solid var(--accent-dark);white-space:nowrap;align-self:center}
+.servico .link-arrow:hover{gap:14px;color:var(--accent-dark);border-color:var(--accent-dark)}
+.servico .link-arrow::after{content:"→";transition:transform .25s var(--ease);display:inline-block}
+.servico .link-arrow:hover::after{transform:translateX(2px)}
+.servico-ghost{position:absolute;right:4px;top:50%;transform:translateY(-50%);font-family:var(--serif);font-weight:600;font-size:clamp(76px,10.5vw,168px);line-height:1;color:transparent;-webkit-text-stroke:1px var(--line);text-stroke:1px var(--line);pointer-events:none;z-index:0;letter-spacing:-.04em;transition:-webkit-text-stroke-color .3s,opacity .3s;opacity:.9;user-select:none}
+@media(max-width:900px){
+  .servico{grid-template-columns:50px 1fr;gap:14px;padding:26px 0}
+  .servico p{grid-column:2;margin-top:6px}
+  .servico h3{font-size:22px}
+  .servico .link-arrow{grid-column:2;margin-top:10px;justify-self:start;align-self:start}
+  .servico-ghost{display:none}
+  .servicos-floral{width:260px;height:260px}
+}
+
+/* prova social — mega */
+.proof{padding:0;background:var(--noir);color:var(--cream);overflow:hidden}
+.proof-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;filter:grayscale(.3) sepia(.22) brightness(.5) contrast(1.18)}
+.proof::after{content:"";position:absolute;inset:0;background:linear-gradient(150deg,rgba(23,15,12,.94) 0%,rgba(33,23,18,.88) 55%,rgba(138,59,78,.62) 100%);z-index:2}
+.proof-floral{position:absolute;right:-120px;bottom:-140px;width:620px;height:620px;object-fit:cover;opacity:.1;mix-blend-mode:soft-light;transform:rotate(21deg);pointer-events:none;z-index:2}
+.proof-inner{position:relative;z-index:3;max-width:920px;margin:0 auto;padding:150px 32px;text-align:center}
+.proof .eyebrow{color:rgba(247,239,230,.85);justify-content:center}
+.proof .eyebrow::before{background:rgba(247,239,230,.55)}
+.proof-stats{display:flex;align-items:center;justify-content:center;gap:48px;margin:44px 0 52px;flex-wrap:wrap}
+.proof-figure{display:flex;flex-direction:column;align-items:center;gap:6px}
+.proof-figure .stat-mega{font-family:var(--serif);font-weight:600;line-height:.88;letter-spacing:-.03em;font-size:clamp(96px,15vw,220px);color:var(--champagne)}
+.proof-figure .stat-stars{color:var(--champagne);font-size:clamp(22px,2.4vw,32px);letter-spacing:6px;margin-top:4px}
+.proof-figure .stat-sub{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(247,239,230,.72)}
+.proof-divider{width:1px;height:120px;background:rgba(247,239,230,.22)}
+.proof h2{color:var(--cream);margin:0 auto 24px;max-width:22ch}
+.proof p.lede{color:rgba(247,239,230,.82);font-size:18px;max-width:56ch;margin:0 auto 40px;line-height:1.6}
+.proof-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+@media(max-width:720px){
+  .proof-inner{padding:112px 24px}
+  .proof-stats{gap:28px}
+  .proof-divider{height:80px}
+  .proof-floral{width:360px;height:360px;right:-90px;bottom:-90px}
+}
+
+/* ticker — repeticao da prova social, decorativa */
+.ticker{padding:0;background:var(--bg3);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.ticker-row{display:flex;white-space:nowrap;width:max-content}
+.ticker-row .set{display:flex;align-items:center;gap:0;animation:tickerScroll 34s linear infinite}
+.ticker-row .set span{display:inline-flex;align-items:center;gap:14px;font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-dark);padding:22px 34px;white-space:nowrap}
+.ticker-row .set span::before{content:"★";color:var(--accent-dark);font-size:11px}
+@keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){
+  .ticker-row{width:100%}
+  .ticker-row .set{animation:none;flex-wrap:wrap;justify-content:center;width:100%}
+  .ticker-row .set.dup{display:none}
+}
+
+/* sobre */
+.sobre{background:var(--bg2);overflow:hidden}
+.sobre-floral{position:absolute;left:-70px;bottom:6%;width:300px;height:300px;object-fit:contain;opacity:.24;mix-blend-mode:multiply;transform:rotate(-14deg);pointer-events:none;z-index:0}
+.sobre-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.05fr;gap:80px;align-items:center}
+.sobre .photo{position:relative}
+.sobre .photo .frame{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:3/4;background:linear-gradient(135deg,var(--sand),var(--bg3))}
+.sobre .photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s var(--ease)}
+.sobre .photo:hover img{transform:scale(1.03)}
+.sobre .photo .badge{position:absolute;left:24px;top:24px;background:rgba(251,247,244,.92);backdrop-filter:blur(8px);padding:10px 16px;border-radius:999px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);font-weight:500}
+.sobre .photo .caption{position:absolute;bottom:-24px;right:-24px;background:var(--noir);color:var(--cream);padding:16px 22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.sobre .photo .caption::before{content:"";width:6px;height:6px;background:var(--champagne);border-radius:50%;display:inline-block}
+.sobre-text h2{margin-bottom:32px;max-width:18ch}
+.sobre-text p{color:var(--ink2);font-size:17px;line-height:1.7;margin-bottom:22px;max-width:54ch}
+.sobre-text p strong{color:var(--ink);font-weight:600}
+.sobre-text .signature{display:flex;align-items:center;gap:14px;margin-top:36px;padding-top:28px;border-top:1px solid var(--line)}
+.sobre-text .signature .sname{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--ink)}
+.sobre-text .signature .srole{font-size:13px;color:var(--ink2)}
+@media(max-width:900px){
+  .sobre-grid{grid-template-columns:1fr;gap:56px}
+  .sobre .photo .caption{right:0;bottom:-18px;font-size:9.5px;padding:12px 16px}
+  .sobre-floral{display:none}
+}
+@media(max-width:600px){
+  .sobre-grid{gap:48px}
+  .sobre .photo .badge{left:16px;top:16px;font-size:9.5px;padding:8px 12px}
+  .sobre .photo .caption{right:0;bottom:-18px;padding:10px 14px}
+  .sobre-text h2{font-size:32px}
+}
+
+/* como funciona */
+.como{background:var(--bg)}
+.steps{display:flex;flex-direction:column}
+.step{display:grid;grid-template-columns:130px 1fr;gap:48px;padding:52px 0;border-top:1px solid var(--line);transition:padding .35s var(--ease)}
+.step:last-child{border-bottom:1px solid var(--line)}
+.step:hover{padding-left:16px}
+.step:hover .n{color:var(--accent-dark)}
+.step .n{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--accent-dark);font-weight:500;padding-top:6px;transition:color .2s}
+.step h3{font-family:var(--serif);font-size:clamp(23px,2.1vw,30px);font-weight:500;margin-bottom:12px;letter-spacing:-.01em}
+.step p{color:var(--ink2);font-size:16px;line-height:1.65;max-width:580px}
+@media(max-width:720px){
+  .step{grid-template-columns:60px 1fr;gap:24px;padding:34px 0}
+  .step p{font-size:15px}
+}
+
+/* diferenciais */
+.difs{background:var(--bg2)}
+.dif-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.dif{padding:52px 44px;background:var(--bg);transition:background .3s var(--ease)}
+.dif:hover{background:var(--card)}
+.dif .icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--sand),var(--bg3));display:flex;align-items:center;justify-content:center;margin-bottom:24px;transition:transform .35s var(--ease)}
+.dif:hover .icon{transform:scale(1.06) rotate(-3deg)}
+.dif .icon svg{width:24px;height:24px;color:var(--accent-dark)}
+.dif h3{font-family:var(--serif);font-size:23px;font-weight:500;margin-bottom:12px;letter-spacing:-.01em}
+.dif p{color:var(--ink2);font-size:15px;line-height:1.6}
+@media(max-width:720px){.dif-grid{grid-template-columns:1fr}.dif{padding:38px 28px}}
+
+/* FAQ */
+.faq{background:var(--bg);overflow:hidden}
+.faq-floral{position:absolute;right:-50px;top:-30px;width:260px;height:260px;object-fit:cover;opacity:.14;mix-blend-mode:multiply;transform:rotate(15deg);pointer-events:none;z-index:0}
+.faq-list{position:relative;z-index:1;max-width:880px;margin:0 auto}
+.faq-item{border-top:1px solid var(--line);padding:0;transition:padding .25s var(--ease)}
+.faq-item:last-child{border-bottom:1px solid var(--line)}
+.faq-item button{width:100%;padding:28px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;text-align:left;cursor:pointer;font-family:inherit;background:transparent;border:0;color:var(--ink)}
+.faq-item .q{font-family:var(--serif);font-size:clamp(18px,1.6vw,22px);font-weight:500;letter-spacing:-.01em;line-height:1.3;flex:1}
+.faq-item .toggle{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s var(--ease),background .2s,border-color .2s;color:var(--accent-dark)}
+.faq-item button:hover .toggle{background:var(--sand);border-color:var(--accent)}
+.faq-item button[aria-expanded="true"] .toggle{transform:rotate(45deg);background:var(--noir);color:var(--cream);border-color:var(--noir)}
+.faq-item .a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease),padding .3s var(--ease),opacity .25s;opacity:0}
+.faq-item button[aria-expanded="true"] + .a{max-height:320px;opacity:1;padding-bottom:28px}
+.faq-item .a p{color:var(--ink2);font-size:15.5px;line-height:1.65;max-width:60ch}
+
+/* contato */
+.contato{background:var(--bg2)}
+.contato-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:stretch}
+.contato-info h2{margin-bottom:36px;max-width:14ch}
+.contato-info .row{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:start;padding:22px 0;border-bottom:1px solid var(--line)}
+.contato-info .row:last-of-type{border-bottom:0}
+.contato-info .row .ic{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-dark);font-weight:500;padding-top:4px}
+.contato-info .row b{display:block;font-size:15.5px;font-weight:600;margin-bottom:4px;color:var(--ink);letter-spacing:-.005em}
+.contato-info .row span{display:block;font-size:14.5px;color:var(--ink2);line-height:1.55}
+.contato-info .row a{color:var(--accent-dark);border-bottom:1px solid currentColor;transition:color .2s}
+.contato-info .row a:hover{color:var(--ink)}
+.contato-info .actions{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap}
+.contato-map{position:relative;min-height:520px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px -16px rgba(23,15,12,.22)}
+.contato-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.contato-map::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 60%,rgba(138,59,78,.1));pointer-events:none}
+@media(max-width:900px){
+  .contato-grid{grid-template-columns:1fr;gap:36px}
+  .contato-map{min-height:360px}
+  .contato-info .row{grid-template-columns:1fr;gap:6px}
+  .contato-info .row .ic{padding-top:0}
+}
+
+/* footer */
+footer{background:var(--noir);color:var(--bg2);padding:88px 0 32px;position:relative;overflow:hidden}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px}
+footer .brand{color:#fff;margin-bottom:16px;font-size:20px}
+footer .brand .name{color:#fff}
+footer .brand .name small{color:rgba(255,255,255,.55)}
+footer .brand .mark{background:linear-gradient(135deg,var(--accent),var(--rose))}
+footer p{color:rgba(255,255,255,.62);font-size:14px;max-width:320px;line-height:1.6}
+footer .footer-rating{display:flex;align-items:center;gap:10px;margin-top:16px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:rgba(247,239,230,.85)}
+footer .footer-rating .stars{color:var(--champagne);font-size:13px;letter-spacing:2px}
+footer .footer-rating strong{color:var(--cream);font-weight:600}
+footer h3{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#fff;font-weight:600;margin-bottom:18px}
+footer a,footer span{color:rgba(255,255,255,.7);font-size:14px;display:block;margin:4px 0;line-height:1.5}
+footer a{min-height:44px;display:flex;align-items:center;transition:color .2s,transform .2s var(--ease)}
+footer a:hover{color:#fff;transform:translateX(3px)}
+.copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:56px;padding-top:24px;font-size:12px;color:rgba(255,255,255,.4);text-align:center;letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.copyright .made{display:inline-flex;align-items:center;gap:8px}
+.copyright .made::before{content:"";width:6px;height:6px;background:var(--champagne);border-radius:50%;display:inline-block}
+@media(max-width:900px){footer .cols{grid-template-columns:1fr 1fr;gap:36px}}
+@media(max-width:600px){footer{padding:72px 0 28px}footer .cols{grid-template-columns:1fr;gap:32px}.copyright{justify-content:center;text-align:center}}
+
+/* fab */
+.fab{position:fixed;right:24px;bottom:24px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 36px -8px rgba(37,211,102,.55),0 0 0 0 rgba(37,211,102,.4);transition:transform .25s var(--ease),box-shadow .25s var(--ease);animation:fabPulse 2.4s ease-in-out infinite}
+.fab:hover{transform:scale(1.08);box-shadow:0 20px 44px -8px rgba(37,211,102,.7)}
+.fab:active{transform:scale(.96)}
+.fab svg{width:30px;height:30px;position:relative;z-index:1}
+@keyframes fabPulse{0%,100%{box-shadow:0 16px 36px -8px rgba(37,211,102,.55),0 0 0 0 rgba(37,211,102,.4)}50%{box-shadow:0 16px 36px -8px rgba(37,211,102,.55),0 0 0 16px rgba(37,211,102,0)}}
+@media(max-width:600px){.fab{right:16px;bottom:16px;width:56px;height:56px}.fab svg{width:26px;height:26px}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.on{opacity:1;transform:none}
+.rv-d1{transition-delay:.08s}
+.rv-d2{transition-delay:.16s}
+.rv-d3{transition-delay:.24s}
+.rv-d4{transition-delay:.32s}
+
+/* scrollbar */
+*{scrollbar-width:thin;scrollbar-color:var(--accent-dark) var(--bg2)}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--accent);border:3px solid var(--bg2);border-radius:6px}
+::-webkit-scrollbar-thumb:hover{background:var(--accent-dark)}
+
+/* container responsive — NUNCA usar shorthand padding aqui (bug de cascata corrigido: só horizontal) */
+@media(max-width:600px){
+  .container{padding-left:20px;padding-right:20px}
+  section{padding:96px 0}
+}
+
+/* decorative ornament */
+.ornament{position:absolute;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--accent-dark);font-weight:500;display:flex;align-items:center;gap:10px;opacity:.7}
+.ornament::before, .ornament::after{content:"";width:28px;height:1px;background:var(--accent-dark);display:inline-block}
+
+/* accessibility live region */
+.live{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* reduced motion */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+  .fab{animation:none}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div class="live" aria-live="polite" id="live"></div>
+
+<header id="top" class="header">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="Estética Danielle Bocchi, página inicial">
+      <span class="mark" aria-hidden="true"><span>db</span></span>
+      <span class="name">Estética Danielle Bocchi<small>Estética avançada . Curitiba</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="#servicos">Procedimentos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#como">Como funciona</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#contato">Contato</a>
+      <a class="btn btn-primary" href="https://wa.me/5541997581018?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Est%C3%A9tica%20Danielle%20Bocchi%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Agendar avaliação pelo WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.7-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.4.1-.2.1-.3 0-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5 0 1.5 1.1 2.9 1.2 3.1.2.2 2.1 3.4 5.3 4.6 2 .8 2.8.9 3.8.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5-1.4c1.5.8 3.2 1.3 5 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        Agendar avaliação
+      </a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu de navegação" aria-controls="nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="conteudo">
+<section class="hero" aria-labelledby="hero-h">
+  <picture>
+    <source srcset="img/hero-bg.avif" type="image/avif">
+    <source srcset="img/hero-bg.webp" type="image/webp">
+    <img class="hero-bg" src="img/hero-bg.webp" alt="" aria-hidden="true" width="1600" height="900" fetchpriority="high" decoding="async">
+  </picture>
+  <picture>
+    <source srcset="img/floral-detail.avif" type="image/avif">
+    <source srcset="img/floral-detail.webp" type="image/webp">
+    <img class="hero-floral" src="img/floral-detail.webp" alt="" aria-hidden="true" width="2048" height="2048" loading="lazy" decoding="async">
+  </picture>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow eyebrow">Estética avançada . Centro Cívico</div>
+      <h1 id="hero-h">Beleza que começa no <em>cuidado</em>, não na pressa.</h1>
+      <p class="lead">Referência em estética avançada no Centro Cívico de Curitiba, com <strong>nota 5,0 e 503 avaliações no Google</strong>. Harmonização facial, rejuvenescimento e protocolos sob medida, sempre a partir de uma avaliação individual.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://wa.me/5541997581018?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Est%C3%A9tica%20Danielle%20Bocchi%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar no WhatsApp e agendar avaliação">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.7-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.4.1-.2.1-.3 0-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5 0 1.5 1.1 2.9 1.2 3.1.2.2 2.1 3.4 5.3 4.6 2 .8 2.8.9 3.8.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5-1.4c1.5.8 3.2 1.3 5 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          Agendar avaliação
+        </a>
+        <a class="btn btn-ghost" href="#sobre">Conhecer a clínica</a>
+      </div>
+    </div>
+    <div class="hero-stats" role="list" aria-label="Dados da clínica">
+      <div class="item item-featured" role="listitem" aria-label="Avaliação 5,0 de 5 com 503 avaliações no Google">
+        <div>
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span class="n">5,0</span>
+        </div>
+        <span class="l">503 avaliações reais no Google — nota máxima, mantida há anos</span>
+      </div>
+      <div class="item" role="listitem">
+        <span class="n">19+</span>
+        <span class="l">Anos de atuação no Centro Cívico de Curitiba</span>
+      </div>
+      <div class="item" role="listitem">
+        <span class="n">5</span>
+        <span class="l">Especialidades avançadas, sempre com avaliação prévia</span>
+      </div>
+      <div class="item" role="listitem">
+        <span class="n">100%</span>
+        <span class="l">Atendimento presencial, com hora marcada</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" class="servicos" aria-labelledby="serv-h">
+  <picture>
+    <source srcset="img/floral-detail-crop.avif" type="image/avif">
+    <source srcset="img/floral-detail-crop.webp" type="image/webp">
+    <img class="servicos-floral" src="img/floral-detail-crop.webp" alt="" aria-hidden="true" width="1180" height="1180" loading="lazy" decoding="async">
+  </picture>
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv">Procedimentos</div>
+        <h2 class="rv rv-d1" id="serv-h" style="margin-top:18px">Estética facial, rejuvenescimento e cuidado avançado.</h2>
+      </div>
+      <p class="rv rv-d2">Cada protocolo começa com avaliação individual. Danielle Bocchi e a equipe escolhem o caminho com base no seu rosto, no seu tempo e no que te incomoda, não no que está em moda.</p>
+    </div>
+    <div class="servico-list">
+      <article class="servico rv">
+        <div class="num">01</div>
+        <h3>Estética Avançada</h3>
+        <p>Protocolos com tecnologia de ponta para resultados naturais. Cada plano é desenhado depois da avaliação presencial, com indicação clara do que faz sentido e do que não faz.</p>
+        <a class="link-arrow" href="https://wa.me/5541997581018?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20est%C3%A9tica%20avan%C3%A7ada." target="_blank" rel="noopener" aria-label="Agendar estética avançada pelo WhatsApp">Agendar</a>
+        <span class="servico-ghost" aria-hidden="true">01</span>
+      </article>
+      <article class="servico rv">
+        <div class="num">02</div>
+        <h3>Harmonização Facial</h3>
+        <p>Equilíbrio e proporção respeitando a identidade do seu rosto. Avaliação criteriosa antes de qualquer procedimento, com explicação detalhada de cada etapa.</p>
+        <a class="link-arrow" href="https://wa.me/5541997581018?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20harmoniza%C3%A7%C3%A3o%20facial." target="_blank" rel="noopener" aria-label="Agendar harmonização facial pelo WhatsApp">Agendar</a>
+        <span class="servico-ghost" aria-hidden="true">02</span>
+      </article>
+      <article class="servico rv">
+        <div class="num">03</div>
+        <h3>Rejuvenescimento</h3>
+        <p>Tratamentos que devolvem viço, firmeza e luminosidade. Plano sob medida para devolver ao rosto o que o tempo levou, com resultado progressivo e natural.</p>
+        <a class="link-arrow" href="https://wa.me/5541997581018?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20rejuvenescimento." target="_blank" rel="noopener" aria-label="Agendar rejuvenescimento pelo WhatsApp">Agendar</a>
+        <span class="servico-ghost" aria-hidden="true">03</span>
+      </article>
+      <article class="servico rv">
+        <div class="num">04</div>
+        <h3>Tratamentos Corporais</h3>
+        <p>Protocolos para modelagem, drenagem e firmeza. Combinamos técnicas para entregar resultado visível, com sessões planejadas de acordo com a sua rotina.</p>
+        <a class="link-arrow" href="https://wa.me/5541997581018?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20tratamentos%20corporais." target="_blank" rel="noopener" aria-label="Agendar tratamentos corporais pelo WhatsApp">Agendar</a>
+        <span class="servico-ghost" aria-hidden="true">04</span>
+      </article>
+      <article class="servico rv">
+        <div class="num">05</div>
+        <h3>Faciais</h3>
+        <p>Limpeza profunda, hidratação e cuidados específicos para cada tipo de pele. Manutenção que prolonga resultados e mantém a saúde da pele em dia.</p>
+        <a class="link-arrow" href="https://wa.me/5541997581018?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20tratamentos%20faciais." target="_blank" rel="noopener" aria-label="Agendar faciais pelo WhatsApp">Agendar</a>
+        <span class="servico-ghost" aria-hidden="true">05</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="proof" aria-labelledby="proof-h">
+  <picture>
+    <source srcset="img/band-bg.avif" type="image/avif">
+    <source srcset="img/band-bg.webp" type="image/webp">
+    <img class="proof-bg" src="img/band-bg.webp" alt="" aria-hidden="true" width="1600" height="900" loading="lazy" decoding="async">
+  </picture>
+  <picture>
+    <source srcset="img/floral-detail-crop.avif" type="image/avif">
+    <source srcset="img/floral-detail-crop.webp" type="image/webp">
+    <img class="proof-floral" src="img/floral-detail-crop.webp" alt="" aria-hidden="true" width="1180" height="1180" loading="lazy" decoding="async">
+  </picture>
+  <div class="proof-inner">
+    <div class="eyebrow rv">Prova social . Google</div>
+    <div class="proof-stats rv rv-d1" role="group" aria-label="Avaliação 5,0 de 5 estrelas, com 503 avaliações no Google">
+      <div class="proof-figure">
+        <span class="stat-mega" aria-hidden="true">5,0</span>
+        <span class="stat-stars" aria-hidden="true">★★★★★</span>
+        <span class="stat-sub" aria-hidden="true">nota média</span>
+      </div>
+      <div class="proof-divider" aria-hidden="true"></div>
+      <div class="proof-figure">
+        <span class="stat-mega" aria-hidden="true">503</span>
+        <span class="stat-sub" aria-hidden="true">avaliações no Google</span>
+      </div>
+    </div>
+    <h2 class="rv rv-d2" id="proof-h">Não é sorte. É consistência de quase vinte anos.</h2>
+    <p class="lede rv rv-d3">Cada uma dessas 503 avaliações começou com a mesma pergunta que talvez seja a sua: será que dá para confiar? Atendimento humano, técnica apurada e resultado que se mantém — é isso que sustenta a nota 5,0.</p>
+    <div class="proof-ctas rv rv-d4">
+      <a class="btn btn-wa" href="https://wa.me/5541997581018?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Est%C3%A9tica%20Danielle%20Bocchi%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar no WhatsApp e agendar avaliação">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.7-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.4.1-.2.1-.3 0-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5 0 1.5 1.1 2.9 1.2 3.1.2.2 2.1 3.4 5.3 4.6 2 .8 2.8.9 3.8.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5-1.4c1.5.8 3.2 1.3 5 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        Quero minha avaliação
+      </a>
+      <a class="btn btn-outline-light" href="#sobre">Conhecer a história da clínica</a>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-row">
+    <div class="set">
+      <span>5,0 ★ nota no Google</span><span>503 avaliações reais</span><span>Avaliação individual sempre</span><span>Centro Cívico, Curitiba</span><span>Quase 20 anos de estética avançada</span>
+    </div>
+    <div class="set dup">
+      <span>5,0 ★ nota no Google</span><span>503 avaliações reais</span><span>Avaliação individual sempre</span><span>Centro Cívico, Curitiba</span><span>Quase 20 anos de estética avançada</span>
+    </div>
+  </div>
+</div>
+
+<section id="sobre" class="sobre" aria-labelledby="sobre-h">
+  <picture>
+    <source srcset="img/floral-detail.avif" type="image/avif">
+    <source srcset="img/floral-detail.webp" type="image/webp">
+    <img class="sobre-floral" src="img/floral-detail.webp" alt="" aria-hidden="true" width="2048" height="2048" loading="lazy" decoding="async">
+  </picture>
+  <div class="container sobre-grid">
+    <div class="photo rv">
+      <div class="frame">
+        <picture>
+          <source srcset="img/about-portrait.avif" type="image/avif">
+          <source srcset="img/about-portrait.webp" type="image/webp">
+          <img src="img/about-portrait.webp" alt="Ilustração artística de uma silhueta em tecido fluido, em tons de areia e rosa dusty, representando a identidade visual da clínica" width="600" height="800" loading="lazy" decoding="async">
+        </picture>
+      </div>
+      <div class="badge" aria-hidden="true">Centro Cívico . Curitiba</div>
+      <div class="caption">Danielle Bocchi . Diretora</div>
+    </div>
+    <div class="sobre-text">
+      <div class="eyebrow rv">Sobre a clínica</div>
+      <h2 class="rv rv-d1" id="sobre-h" style="margin-top:18px">Estética que respeita o seu tempo e a sua identidade.</h2>
+      <p class="rv rv-d2">A <strong>Estética Danielle Bocchi</strong> é referência em estética avançada no Centro Cívico de Curitiba. Há quase duas décadas a clínica constrói reputação com técnica apurada, atendimento humano e um resultado consistente — hoje traduzido em <strong>5,0 de nota e 503 avaliações no Google</strong>.</p>
+      <p class="rv rv-d2">A primeira conversa é sempre de <strong>avaliação</strong>: histórico, expectativas, exame detalhado do que te incomoda. Só depois disso vem o plano, com explicação clara de cada etapa e do tempo que cada procedimento leva.</p>
+      <p class="rv rv-d3">O atendimento é presencial, com hora marcada, em um consultório preparado para receber cada paciente com a atenção que o cuidado com a pele e com a estética exigem.</p>
+      <div class="signature rv rv-d4">
+        <div>
+          <div class="sname">Danielle Bocchi</div>
+          <div class="srole">Diretora e responsável técnica</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como" class="como" aria-labelledby="como-h">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv">Como funciona</div>
+        <h2 class="rv rv-d1" id="como-h" style="margin-top:18px">Quatro passos para começar.</h2>
+      </div>
+      <p class="rv rv-d2">Sem cadastro, sem formulário longo, sem espera. A primeira conversa é direta, e a primeira visita serve para entender o que faz sentido no seu caso.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv">
+        <div class="n">PASSO 01</div>
+        <div>
+          <h3>Conversa inicial pelo WhatsApp</h3>
+          <p>Mande uma mensagem contando o que te incomoda. A equipe responde em horário comercial com os horários disponíveis e tira a primeira dúvida antes de você se comprometer.</p>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="n">PASSO 02</div>
+        <div>
+          <h3>Avaliação presencial</h3>
+          <p>Conversa sobre histórico, expectativas e exame do caso. Avaliação cuidadosa, sem compromisso. Você sai com orientações claras já no primeiro dia.</p>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="n">PASSO 03</div>
+        <div>
+          <h3>Plano de tratamento</h3>
+          <p>Procedimentos definidos com base na sua avaliação, no seu tempo e no que faz sentido para o seu caso. Explicação detalhada de cada etapa antes de começar.</p>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="n">PASSO 04</div>
+        <div>
+          <h3>Acompanhamento próximo</h3>
+          <p>Retornos marcados para avaliar resultados, ajustar o que for preciso e garantir que o tratamento evolui como combinado. Cuidado que continua depois do procedimento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="difs" aria-labelledby="dif-h">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow rv">O que esperar</div>
+        <h2 class="rv rv-d1" id="dif-h" style="margin-top:18px">Atendimento que entende cada rosto como único.</h2>
+      </div>
+      <p class="rv rv-d2">Quatro pilares que orientam cada protocolo, cada consulta e cada retorno da clínica.</p>
+    </div>
+    <div class="dif-grid">
+      <article class="dif rv">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </div>
+        <h3>Avaliação prévia detalhada</h3>
+        <p>Cada protocolo começa com conversa sobre histórico, expectativas e exame individual. Você sai da primeira visita com um plano claro, mesmo que decida não seguir em frente.</p>
+      </article>
+      <article class="dif rv rv-d1">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6c4 0 4 2 8 2s4-2 8-2"/><path d="M3 12c4 0 4 2 8 2s4-2 8-2"/><path d="M3 18c4 0 4 2 8 2s4-2 8-2"/></svg>
+        </div>
+        <h3>Protocolos sob medida</h3>
+        <p>Sem pacotes prontos. Cada combinação de procedimentos é desenhada para o caso específico da paciente, com explicação de por que cada etapa foi indicada.</p>
+      </article>
+      <article class="dif rv rv-d2">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v3"/><path d="M12 19v3"/><path d="M4.93 4.93l2.12 2.12"/><path d="M16.95 16.95l2.12 2.12"/><path d="M2 12h3"/><path d="M19 12h3"/><path d="M4.93 19.07l2.12-2.12"/><path d="M16.95 7.05l2.12-2.12"/><circle cx="12" cy="12" r="4"/></svg>
+        </div>
+        <h3>Resultado natural</h3>
+        <p>Técnica apurada e produtos certificados para resultado que se mantém elegante. A estética avançada da clínica não trabalha com exageros, e sim com o que combina com você.</p>
+      </article>
+      <article class="dif rv rv-d3">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg>
+        </div>
+        <h3>Acompanhamento próximo</h3>
+        <p>Retornos programados para acompanhar a evolução, ajustar o que for preciso e responder dúvidas que aparecem depois. Cuidado que não termina na última sessão.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq" aria-labelledby="faq-h">
+  <picture>
+    <source srcset="img/floral-detail-crop.avif" type="image/avif">
+    <source srcset="img/floral-detail-crop.webp" type="image/webp">
+    <img class="faq-floral" src="img/floral-detail-crop.webp" alt="" aria-hidden="true" width="1180" height="1180" loading="lazy" decoding="async">
+  </picture>
+  <div class="container">
+    <div class="sec-head" style="grid-template-columns:1fr;margin-bottom:56px">
+      <div>
+        <div class="eyebrow rv">Dúvidas frequentes</div>
+        <h2 class="rv rv-d1" id="faq-h" style="margin-top:18px;max-width:18ch">Antes de agendar, vale conferir.</h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item rv">
+        <button type="button" aria-expanded="false" aria-controls="faq1">
+          <span class="q">Como funciona a primeira consulta?</span>
+          <span class="toggle" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="14" height="14"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="a" id="faq1" role="region">
+          <p>A primeira consulta é de avaliação. Você conta o que te incomoda, a equipe examina o caso e sai com um plano detalhado, mesmo que decida não seguir com o procedimento. Não há compromisso nessa primeira conversa.</p>
+        </div>
+      </div>
+      <div class="faq-item rv rv-d1">
+        <button type="button" aria-expanded="false" aria-controls="faq2">
+          <span class="q">Os procedimentos são dolorosos?</span>
+          <span class="toggle" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="14" height="14"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="a" id="faq2" role="region">
+          <p>A maioria dos procedimentos causa desconforto leve e bem tolerado. Anestésico tópico ou local é usado sempre que indicado, e a equipe explica o que esperar de cada etapa antes de começar.</p>
+        </div>
+      </div>
+      <div class="faq-item rv rv-d2">
+        <button type="button" aria-expanded="false" aria-controls="faq3">
+          <span class="q">Qual o tempo de recuperação?</span>
+          <span class="toggle" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="14" height="14"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="a" id="faq3" role="region">
+          <p>Varia por procedimento. A avaliação presencial é o momento de entender o seu caso e receber orientação clara sobre o que esperar nos dias seguintes, incluindo restrições e cuidados.</p>
+        </div>
+      </div>
+      <div class="faq-item rv rv-d3">
+        <button type="button" aria-expanded="false" aria-controls="faq4">
+          <span class="q">Posso parcelar o pagamento?</span>
+          <span class="toggle" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="14" height="14"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="a" id="faq4" role="region">
+          <p>Sim. A clínica trabalha com formas de pagamento e parcelamento. Detalhes e opções são alinhados diretamente na conversa de WhatsApp ou na avaliação presencial.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contato" aria-labelledby="contato-h">
+  <div class="container contato-grid">
+    <div class="contato-info">
+      <div class="eyebrow rv">Contato</div>
+      <h2 class="rv rv-d1" id="contato-h" style="margin-top:18px">Agende sua avaliação.</h2>
+      <div class="row rv rv-d2">
+        <div class="ic">Localização</div>
+        <div>
+          <b>Centro Cívico, Curitiba</b>
+          <span>Atendimento presencial com hora marcada. Confirme o endereço completo pelo WhatsApp antes de ir.</span>
+        </div>
+      </div>
+      <div class="row rv rv-d3">
+        <div class="ic">WhatsApp</div>
+        <div>
+          <b>Atendimento mais rápido</b>
+          <span><a href="https://wa.me/5541997581018?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Est%C3%A9tica%20Danielle%20Bocchi%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">(41) 99758-1018</a></span>
+        </div>
+      </div>
+      <div class="row rv rv-d4">
+        <div class="ic">Telefone</div>
+        <div>
+          <b>Mesma linha do WhatsApp</b>
+          <span><a href="tel:+5541997581018" aria-label="Ligar para a clínica">(41) 99758-1018</a></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ic">Atendimento</div>
+        <div>
+          <b>Presencial com hora marcada</b>
+          <span>Confirme disponibilidade pelo WhatsApp antes de ir à clínica.</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ic">Avaliações</div>
+        <div>
+          <b>5,0 no Google</b>
+          <span>503 avaliações reais de pacientes, com fotos de antes e depois.</span>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://wa.me/5541997581018?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Est%C3%A9tica%20Danielle%20Bocchi%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar no WhatsApp e agendar avaliação">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.7-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.4.1-.2.1-.3 0-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5 0 1.5 1.1 2.9 1.2 3.1.2.2 2.1 3.4 5.3 4.6 2 .8 2.8.9 3.8.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5-1.4c1.5.8 3.2 1.3 5 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="tel:+5541997581018" aria-label="Ligar para a clínica">Ligar agora</a>
+      </div>
+    </div>
+    <div class="contato-map rv">
+      <iframe title="Mapa da Estética Danielle Bocchi no Centro Cívico de Curitiba" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Centro+C%C3%ADvico,+Curitiba,+PR&z=15&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="cols">
+      <div>
+        <a href="#top" class="brand" aria-label="Estética Danielle Bocchi">
+          <span class="mark" aria-hidden="true"><span>db</span></span>
+          <span class="name">Estética Danielle Bocchi<small>Estética avançada . Curitiba</small></span>
+        </a>
+        <p>Clínica de estética avançada no Centro Cívico de Curitiba. Procedimentos com avaliação individual e protocolo sob medida.</p>
+        <p class="footer-rating"><span class="stars" aria-hidden="true">★★★★★</span> <strong>5,0</strong> no Google . 503 avaliações reais</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <a href="#servicos">Procedimentos</a>
+        <a href="#sobre">Sobre a clínica</a>
+        <a href="#como">Como funciona</a>
+        <a href="#faq">Dúvidas frequentes</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div>
+        <h3>Procedimentos</h3>
+        <a href="#servicos">Estética Avançada</a>
+        <a href="#servicos">Harmonização Facial</a>
+        <a href="#servicos">Rejuvenescimento</a>
+        <a href="#servicos">Tratamentos Corporais</a>
+        <a href="#servicos">Faciais</a>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <a href="https://wa.me/5541997581018?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Est%C3%A9tica%20Danielle%20Bocchi%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">(41) 99758-1018</a>
+        <span>Centro Cívico, Curitiba, PR</span>
+        <span>Atendimento com hora marcada</span>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>Estética Danielle Bocchi . Centro Cívico, Curitiba, PR . Todos os direitos reservados.</span>
+      <span class="made">Lead 4499b04</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/5541997581018?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Est%C3%A9tica%20Danielle%20Bocchi%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.7-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.4.1-.2.1-.3 0-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5 0 1.5 1.1 2.9 1.2 3.1.2.2 2.1 3.4 5.3 4.6 2 .8 2.8.9 3.8.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5-1.4c1.5.8 3.2 1.3 5 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+<script>
+(function(){
+  // header scroll
+  var h=document.getElementById('top');
+  function onScroll(){
+    if(window.scrollY>10){h.classList.add('scrolled')}else{h.classList.remove('scrolled')}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  // mobile nav
+  var nt=document.getElementById('nav-toggle');
+  var nav=document.getElementById('nav');
+  var live=document.getElementById('live');
+  function setNav(open){
+    nav.classList.toggle('open',open);
+    document.body.classList.toggle('menu-open',open);
+    nt.setAttribute('aria-expanded',open?'true':'false');
+    nt.setAttribute('aria-label',open?'Fechar menu de navegação':'Abrir menu de navegação');
+    if(open){
+      live.textContent='Menu aberto';
+      var firstLink=nav.querySelector('a');
+      if(firstLink){firstLink.focus()}
+    }else{live.textContent='Menu fechado'}
+  }
+  nt.addEventListener('click',function(){setNav(!nav.classList.contains('open'))});
+  document.querySelectorAll('#nav a').forEach(function(a){a.addEventListener('click',function(){setNav(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){setNav(false);nt.focus()}});
+
+  // faq accordion
+  document.querySelectorAll('.faq-item button').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var expanded=btn.getAttribute('aria-expanded')==='true';
+      btn.setAttribute('aria-expanded',expanded?'false':'true');
+      if(!expanded){live.textContent='Dúvida expandida: '+btn.querySelector('.q').textContent}
+    });
+    btn.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();btn.click()}
+    });
+  });
+
+  // reveal on scroll
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}
+      });
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    rv.forEach(function(el){io.observe(el)});
+  }else{
+    rv.forEach(function(el){el.classList.add('on')});
+  }
+
+  // smooth close menu on resize to desktop
+  var rT;
+  window.addEventListener('resize',function(){
+    clearTimeout(rT);
+    rT=setTimeout(function(){if(window.innerWidth>1024&&nav.classList.contains('open')){setNav(false)}},120);
+  });
+})();
+</script>
+</body>
+</html>
